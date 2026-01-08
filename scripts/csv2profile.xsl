@@ -6,7 +6,7 @@
     exclude-result-prefixes="xs math csv"
     version="3.0">
     
-    <xsl:import href="csv2xml.xsl"/>
+    <xsl:import href="csv2xml-semi.xsl"/>
     
     <xsl:param name="csv" select="'tastade.csv'"/>
     
