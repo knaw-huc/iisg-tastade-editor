@@ -1,0 +1,177 @@
+source;entiteit;veld;label;min;max;type;default;choice_list
+group_61544a038d768;Individual;;Identifiers;0;;tab;;
+group_61544a038d768;Individual;title;Title;0;;text;;
+group_61544a038d768;Individual;firstname;First Name;1;;text;;
+group_61544a038d768;Individual;middlename;Middle Name;0;;text;;
+group_61544a038d768;Individual;surname;Surname;1;;text;;
+group_61544a038d768;Individual;maidenname;Maiden Name;0;;text;;
+group_61544a038d768;Individual;suffix;Suffix;0;;text;;
+group_61544a038d768;Individual;aliases;Aliases;0;;repeater;;
+group_61544a038d768;Individual;individualid;Individual ID;0;;text;;
+group_61544a038d768;Individual;cohort;Primary Cohort;1;;select;Unknown;Liverpool|Bristol|London|Minor Ports|Corporate|Unknown
+group_61544a038d768;Individual;other_cohorts;Other cohorts;0;;checkbox;;Liverpool|Bristol|London|Minor Ports|Corporate|Unknown
+group_61544a038d768;Individual;;Personal;0;;tab;;
+group_61544a038d768;Individual;sex;Sex;0;;select;;male|female|maybe-male|maybe-female
+group_61544a038d768;Individual;religion;Religion;0;;select;;Church of England|Church of Scotland|Church of Ireland|Roman Catholic|Jewish|Anglican – Jewish convert|Quaker|Nonconformist or ‘Dissenter’|Nonconformist - Congregationalist|Nonconformist - Baptist|Nonconformist - Methodist|Nonconformist – Moravian|Nonconformist - Unitarian|Nonconformist - Presbyterian|Huguenot
+group_61544a038d768;Individual;social_background;Social background;0;;select;;Labourer|Tenant farmer|Yeoman farmer|Craft|Trade|Professional|Gentry|Nobility
+group_61544a038d768;Individual;social_outcome;Social outcome;0;;select;;Labourer|Tenant farmer|Yeoman farmer|Craft|Trade|Professional|Gentry|Nobility
+group_61544a038d768;Individual;political_affiliation;Political Affiliation;0;;select;;Parliamentary|Royalist|Whig|Tory|Shifting|Other
+group_61544a038d768;Individual;occupation_of_husband;Occupation of husband;0;;text;;
+group_61544a038d768;Individual;occupation_of_father;Occupation of father;0;;text;;
+group_61544a038d768;Individual;family_members;Family Members;0;;repeater;;
+group_61544a038d768;Individual;political_offices;Political offices held;0;;repeater;;
+group_61544a038d768;Individual;bankruptcies;Bankruptcies;0;;repeater;;
+group_61544a038d768;Individual;geographic_experience;Geographic Experience;0;;repeater;;
+group_61544a038d768;Individual;internal_migrant;Internal Migrant?;0;;group;;
+group_61544a038d768;Individual;foreign_born;Foreign born?;0;;group;;
+group_61544a038d768;Individual;supplier_to_slave_trade_voyages;Supplier to Slave Trade Voyages?;0;;group;;
+group_61544a038d768;Individual;creditor_to_slave_trade_voyages;Creditor to Slave Trade Voyages?;0;;group;;
+group_61544a038d768;Individual;philanthropy;Philanthropy?;0;;group;;
+group_61544a038d768;Individual;plantation_owner;Plantation owner?;0;;group;;
+group_61544a038d768;Individual;corporate_investor;Corporate Investor?;0;;group;;
+group_61544a038d768;Individual;predominant_slave_trading;Was slave trading their predominant commercial activity?;0;;radio;?;1|0|?
+group_61544a038d768;Individual;slaveholder;Slaveholder?;0;;radio;?;1|0|?
+group_61544a038d768;Individual;lobbyist_for_the_slave_trade;Lobbyist for the slave trade?;0;;radio;?;1|0|?
+group_61544a038d768;Individual;;Dates & Locations;0;;tab;;
+group_61544a038d768;Individual;residencies;Residencies;0;;repeater;;
+group_61544a038d768;Individual;birth;Birth;0;;group;;
+group_61544a038d768;Individual;death;Death;0;;group;;
+group_61544a038d768;Individual;burial;Burial;0;;group;;
+group_61544a038d768;Individual;christening;Christening;0;;group;;
+group_61544a038d768;Individual;knighthood;Knighthood;0;;group;;
+group_61544a038d768;Individual;baronetcy;Baronetcy;0;;group;;
+group_61544a038d768;Individual;peerage;Peerage;0;;group;;
+group_61544a038d768;Individual;;Education & Work;0;;tab;;
+group_61544a038d768;Individual;occupation;Occupation;0;;select;;
+group_61544a038d768;Individual;occupation_details;Occupation details;0;;textarea;;
+group_61544a038d768;Individual;merchant;Merchant details;0;;group;;
+group_61544a038d768;Individual;;;0;;message;;
+group_61544a038d768;Individual;schools;Schools;0;;repeater;;
+group_61544a038d768;Individual;universities;Universities;0;;repeater;;
+group_61544a038d768;Individual;inns_of_court;Inns of Court;0;;repeater;;
+group_61544a038d768;Individual;military_training;Military training;0;;repeater;;
+group_61544a038d768;Individual;imperial_positions;Imperial positions;0;;repeater;;
+group_61544a038d768;Individual;apprenticeships;Apprenticeships;0;;repeater;;
+group_61544a038d768;Individual;livery_company_affiliations;Livery company affiliations;0;;repeater;;
+group_61544a038d768;Individual;other_business_activities;Other business activities;0;;repeater;;
+group_61544a038d768;Individual;;Legacies;0;;tab;;
+group_61544a038d768;Individual;was_slave_trading_investment_profitable;Was slave trading investment profitable?;0;;radio;?;1|0|?
+group_61544a038d768;Individual;will;Will;0;;group;;
+group_61544a038d768;Individual;legacies;Legacies;0;;flexible_content;;
+group_61544a038d768;Individual;;Investments;0;;tab;;
+group_61544a038d768;Individual;investments;Investments;0;;repeater;;
+group_61544a038d768;Individual;;Summary;0;;tab;;
+group_61544a038d768;Individual;completion_status;Status;0;;select;In Progress;In Progress|Complete
+group_61544a038d768;Individual;notes;General Notes;0;;wysiwyg;;
+field_61ae452678e5e;Aliases;alias;Alias;0;;text;;
+field_6155e4cd8bc2b;Family Members;name;Name;1;;text;;
+field_6155e4e98bc2c;Family Members;relationship;Relationship;1;;select;;Spouse|Mother|Father|Daughter|Son|Uncle|Aunt|Brother|Sister|Mother-in-law|Father-in-law|Brother-in-law|Sister-in-law|Son-in-law|Daughter-in-law|Niece|Nephew|Cousin|Grandmother|Grandfather|Granddaughter|Grandson|Testator-Legatee|Trustee|Executor|Business Partner
+field_6155e53e8bc2d;Family Members;marriage_date;Marriage Date;0;;alt_date_picker;;
+field_6155e5568bc2e;Family Members;individual;Individual;0;;post_object;;
+field_6155e673d4489;Family Members;relationship_notes;Relationship Notes;0;;textarea;;
+field_6155e7586e7b4;Political offices held;type;Type;0;;select;;Court|Local|National|Parliament|Government|Other
+field_6155e78c6e7b5;Political offices held;notes;Notes;0;;textarea;;
+field_61b0b22aa1da4;Bankruptcies;date;Date;0;;alt_date_picker;;
+field_61b0b236a1da5;Bankruptcies;details;Details;0;;textarea;;
+field_624574b765471;Geographic Experience;continent;Continent;1;;select;;Africa|Americas|Asia|Europe
+field_624574de65472;Geographic Experience;details;Details;0;;textarea;;
+field_615d81023ad33;Internal Migrant;enabled;;0;;radio;?;1|0|?
+field_624576d280c98;Internal Migrant;details;Details;0;;textarea;;
+field_615d810d3ad34;Foreign born;enabled;;0;;radio;?;1|0|?
+field_624577418a016;Foreign born;details;Details;0;;textarea;;
+field_615d81243ad36;Supplier to Slave Trade Voyages;enabled;;0;;radio;?;1|0|?
+field_624577718a019;Supplier to Slave Trade Voyages;details;Details;0;;textarea;;
+field_615d81413ad37;Creditor to Slave Trade Voyages;enabled;;0;;radio;?;1|0|?
+field_624577e97b7ec;Creditor to Slave Trade Voyages;details;Details;0;;textarea;;
+field_615d81503ad38;Philanthropy;enabled;;0;;radio;?;1|0|?
+field_624578147b7ef;Philanthropy;details;Details;0;;textarea;;
+field_61b0b7921272e;Plantation owner;enabled;;0;;radio;?;1|0|?
+field_61b0b7b51272f;Plantation owner;link;Link;0;;url;;
+field_624578447b7f2;Plantation owner;details;Details;0;;textarea;;
+field_615d81153ad35;Corporate Investor;investments;Investments;0;;select;Neither;Neither|Corporate|Non-corporate|Both
+field_620243fcb3176;Corporate Investor;type;Type;0;;checkbox;;Company of Royal Adventurers|Royal African Company|South Sea Company
+field_624578707b7f5;Corporate Investor;details;Details;0;;textarea;;
+field_61af399b6773f;Residencies;address;Address;0;;textarea;;
+field_61af39a867740;Residencies;town_city_clone;Town/city;0;;clone;;
+field_61544ae012059;Birth;date;Date;0;;alt_date_picker;;
+field_61b0b118c4ce6;Birth;address;Address;0;;textarea;;
+field_61b0b11ac4ce7;Birth;town_city_clone;Town/city;0;;clone;;
+field_61544b241205b;Death;date;Date;0;;alt_date_picker;;
+field_61b23575bc5ef;Death;address;Address;0;;textarea;;
+field_61b23575bc5f0;Death;town_city_clone;Town/city;0;;clone;;
+field_61544b9a12061;Burial;date;Date;0;;alt_date_picker;;
+field_61b2358dbc5f2;Burial;address;Address;0;;textarea;;
+field_61b2358dbc5f3;Burial;town_city_clone;Town/city;0;;clone;;
+field_62458d1f98001;Burial;memorial_details;Memorial details;0;;textarea;;
+field_61544b5d1205e;Christening;date;Date;0;;alt_date_picker;;
+field_61544a8f12056;Knighthood;date;Date;0;;alt_date_picker;;
+field_62458fe2c8224;Baronetcy;date;Date;0;;alt_date_picker;;
+field_6245904cc8228;Peerage;date;Date;0;;alt_date_picker;;
+field_6202415e033f1;Merchant details;region;Region;0;;textarea;;
+field_6202416e033f2;Merchant details;trade;Trade;0;;textarea;;
+field_61af589d3153c;Schools;name;Name;1;;text;;
+field_61af58d43153e;Universities;name;University;1;;select;;Aberdeen|Cambridge|Edinburgh|Glasgow|Oxford|St Andrews
+field_620241b963ac8;Universities;college;College;0;;text;;
+field_61af590831540;Inns of Court;name;Name;1;;select;;Inner Temple|Middle Temple|Lincoln’s|Gray’s
+field_61af599531545;Military training;description;Description;1;;text;;
+field_61af6a3be1e36;Imperial positions;role;Role;1;;text;;
+field_61af6a51e1e37;Imperial positions;region_clone;Region;0;;clone;;
+field_61af592c31542;Apprenticeships;master;Master;0;;text;;
+field_61af594631543;Apprenticeships;livery_clone;Livery;0;;clone;;
+field_62827bcf6c256;Apprenticeships;start_date;Start date;0;;alt_date_picker;;
+field_61af6adb4951c;Livery company affiliations;livery_clone;Livery;0;;clone;;
+field_61af6adb4951b;Livery company affiliations;role;Role;0;;select;;Freeman|Liveryman|Warden|Master|Treasurer|Secretary
+field_61af6b3b4951d;Livery company affiliations;start_date;Start date;0;;alt_date_picker;;
+field_61af6b4b4951e;Livery company affiliations;end_date;End date;0;;alt_date_picker;;
+field_6202469399a8c;Other business activities;region_clone;Region;0;;clone;;
+field_620246da01310;Other business activities;economic_sector;Economic sector;0;;select;;banking|charity|commerce|government|infrastructure|insurance|land|manufacturing|mining|privateering|shipping|servant|tax_farmer
+field_627cf2838caca;Other business activities;details;Details;0;;textarea;;
+field_61b36f555a013;Will;probate_date;Probate date;0;;alt_date_picker;;
+field_61b36f905a014;Will;value;Value of Total Personalty;0;;number;;
+field_628f8bcee842b;Will;value_known_legacies;Value of Known Legacies (where material to total estate);0;;number;;
+field_61b3711f5a016;Will;occupation;Occupation;0;;text;;
+field_61b371025a015;Will;town_city_clone;Town/city;0;;clone;;
+field_61b37162122e5;Will;courts;Courts;0;;textarea;;
+field_61b3712a5a017;Will;notes;Notes;0;;textarea;;
+field_627cc6358fa77;Investments;company;Company;1;;radio;;Company of Royal Adventurers|Royal African Company|South Sea Company
+field_615d6fab21e1d;Investments;source_of_investment_funds;Source of Investment Funds;0;;text;;
+field_615d6fb421e1e;Investments;size_of_investment;Size of Investment;0;;number;;
+field_619e656d726e6;Investments;date_of_purchase;Date of Purchase;0;;alt_date_picker;;
+field_619e65a2f879b;Investments;date_of_sale;Date of Sale;0;;alt_date_picker;;
+field_615d705c21e1f;Investments;profitable;Profitable;0;;true_false;;
+field_615d706d21e20;Investments;destination_for_profits;Destination for Profits;0;;text;;
+field_61ae30145b57a;Investments;location;Investment Location;0;;clone;;
+field_627cda05efa78;Investments;data_source;Data source;0;;textarea;;
+group_61546f76d9a4d;Crossing;voyageid;Voyage ID;1;;text;;
+group_61546f76d9a4d;Crossing;corporate;Corporate;0;;true_false;;
+group_61546f76d9a4d;Crossing;vessel;Vessel;0;;group;;
+group_61546f76d9a4d;Crossing;journey;Journey;0;;group;;
+group_61546f76d9a4d;Crossing;enslaved_people;Enslaved people;0;;group;;
+group_61546f76d9a4d;Crossing;outcome;Outcome;0;;textarea;;
+field_6154702adb1dd;Vessel;name;Name;0;;text;;
+field_61547091db1e0;Vessel;flags;Flags;0;;select;;denmark-baltic|france|gb|netherlands|portugal-brazil|spain-uruguay|sweden|usa|other
+field_61aa2ed75a32f;Vessel;tonnage;Tonnage;0;;number;;
+field_61547035db1de;Journey;startyear;Departure Year;0;;number;;
+field_61546ff9db1da;Journey;departure_location;Departure Location;1;;text;;
+field_61547070db1df;Journey;endyear;Arrival Year;0;;number;;
+field_61aa2e82814ea;Journey;arrival_location;Arrival Location;1;;text;;
+field_61aa30fbf0fb4;Enslaved people;principal_purchase_location;Principal purchase location;0;;text;;
+field_61aa310ff0fb5;Enslaved people;principal_landing_location;Principal landing location;0;;text;;
+field_619e64460781b;Enslaved people;embarked;Number embarked;0;;number;;
+field_6155e3bd2aeac;Enslaved people;disembarked;Number disembarked;0;;number;;
+field_61aa2d5d83b41;Enslaved people;deaths;Number of deaths;0;;number;;
+group_63848848b080a;Place;town_of_place;Town ID;0;;number;;
+group_63848848b080a;Place;town_city;Town/City;0;;text;;
+group_63848848b080a;Place;county;County;1;;select;;Aberdeenshire|Angus|Argyll|Ayrshire|Banffshire|Bedfordshire|Berkshire|Berwickshire|Brecknockshire|Buckinghamshire|Buteshire|Caernarfonshire|Caithness|Cambridgeshire|Cardiganshire|Carmarthenshire|Cheshire|Clackmannanshire|Cornwall|Cumberland|Derbyshire|Devon|Dorset|Dumfriesshire|Dunbartonshire|Durham|East Lothian|Essex|Fife|Flintshire|Forfarshire|Galloway|Glamorgan|Gloucestershire|Haddingtonshire (East Lothian)|Hampshire|Herefordshire|Hertfordshire|Huntingdonshire|Inner Hebrides, Argyll|Inverness-shire|Isle of Skye|Jersey|Kent|Kincardineshire|Kinross-shire|Kirkcudbrightshire|Lanarkshire|Lancashire|Leicestershire|Lewis, Uist & Skye|Lincolnshire|Linlithgowshire (West Lothian)|London|Middlesex|Midlothian|Monmouthshire|Moray|Nairnshire|Norfolk|North Yorkshire|Northamptonshire|Northumberland|Nottinghamshire|Orkney|Oxfordshire|Peeblesshire|Pembrokeshire|Perthshire|Powys|Renfrewshire|Ross & Cromarty|Roxburghshire|Rutland|Selkirkshire|Shropshire|Somerset|Staffordshire|Stirlingshire|Suffolk|Surrey|Sussex|Sutherland|Warwickshire|West Lothian|West Yorkshire|Westmorland|Wigtownshire|Wiltshire|Worcestershire|Yorkshire
+group_63848848b080a;Place;region;Region;0;;select;;Argyll & Bute|Central England|Central Scotland|Channel Islands|Devon & Cornwall|East Anglia|East Midlands|Highlands & Islands|London|Mid-Wales|North Wales|North-east Scotland|North-west England|Northern England|Scotland|South Wales|South-east England|South-west England|Southern Scotland|Wessex|West Midlands|Yorkshire
+group_63848848b080a;Place;country;Country;1;;select;;England|Scotland|Wales
+group_63848848b080a;Place;latitude;Latitude;0;;text;;
+group_63848848b080a;Place;longitude;Longitude;0;;text;;
+group_619e6646dd858;Organisation;economic_sector;Economic sector;0;;select;;banking|charity|commerce|government|infrastructure|insurance|land|manufacturing|mining|shipping
+group_619e6646dd858;Organisation;region_clone;Region;0;;clone;;
+group_619e6646dd858;Organisation;category;Category;0;;select;;Business|Charity|Educational|Hospitals|Imperial|Legal|Livery|Military|Parish|Political|Religious|Scientific|Social|State
+group_619e6646dd858;Organisation;description_of_activities;Description of Activities;0;;wysiwyg;;
+group_619e6646dd858;Organisation;slave_trading;Slave trading;0;;group;;
+field_61ae25b54b565;Slave trading;is_associated;Associated with slave trading;0;;radio;no;yes|no|inferred
+field_619e66be93231;Slave trading;year_of_first_participation;Year of First Participation;0;;number;;
+field_619e670493233;Slave trading;year_of_last_participation;Year of Last Participation;0;;number;;

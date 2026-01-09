@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentSpec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true"
+    CMDVersion="1.2" CMDOriginalVersion="1.2"
+    xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+    <Header>
+        <ID>clarin.eu:cr1:p_Will</ID>
+        <Name>Will</Name>
+        <Description/>
+        <Status>development</Status>
+    </Header>
+    <Component name="Will" CardinalityMin="1" CardinalityMax="1">
+        <Element name="probate_date"/>
+        <Element name="value" ValueScheme="int"/>
+        <Element name="value_known_legacies" ValueScheme="int"/>
+        <Element name="occupation" ValueScheme="string"/>
+        <Element name="town_city_clone"/>
+        <Element name="courts"/>
+        <Element name="notes"/>
+    </Component>
+</ComponentSpec>

@@ -1,0 +1,286 @@
+{
+    "key": "group_5a8d57087fc79",
+    "title": "Footer",
+    "fields": [
+        {
+            "key": "field_6418576241225",
+            "label": "Footer Elements",
+            "name": "footer_elements",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6418576f41226",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add element",
+            "sub_fields": [
+                {
+                    "key": "field_6418576f41226",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6418579341227",
+                    "label": "Width",
+                    "name": "width",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "One Quarter",
+                        "2": "One Half",
+                        "3": "Three Quarters",
+                        "4": "Full Width"
+                    },
+                    "default_value": 1,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a4678de625fa",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "flexible_content",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layouts": {
+                        "layout_6418655a407d8": {
+                            "key": "layout_6418655a407d8",
+                            "name": "image",
+                            "label": "Image",
+                            "display": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_64186567407d9",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "5a8d5301173c0": {
+                            "key": "5a8d5301173c0",
+                            "name": "wysiwyg",
+                            "label": "Wysiwyg",
+                            "display": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5a46790f62604",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "tabs": "all",
+                                    "delay": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "5a8d530120b66": {
+                            "key": "5a8d530120b66",
+                            "name": "social_media",
+                            "label": "Social Media",
+                            "display": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5a467ef452919",
+                                    "label": "Accounts",
+                                    "name": "accounts",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "Add Social Media Account",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5a467f2f5291b",
+                                            "label": "Type",
+                                            "name": "type",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "facebook": "Facebook",
+                                                "twitter": "Twitter",
+                                                "instagram": "Instagram",
+                                                "linkedin": "LinkedIn",
+                                                "youtube": "YouTube",
+                                                "github": "GitHub"
+                                            },
+                                            "default_value": false,
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "ajax": 0,
+                                            "placeholder": "",
+                                            "return_format": "value"
+                                        },
+                                        {
+                                            "key": "field_5a467f485291d",
+                                            "label": "Url",
+                                            "name": "url",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "formatting": "html",
+                                            "maxlength": ""
+                                        }
+                                    ]
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "5a8d530140dbc": {
+                            "key": "5a8d530140dbc",
+                            "name": "footer_nav",
+                            "label": "Footer Nav Menu",
+                            "display": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c24d339a6f40",
+                                    "label": "Menu",
+                                    "name": "footer_menu--autofilled_options",
+                                    "type": "select",
+                                    "instructions": "Go to Appearance -> <a href=\"\/wp\/wp-admin\/nav-menus.php\" target=\"_blank\">Menus<\/a> to add or edit menus",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": [],
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        }
+                    },
+                    "button_label": "Choose Content",
+                    "min": 0,
+                    "max": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1679320461
+}

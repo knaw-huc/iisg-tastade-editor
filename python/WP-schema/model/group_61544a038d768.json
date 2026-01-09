@@ -1,0 +1,3905 @@
+{
+    "key": "group_61544a038d768",
+    "title": "Individual",
+    "fields": [
+        {
+            "key": "field_61ae4874e608c",
+            "label": "Identifiers",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61544a4d12051",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 10
+        },
+        {
+            "key": "field_61544a5a12052",
+            "label": "First Name",
+            "name": "firstname",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "22",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_627ccb448fa78",
+            "label": "Middle Name",
+            "name": "middlename",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "16",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61544a6612053",
+            "label": "Surname",
+            "name": "surname",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "22",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61544a7312054",
+            "label": "Maiden Name",
+            "name": "maidenname",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61544a7f12055",
+            "label": "Suffix",
+            "name": "suffix",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61544ac612057",
+            "label": "Aliases",
+            "name": "aliases",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61ae452678e5e",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add alias",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61ae452678e5e",
+                    "label": "Alias",
+                    "name": "alias",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_61544ac612057"
+                }
+            ]
+        },
+        {
+            "key": "field_61544a081204e",
+            "label": "Individual ID",
+            "name": "individualid",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Identifier from the Transatlantic Slave Trade voyages database, if applicable",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 36
+        },
+        {
+            "key": "field_6202448ac0565",
+            "label": "Primary Cohort",
+            "name": "cohort",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Liverpool": "Liverpool",
+                "Bristol": "Bristol",
+                "London": "London",
+                "Minor Ports": "Minor Ports",
+                "Corporate": "Corporate",
+                "Unknown": "Unknown"
+            },
+            "default_value": "Unknown",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_62456d6f486fb",
+            "label": "Other cohorts",
+            "name": "other_cohorts",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Liverpool": "Liverpool",
+                "Bristol": "Bristol",
+                "London": "London",
+                "Minor Ports": "Minor Ports",
+                "Corporate": "Corporate",
+                "Unknown": "Unknown"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_61ae49ff64f8b",
+            "label": "Personal",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61544ad112058",
+            "label": "Sex",
+            "name": "sex",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "If unknown, please leave blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "male": "Male",
+                "female": "Female",
+                "maybe-male": "Male?",
+                "maybe-female": "Female?"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61af52df7cb2f",
+            "label": "Religion",
+            "name": "religion",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "If unknown, please leave blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Church of England": "Church of England",
+                "Church of Scotland": "Church of Scotland",
+                "Church of Ireland": "Church of Ireland",
+                "Roman Catholic": "Roman Catholic",
+                "Jewish": "Jewish",
+                "Anglican – Jewish convert": "Anglican – Jewish convert",
+                "Quaker": "Quaker",
+                "Nonconformist or ‘Dissenter’": "Nonconformist or ‘Dissenter’",
+                "Nonconformist - Congregationalist": "Nonconformist - Congregationalist",
+                "Nonconformist - Baptist": "Nonconformist - Baptist",
+                "Nonconformist - Methodist": "Nonconformist - Methodist",
+                "Nonconformist – Moravian": "Nonconformist – Moravian",
+                "Nonconformist - Unitarian": "Nonconformist - Unitarian",
+                "Nonconformist - Presbyterian": "Nonconformist - Presbyterian",
+                "Huguenot": "Huguenot"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61af69084067d",
+            "label": "Social background",
+            "name": "social_background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "If unknown, please leave blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Labourer": "Labourer",
+                "Tenant farmer": "Tenant farmer",
+                "Yeoman farmer": "Yeoman farmer",
+                "Craft": "Craft",
+                "Trade": "Trade",
+                "Professional": "Professional",
+                "Gentry": "Gentry",
+                "Nobility": "Nobility"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61af697c4067e",
+            "label": "Social outcome",
+            "name": "social_outcome",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "If unknown, please leave blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Labourer": "Labourer",
+                "Tenant farmer": "Tenant farmer",
+                "Yeoman farmer": "Yeoman farmer",
+                "Craft": "Craft",
+                "Trade": "Trade",
+                "Professional": "Professional",
+                "Gentry": "Gentry",
+                "Nobility": "Nobility"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_62458ee0a72ea",
+            "label": "Political Affiliation",
+            "name": "political_affiliation",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "If unknown, please leave blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Parliamentary": "Parliamentary",
+                "Royalist": "Royalist",
+                "Whig": "Whig",
+                "Tory": "Tory",
+                "Shifting": "Shifting",
+                "Other": "Other"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_627cf33e38573",
+            "label": "Occupation of husband",
+            "name": "occupation_of_husband",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61544ad112058",
+                        "operator": "==",
+                        "value": "female"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_627cf37338574",
+            "label": "Occupation of father",
+            "name": "occupation_of_father",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61544ad112058",
+                        "operator": "==",
+                        "value": "female"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6155e4af8bc2a",
+            "label": "Family Members",
+            "name": "family_members",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6155e4cd8bc2b",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add a new relation",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6155e4cd8bc2b",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_6155e4af8bc2a"
+                },
+                {
+                    "key": "field_6155e4e98bc2c",
+                    "label": "Relationship",
+                    "name": "relationship",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "12",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Spouse": "Spouse",
+                        "Mother": "Mother",
+                        "Father": "Father",
+                        "Daughter": "Daughter",
+                        "Son": "Son",
+                        "Uncle": "Uncle",
+                        "Aunt": "Aunt",
+                        "Brother": "Brother",
+                        "Sister": "Sister",
+                        "Mother-in-law": "Mother-in-law",
+                        "Father-in-law": "Father-in-law",
+                        "Brother-in-law": "Brother-in-law",
+                        "Sister-in-law": "Sister-in-law",
+                        "Son-in-law": "Son-in-law",
+                        "Daughter-in-law": "Daughter-in-law",
+                        "Niece": "Niece",
+                        "Nephew": "Nephew",
+                        "Cousin": "Cousin",
+                        "Grandmother": "Grandmother",
+                        "Grandfather": "Grandfather",
+                        "Granddaughter": "Granddaughter",
+                        "Grandson": "Grandson",
+                        "Testator-Legatee": "Testator-Legatee",
+                        "Trustee": "Trustee",
+                        "Executor": "Executor",
+                        "Business Partner": "Business Partner"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6155e4af8bc2a"
+                },
+                {
+                    "key": "field_6155e53e8bc2d",
+                    "label": "Marriage Date",
+                    "name": "marriage_date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6155e4e98bc2c",
+                                "operator": "==",
+                                "value": "Spouse"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "18",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_6155e4af8bc2a"
+                },
+                {
+                    "key": "field_6155e5568bc2e",
+                    "label": "Individual",
+                    "name": "individual",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "Only if the family member exists as a wordpress individual. You should also create the inverse relationship back to this individual.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "individual"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_6155e4af8bc2a"
+                },
+                {
+                    "key": "field_6155e673d4489",
+                    "label": "Relationship Notes",
+                    "name": "relationship_notes",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "",
+                    "parent_repeater": "field_6155e4af8bc2a"
+                }
+            ]
+        },
+        {
+            "key": "field_61af5198e6847",
+            "label": "Political offices held",
+            "name": "political_offices",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6155e7586e7b4",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add office",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6155e7586e7b4",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Court": "Court",
+                        "Local": "Local",
+                        "National": "National",
+                        "Parliament": "Parliament",
+                        "Government": "Government",
+                        "Other": "Other"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_61af5198e6847"
+                },
+                {
+                    "key": "field_6155e78c6e7b5",
+                    "label": "Notes",
+                    "name": "notes",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6155e7586e7b4",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_61af5198e6847"
+                }
+            ]
+        },
+        {
+            "key": "field_61b0b1c4a1da2",
+            "label": "Bankruptcies",
+            "name": "bankruptcies",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add dates and details of any bankruptcies",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61b0b22aa1da4",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add bankruptcy",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61b0b22aa1da4",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_61b0b1c4a1da2"
+                },
+                {
+                    "key": "field_61b0b236a1da5",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_61b0b1c4a1da2"
+                }
+            ]
+        },
+        {
+            "key": "field_624573a265470",
+            "label": "Geographic Experience",
+            "name": "geographic_experience",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add details of any experience with Africa, the Americas, Asia or Europe",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_624574b765471",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add continent",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_624574b765471",
+                    "label": "Continent",
+                    "name": "continent",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Africa": "Africa",
+                        "Americas": "Americas",
+                        "Asia": "Asia",
+                        "Europe": "Europe"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_624573a265470"
+                },
+                {
+                    "key": "field_624574de65472",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_624573a265470"
+                }
+            ]
+        },
+        {
+            "key": "field_624576a880c97",
+            "label": "Internal Migrant?",
+            "name": "internal_migrant",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615d81023ad33",
+                    "label": "",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "Yes",
+                        "0": "No",
+                        "?": "Don't know"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "?",
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_624576d280c98",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d81023ad33",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_624577418a014",
+            "label": "Foreign born?",
+            "name": "foreign_born",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615d810d3ad34",
+                    "label": "",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "Yes",
+                        "0": "No",
+                        "?": "Don't know"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "?",
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_624577418a016",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d810d3ad34",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_624577718a017",
+            "label": "Supplier to Slave Trade Voyages?",
+            "name": "supplier_to_slave_trade_voyages",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615d81243ad36",
+                    "label": "",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "Yes",
+                        "0": "No",
+                        "?": "Don't know"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "?",
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_624577718a019",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d81243ad36",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_624577e97b7ea",
+            "label": "Creditor to Slave Trade Voyages?",
+            "name": "creditor_to_slave_trade_voyages",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615d81413ad37",
+                    "label": "",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "Yes",
+                        "0": "No",
+                        "?": "Don't know"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "?",
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_624577e97b7ec",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d81413ad37",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_624578147b7ed",
+            "label": "Philanthropy?",
+            "name": "philanthropy",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615d81503ad38",
+                    "label": "",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "Yes",
+                        "0": "No",
+                        "?": "Don't know"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "?",
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_624578147b7ef",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d81503ad38",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_624578447b7f0",
+            "label": "Plantation owner?",
+            "name": "plantation_owner",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61b0b7921272e",
+                    "label": "",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "Yes",
+                        "0": "No",
+                        "?": "Don't know"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "?",
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_61b0b7b51272f",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Link to Legacies of British Slavery",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61b0b7921272e",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_624578447b7f2",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61b0b7921272e",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_624578707b7f3",
+            "label": "Corporate Investor?",
+            "name": "corporate_investor",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615d81153ad35",
+                    "label": "Investments",
+                    "name": "investments",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Neither": "Neither",
+                        "Corporate": "Corporate",
+                        "Non-corporate": "Non-corporate",
+                        "Both": "Both"
+                    },
+                    "default_value": "Neither",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_620243fcb3176",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d81153ad35",
+                                "operator": "!=",
+                                "value": "Neither"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Company of Royal Adventurers": "Company of Royal Adventurers",
+                        "Royal African Company": "Royal African Company",
+                        "South Sea Company": "South Sea Company"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice"
+                },
+                {
+                    "key": "field_624578707b7f5",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615d81153ad35",
+                                "operator": "!=",
+                                "value": "Neither"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62458c1eac332",
+            "label": "Was slave trading their predominant commercial activity?",
+            "name": "predominant_slave_trading",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Yes",
+                "0": "No",
+                "?": "Don't know"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "?",
+            "layout": "horizontal",
+            "return_format": "array",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_628f6b533ca00",
+            "label": "Slaveholder?",
+            "name": "slaveholder",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Yes",
+                "0": "No",
+                "?": "Don't know"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "?",
+            "layout": "horizontal",
+            "return_format": "array",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_628f6b613ca01",
+            "label": "Lobbyist for the slave trade?",
+            "name": "lobbyist_for_the_slave_trade",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Yes",
+                "0": "No",
+                "?": "Don't know"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "?",
+            "layout": "horizontal",
+            "return_format": "array",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61ae48abe608e",
+            "label": "Dates & Locations",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61af39896773e",
+            "label": "Residencies",
+            "name": "residencies",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af399b6773f",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add residency",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af399b6773f",
+                    "label": "Address",
+                    "name": "address",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_61af39896773e"
+                },
+                {
+                    "key": "field_61af39a867740",
+                    "label": "Town\/city",
+                    "name": "town_city_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af323d9b615"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_61af39896773e"
+                }
+            ]
+        },
+        {
+            "key": "field_61ae47368fe8b",
+            "label": "Birth",
+            "name": "birth",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61544ae012059",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                },
+                {
+                    "key": "field_61b0b118c4ce6",
+                    "label": "Address",
+                    "name": "address",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_61b0b11ac4ce7",
+                    "label": "Town\/city",
+                    "name": "town_city_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af323d9b615"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        },
+        {
+            "key": "field_61b23575bc5ee",
+            "label": "Death",
+            "name": "death",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61544b241205b",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                },
+                {
+                    "key": "field_61b23575bc5ef",
+                    "label": "Address",
+                    "name": "address",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_61b23575bc5f0",
+                    "label": "Town\/city",
+                    "name": "town_city_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af323d9b615"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        },
+        {
+            "key": "field_61b2358dbc5f1",
+            "label": "Burial",
+            "name": "burial",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61544b9a12061",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                },
+                {
+                    "key": "field_61b2358dbc5f2",
+                    "label": "Address",
+                    "name": "address",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_61b2358dbc5f3",
+                    "label": "Town\/city",
+                    "name": "town_city_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af323d9b615"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_62458d1f98001",
+                    "label": "Memorial details",
+                    "name": "memorial_details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62459091df64f",
+            "label": "Christening",
+            "name": "christening",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61544b5d1205e",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                }
+            ]
+        },
+        {
+            "key": "field_624590aedf651",
+            "label": "Knighthood",
+            "name": "knighthood",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61544a8f12056",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                }
+            ]
+        },
+        {
+            "key": "field_62458ffac8225",
+            "label": "Baronetcy",
+            "name": "baronetcy",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62458fe2c8224",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                }
+            ]
+        },
+        {
+            "key": "field_6245904cc8227",
+            "label": "Peerage",
+            "name": "peerage",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6245904cc8228",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                }
+            ]
+        },
+        {
+            "key": "field_61af58523153a",
+            "label": "Education & Work",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61af50ab57e19",
+            "label": "Occupation",
+            "name": "occupation",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "If unknown, please leave blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": false,
+            "return_format": "label",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_627cf041738b3",
+            "label": "Occupation details",
+            "name": "occupation_details",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61af50ab57e19",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6202413b033f0",
+            "label": "Merchant details",
+            "name": "merchant",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61af50ab57e19",
+                        "operator": "==contains",
+                        "value": "Merchant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_6202415e033f1",
+                    "label": "Region",
+                    "name": "region",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_6202416e033f2",
+                    "label": "Trade",
+                    "name": "trade",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61b0d4885c76e",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61af58843153b",
+            "label": "Schools",
+            "name": "schools",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af589d3153c",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add school",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af589d3153c",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_61af58843153b"
+                }
+            ]
+        },
+        {
+            "key": "field_61af58d43153d",
+            "label": "Universities",
+            "name": "universities",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af589d3153c",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add university",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af58d43153e",
+                    "label": "University",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Aberdeen": "Aberdeen",
+                        "Cambridge": "Cambridge",
+                        "Edinburgh": "Edinburgh",
+                        "Glasgow": "Glasgow",
+                        "Oxford": "Oxford",
+                        "St Andrews": "St Andrews"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_61af58d43153d"
+                },
+                {
+                    "key": "field_620241b963ac8",
+                    "label": "College",
+                    "name": "college",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_61af58d43153d"
+                }
+            ]
+        },
+        {
+            "key": "field_61af59083153f",
+            "label": "Inns of Court",
+            "name": "inns_of_court",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af590831540",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add inn of court",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af590831540",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Inner Temple": "Inner Temple",
+                        "Middle Temple": "Middle Temple",
+                        "Lincoln’s": "Lincoln’s",
+                        "Gray’s": "Gray’s"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_61af59083153f"
+                }
+            ]
+        },
+        {
+            "key": "field_61af599531544",
+            "label": "Military training",
+            "name": "military_training",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af599531545",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add military training",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af599531545",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_61af599531544"
+                }
+            ]
+        },
+        {
+            "key": "field_61af6a3be1e35",
+            "label": "Imperial positions",
+            "name": "imperial_positions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af6a3be1e36",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add position",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af6a3be1e36",
+                    "label": "Role",
+                    "name": "role",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_61af6a3be1e35"
+                },
+                {
+                    "key": "field_61af6a51e1e37",
+                    "label": "Region",
+                    "name": "region_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61ae2a1b730b7"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_61af6a3be1e35"
+                }
+            ]
+        },
+        {
+            "key": "field_61af592c31541",
+            "label": "Apprenticeships",
+            "name": "apprenticeships",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af592c31542",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add apprenticeship",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af592c31542",
+                    "label": "Master",
+                    "name": "master",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_61af592c31541"
+                },
+                {
+                    "key": "field_61af594631543",
+                    "label": "Livery",
+                    "name": "livery_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af5ea745f60"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_61af592c31541"
+                },
+                {
+                    "key": "field_62827bcf6c256",
+                    "label": "Start date",
+                    "name": "start_date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_61af592c31541"
+                }
+            ]
+        },
+        {
+            "key": "field_61af6adb4951a",
+            "label": "Livery company affiliations",
+            "name": "livery_company_affiliations",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_61af592c31542",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add affiliation",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_61af6adb4951c",
+                    "label": "Livery",
+                    "name": "livery_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af5ea745f60"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_61af6adb4951a"
+                },
+                {
+                    "key": "field_61af6adb4951b",
+                    "label": "Role",
+                    "name": "role",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Freeman": "Freeman",
+                        "Liveryman": "Liveryman",
+                        "Warden": "Warden",
+                        "Master": "Master",
+                        "Treasurer": "Treasurer",
+                        "Secretary": "Secretary"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_61af6adb4951a"
+                },
+                {
+                    "key": "field_61af6b3b4951d",
+                    "label": "Start date",
+                    "name": "start_date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_61af6adb4951a"
+                },
+                {
+                    "key": "field_61af6b4b4951e",
+                    "label": "End date",
+                    "name": "end_date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_61af6adb4951a"
+                }
+            ]
+        },
+        {
+            "key": "field_6202461099a87",
+            "label": "Other business activities",
+            "name": "other_business_activities",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6202469399a8c",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add activity",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6202469399a8c",
+                    "label": "Region",
+                    "name": "region_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61ae2a1b730b7"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_6202461099a87"
+                },
+                {
+                    "key": "field_620246da01310",
+                    "label": "Economic sector",
+                    "name": "economic_sector",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "banking": "Banking",
+                        "charity": "Charity",
+                        "commerce": "Commerce",
+                        "government": "Government contracts",
+                        "infrastructure": "Infrastructure",
+                        "insurance": "Insurance",
+                        "land": "Land",
+                        "manufacturing": "Manufacturing",
+                        "mining": "Mining",
+                        "privateering": "Privateering",
+                        "shipping": "Shipping",
+                        "servant": "Servant Trade",
+                        "tax_farmer": "Tax Farmer"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "array",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6202461099a87"
+                },
+                {
+                    "key": "field_627cf2838caca",
+                    "label": "Details",
+                    "name": "details",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_6202461099a87"
+                }
+            ]
+        },
+        {
+            "key": "field_61b0b8b41f537",
+            "label": "Legacies",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61b0b8de1f538",
+            "label": "Was slave trading investment profitable?",
+            "name": "was_slave_trading_investment_profitable",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Yes",
+                "0": "No",
+                "?": "Don't know"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "?",
+            "layout": "horizontal",
+            "return_format": "array",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61b36f405a012",
+            "label": "Will",
+            "name": "will",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61b36f555a013",
+                    "label": "Probate date",
+                    "name": "probate_date",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900
+                },
+                {
+                    "key": "field_61b36f905a014",
+                    "label": "Value of Total Personalty",
+                    "name": "value",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "£",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_628f8bcee842b",
+                    "label": "Value of Known Legacies (where material to total estate)",
+                    "name": "value_known_legacies",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "£",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_61b3711f5a016",
+                    "label": "Occupation",
+                    "name": "occupation",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61b371025a015",
+                    "label": "Town\/city",
+                    "name": "town_city_clone",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61af323d9b615"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_61b37162122e5",
+                    "label": "Courts",
+                    "name": "courts",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "One per line",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_61b3712a5a017",
+                    "label": "Notes",
+                    "name": "notes",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61b0b8ff1f539",
+            "label": "Legacies",
+            "name": "legacies",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_61b0b907dbe36": {
+                    "key": "layout_61b0b907dbe36",
+                    "name": "cultural_accumulation",
+                    "label": "Cultural Accumulation",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64105e711cea8",
+                            "label": "Common fields",
+                            "name": "common_fields",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6410614abae33"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_61b0b95e1f53a",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Cultural": "Cultural",
+                                "Scientific": "Scientific",
+                                "Philanthropic": "Philanthropic",
+                                "Educational": "Educational",
+                                "Religious": "Religious",
+                                "Political": "Political"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_61b0baeaa2747",
+                            "label": "Scale",
+                            "name": "scale",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62024934e3b09",
+                            "label": "Town\/city",
+                            "name": "town_city_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_61af323d9b615"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_61b0b98c1f53b": {
+                    "key": "layout_61b0b98c1f53b",
+                    "name": "physical_imprints",
+                    "label": "Physical imprints",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64105e921cea9",
+                            "label": "Common fields",
+                            "name": "common_fields",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6410614abae33"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_61b0b9b41f53c",
+                            "label": "Building category",
+                            "name": "building_category",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Rural": "Rural",
+                                "Urban": "Urban"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_61b0bb42a274e",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Built": "Built",
+                                "Modified": "Modified"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_61b0baf6a2748",
+                            "label": "Scale",
+                            "name": "scale",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61b0bb67a2750",
+                            "label": "Location",
+                            "name": "location",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_61af323d9b615"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_61b0b9ce1f53d": {
+                    "key": "layout_61b0b9ce1f53d",
+                    "name": "commerce",
+                    "label": "Commerce",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64105e9f1ceaa",
+                            "label": "Common fields",
+                            "name": "common_fields",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6410614abae33"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_61b0b9d91f53e",
+                            "label": "Industry",
+                            "name": "industry",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Banking": "Banking",
+                                "Trade": "Trade",
+                                "Mining": "Mining",
+                                "Manufacturing": "Manufacturing",
+                                "Industry": "Industry",
+                                "Insurance": "Insurance",
+                                "Shipping": "Shipping",
+                                "Infrastructure": "Infrastructure",
+                                "Government contracting": "Government contracting",
+                                "Government securities": "Government securities",
+                                "Colonies": "Colonies"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_61b0bb9ba2751",
+                            "label": "Location",
+                            "name": "location",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_61ae2a1b730b7"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_61b0b9fd1f53f": {
+                    "key": "layout_61b0b9fd1f53f",
+                    "name": "land",
+                    "label": "Land",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64105ec01ceab",
+                            "label": "Common fields",
+                            "name": "common_fields",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6410614abae33"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_61b0ba121f542": {
+                    "key": "layout_61b0ba121f542",
+                    "name": "back_into_slave_trading",
+                    "label": "Back into slave economy",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64105ece1ceac",
+                            "label": "Common fields",
+                            "name": "common_fields",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6410614abae33"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_6300b5d692b5c",
+                            "label": "Economy Type",
+                            "name": "economy_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "slave_trading": "Slave-trading",
+                                "slave_ownership": "Slave-ownership",
+                                "industry": "Industry",
+                                "empire": "Empire"
+                            },
+                            "default_value": "slave_trading",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "label",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_61b0ba1f1f543",
+                            "label": "Voyage link",
+                            "name": "voyage_link",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "80",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_628f8c75ecc31",
+                            "label": "Shares in slave trading corporation",
+                            "name": "shares",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_628f8cbcecc32",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Shares",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_628f8cbcecc32",
+                                    "label": "Company",
+                                    "name": "company",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Company of Royal Adventurers": "Company of Royal Adventurers",
+                                        "Royal African Company": "Royal African Company",
+                                        "South Sea Company": "South Sea Company"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 1,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_628f8c75ecc31"
+                                },
+                                {
+                                    "key": "field_628f8d04ecc33",
+                                    "label": "Value",
+                                    "name": "value",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "£",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "parent_repeater": "field_628f8c75ecc31"
+                                },
+                                {
+                                    "key": "field_628f8d19ecc34",
+                                    "label": "Recipient",
+                                    "name": "recipient",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "individual"
+                                    ],
+                                    "taxonomy": "",
+                                    "allow_null": 1,
+                                    "multiple": 0,
+                                    "return_format": "object",
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "parent_repeater": "field_628f8c75ecc31"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_624591706be32": {
+                    "key": "layout_624591706be32",
+                    "name": "philanthropy",
+                    "label": "Philanthropy",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64105edf1cead",
+                            "label": "Common fields",
+                            "name": "common_fields",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6410614abae33"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_6245918f6be33",
+                            "label": "Type",
+                            "name": "type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Cultural": "Cultural",
+                                "Educational": "Educational",
+                                "Medical": "Medical",
+                                "Scientific": "Scientific",
+                                "Social": "Social"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6245921c6be38",
+                            "label": "Scale",
+                            "name": "scale",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_624592066be37",
+                            "label": "Town\/city",
+                            "name": "town_city_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_61af323d9b615"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Legacy",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_627cc5ec8fa75",
+            "label": "Investments",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_627cc60f8fa76",
+            "label": "Investments",
+            "name": "investments",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_627cc6358fa77",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add investment",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_627cc6358fa77",
+                    "label": "Company",
+                    "name": "company",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Company of Royal Adventurers": "Company of Royal Adventurers",
+                        "Royal African Company": "Royal African Company",
+                        "South Sea Company": "South Sea Company"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_615d6fab21e1d",
+                    "label": "Source of Investment Funds",
+                    "name": "source_of_investment_funds",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_615d6fb421e1e",
+                    "label": "Size of Investment",
+                    "name": "size_of_investment",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "value at the time",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "GBP",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_619e656d726e6",
+                    "label": "Date of Purchase",
+                    "name": "date_of_purchase",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_619e65a2f879b",
+                    "label": "Date of Sale",
+                    "name": "date_of_sale",
+                    "aria-label": "",
+                    "type": "alt_date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min_year": 1500,
+                    "max_year": 1900,
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_615d705c21e1f",
+                    "label": "Profitable",
+                    "name": "profitable",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_615d706d21e20",
+                    "label": "Destination for Profits",
+                    "name": "destination_for_profits",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_61ae30145b57a",
+                    "label": "Investment Location",
+                    "name": "location",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_61ae2a1b730b7"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 1,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_627cc60f8fa76"
+                },
+                {
+                    "key": "field_627cda05efa78",
+                    "label": "Data source",
+                    "name": "data_source",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "",
+                    "parent_repeater": "field_627cc60f8fa76"
+                }
+            ]
+        },
+        {
+            "key": "field_61ae4a4764f8d",
+            "label": "Summary",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_620244f99ad13",
+            "label": "Status",
+            "name": "completion_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "In Progress": "In Progress",
+                "Complete": "Complete"
+            },
+            "default_value": "In Progress",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61544c1112067",
+            "label": "General Notes",
+            "name": "notes",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Add any notes about the data here. Biographical information should be entered in the main body of the post, above",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "individual"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1715270416
+}

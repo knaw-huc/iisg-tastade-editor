@@ -1,0 +1,72 @@
+{
+    "key": "group_5a8d573ca174a",
+    "title": "Site Images",
+    "fields": [
+        {
+            "key": "field_5a8acb087b418",
+            "label": "Placeholder Image",
+            "name": "placeholder_image",
+            "type": "image",
+            "instructions": "Used as the thumbnail image for posts that don't have a featured image",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a96c304f0f83",
+            "label": "Default Share Image",
+            "name": "default_share_image",
+            "type": "image",
+            "instructions": "Used as the share image on Facebook and Twitter for posts that don't have a featured image",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1585903375
+}

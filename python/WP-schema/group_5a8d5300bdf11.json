@@ -1,0 +1,69 @@
+{
+    "key": "group_5a8d5300bdf11",
+    "title": "SEO & Social Metadata",
+    "fields": [
+        {
+            "key": "field_598dcf2757fff",
+            "label": "Title",
+            "name": "page_title",
+            "type": "text",
+            "instructions": "Alternative title for search engines, social media, and browser tabs. The main title will be used if left blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_598dcf4658000",
+            "label": "Description",
+            "name": "page_description",
+            "type": "textarea",
+            "instructions": "Description for search results and social media sharing. An excerpt of the main content will be used if left blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1638539750
+}

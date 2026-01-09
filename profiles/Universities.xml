@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComponentSpec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true"
+    CMDVersion="1.2" CMDOriginalVersion="1.2"
+    xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+    <Header>
+        <ID>clarin.eu:cr1:p_Universities</ID>
+        <Name>Universities</Name>
+        <Description/>
+        <Status>development</Status>
+    </Header>
+    <Component name="Universities" CardinalityMin="1" CardinalityMax="1">
+        <Element name="name">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>Aberdeen</item>
+                        <item>Cambridge</item>
+                        <item>Edinburgh</item>
+                        <item>Glasgow</item>
+                        <item>Oxford</item>
+                        <item>St Andrews</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Element name="college" ValueScheme="string"/>
+    </Component>
+</ComponentSpec>
