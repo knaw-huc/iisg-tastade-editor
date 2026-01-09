@@ -26,14 +26,16 @@
                         <xsl:for-each
                             select="current-group()[normalize-space(c[@n = 'veld']) != '']">
                             <Element name="{normalize-space(c[@n='veld'])}">
+                                <xsl:variable name="type_field"
+                                    select="normalize-space(c[@n = 'type'])"/>
                                 <xsl:choose>
-                                    <xsl:when test="normalize-space(c[@n = 'type']) = 'text'">
+                                    <xsl:when test="$type_field = 'text'">
                                         <xsl:attribute name="ValueScheme" select="'string'"/>
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(c[@n = 'type']) = 'number'">
+                                    <xsl:when test="$type_field = 'number'">
                                         <xsl:attribute name="ValueScheme" select="'int'"/>
                                     </xsl:when>
-                                    <xsl:when test="normalize-space(c[@n = 'type']) = 'select'">
+                                    <xsl:when test="$type_field = 'select' or $type_field = 'radio' or $type_field = 'checkbox'">
                                         <ValueScheme>
                                             <Vocabulary>
                                                 <enumeration>
