@@ -379,7 +379,7 @@
             </Element>
         </Component>
         <Component name="General_Notes">
-            <Element name="notes"/>
+            <Element name="notes" ValueScheme="string"/>
         </Component>
         <Component name="Internal_Migrant">
             <Element name="enabled">
