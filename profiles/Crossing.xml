@@ -9,11 +9,11 @@
         <Status>development</Status>
     </Header>
     <Component name="Crossing" CardinalityMin="1" CardinalityMax="1">
-        <Component name="Voyage_ID">
-            <Element name="voyageid" ValueScheme="string"/>
-        </Component>
-        <Component name="Corporate"/>
+        <Element name="voyageid" ValueScheme="string"/>
+        <Element name="corporate" ValueScheme="boolean"/>
+        <Element name="outcome" ValueScheme="string"/>
         <Component name="Vessel">
+            <Element name="vessel" ValueScheme="string"/>
             <Element name="name" ValueScheme="string"/>
             <Element name="flags">
                 <ValueScheme>
@@ -35,18 +35,19 @@
             <Element name="tonnage" ValueScheme="int"/>
         </Component>
         <Component name="Journey">
+            <Element name="journey" ValueScheme="string"/>
             <Element name="startyear" ValueScheme="int"/>
             <Element name="departure_location" ValueScheme="string"/>
             <Element name="endyear" ValueScheme="int"/>
             <Element name="arrival_location" ValueScheme="string"/>
         </Component>
         <Component name="Enslaved_people">
+            <Element name="enslaved_people" ValueScheme="string"/>
             <Element name="principal_purchase_location" ValueScheme="string"/>
             <Element name="principal_landing_location" ValueScheme="string"/>
             <Element name="embarked" ValueScheme="int"/>
             <Element name="disembarked" ValueScheme="int"/>
             <Element name="deaths" ValueScheme="int"/>
         </Component>
-        <Component name="Outcome"/>
     </Component>
 </ComponentSpec>

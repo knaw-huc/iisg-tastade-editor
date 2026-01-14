@@ -9,13 +9,50 @@
         <Status>development</Status>
     </Header>
     <Component name="Organisation" CardinalityMin="1" CardinalityMax="1">
-        <Component name="Economic_sector"/>
-        <Component name="Region">
-            <Element name="region_clone" ValueScheme="string"/>
-        </Component>
-        <Component name="Category"/>
-        <Component name="Description_of_Activities"/>
+        <Element name="economic_sector">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>banking</item>
+                        <item>charity</item>
+                        <item>commerce</item>
+                        <item>government</item>
+                        <item>infrastructure</item>
+                        <item>insurance</item>
+                        <item>land</item>
+                        <item>manufacturing</item>
+                        <item>mining</item>
+                        <item>shipping</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Element name="region_clone" ValueScheme="string"/>
+        <Element name="category">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>Business</item>
+                        <item>Charity</item>
+                        <item>Educational</item>
+                        <item>Hospitals</item>
+                        <item>Imperial</item>
+                        <item>Legal</item>
+                        <item>Livery</item>
+                        <item>Military</item>
+                        <item>Parish</item>
+                        <item>Political</item>
+                        <item>Religious</item>
+                        <item>Scientific</item>
+                        <item>Social</item>
+                        <item>State</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Element name="description_of_activities" ValueScheme="string"/>
         <Component name="Slave_trading">
+            <Element name="slave_trading" ValueScheme="string"/>
             <Element name="is_associated">
                 <ValueScheme>
                     <Vocabulary>
