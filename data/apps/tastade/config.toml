@@ -1,0 +1,36 @@
+
+[app]
+name="tastade"
+title="Tastade Editor"
+def_prof="clarin.eu:cr1:p_1766041970062"
+cmdi_version="1.2"
+
+[app.access]
+#users="./htp.test" # location of the htpassword file, i.e. the "users" and "owner"
+read="any" # or "users" or "owner"
+write="any" # or "users" or "owner"
+
+[app.prof.individual]
+prof="clarin.eu:cr1:p_1766041970062"
+title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+
+[app.prof.individual.list]
+        
+[app.prof.individual.list.first]
+xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+label="First"
+sort="true"# or "false"
+filter="true"# or "'select'"
+
+[app.prof.organisation]
+prof="clarin.eu:cr1:p_1766041970063"
+title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+
+[app.prof.organisation.list]
+        
+[app.prof.organisation.list.first]
+xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+label="First"
+sort="true"# or "false"
+filter="true"# or "'select'"
+                

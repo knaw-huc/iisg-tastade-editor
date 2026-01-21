@@ -1,0 +1,18 @@
+
+services:
+  sd-editor:
+    image: ghcr.io/knaw-huc/service-huc-editor:2.0-rc9
+    environment:
+      - BASE_URL=http://localhost:1210
+      #- CDN_URL=https://alpha-cmdicdn.sd.di.huc.knaw.nl
+      - CDN_URL=http://localhost:1310/
+    volumes:
+      - ./data:/home/huc/huc-editor-service/data
+    networks:
+      - sd-editor
+    ports:
+      - '1210:1210'
+
+networks:
+  sd-editor:
+    external: false
