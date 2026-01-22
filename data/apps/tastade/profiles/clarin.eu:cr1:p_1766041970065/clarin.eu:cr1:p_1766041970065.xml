@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1766041970065</ID>
+        <Name>Crossing</Name>
+        <Description>main entity</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="Crossing" CardinalityMin="1" CardinalityMax="1">
+        <Element name="voyageid" ValueScheme="string"/>
+        <Element name="corporate" ValueScheme="boolean"/>
+        <Element name="outcome" ValueScheme="string"/>
+        <Component name="Vessel">
+            <Element name="vessel" ValueScheme="string"/>
+            <Element name="name" ValueScheme="string"/>
+            <Element name="flags">
+                <ValueScheme>
+                    <Vocabulary>
+                        <enumeration>
+                            <item>denmark-baltic</item>
+                            <item>france</item>
+                            <item>gb</item>
+                            <item>netherlands</item>
+                            <item>portugal-brazil</item>
+                            <item>spain-uruguay</item>
+                            <item>sweden</item>
+                            <item>usa</item>
+                            <item>other</item>
+                        </enumeration>
+                    </Vocabulary>
+                </ValueScheme>
+            </Element>
+            <Element name="tonnage" ValueScheme="int"/>
+        </Component>
+        <Component name="Journey">
+            <Element name="journey" ValueScheme="string"/>
+            <Element name="startyear" ValueScheme="int"/>
+            <Element name="departure_location" ValueScheme="string"/>
+            <Element name="endyear" ValueScheme="int"/>
+            <Element name="arrival_location" ValueScheme="string"/>
+        </Component>
+        <Component name="Enslaved_people">
+            <Element name="enslaved_people" ValueScheme="string"/>
+            <Element name="principal_purchase_location" ValueScheme="string"/>
+            <Element name="principal_landing_location" ValueScheme="string"/>
+            <Element name="embarked" ValueScheme="int"/>
+            <Element name="disembarked" ValueScheme="int"/>
+            <Element name="deaths" ValueScheme="int"/>
+        </Component>
+    </Component>
+</ComponentSpec>

@@ -33,4 +33,28 @@ xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(te
 label="First"
 sort="true"# or "false"
 filter="true"# or "'select'"
-                
+
+[app.prof.place]
+prof="clarin.eu:cr1:p_1766041970064"
+title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+
+[app.prof.place.list]
+        
+[app.prof.place.list.first]
+xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+label="First"
+sort="true"# or "false"
+filter="true"# or "'select'"
+
+[app.prof.crossing]
+prof="clarin.eu:cr1:p_1766041970065"
+title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+
+[app.prof.crossing.list]
+        
+[app.prof.crossing.list.first]
+xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+label="First"
+sort="true"# or "false"
+filter="true"# or "'select'"
+

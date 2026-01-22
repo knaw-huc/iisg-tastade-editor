@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1766041970064</ID>
+        <Name>Place</Name>
+        <Description>main entity</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="Place" CardinalityMin="1" CardinalityMax="1">
+        <Element name="town_of_place" ValueScheme="int"/>
+        <Element name="town_city" ValueScheme="string"/>
+        <Element name="county">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>Aberdeenshire</item>
+                        <item>Angus</item>
+                        <item>Argyll</item>
+                        <item>Ayrshire</item>
+                        <item>Banffshire</item>
+                        <item>Bedfordshire</item>
+                        <item>Berkshire</item>
+                        <item>Berwickshire</item>
+                        <item>Brecknockshire</item>
+                        <item>Buckinghamshire</item>
+                        <item>Buteshire</item>
+                        <item>Caernarfonshire</item>
+                        <item>Caithness</item>
+                        <item>Cambridgeshire</item>
+                        <item>Cardiganshire</item>
+                        <item>Carmarthenshire</item>
+                        <item>Cheshire</item>
+                        <item>Clackmannanshire</item>
+                        <item>Cornwall</item>
+                        <item>Cumberland</item>
+                        <item>Derbyshire</item>
+                        <item>Devon</item>
+                        <item>Dorset</item>
+                        <item>Dumfriesshire</item>
+                        <item>Dunbartonshire</item>
+                        <item>Durham</item>
+                        <item>East Lothian</item>
+                        <item>Essex</item>
+                        <item>Fife</item>
+                        <item>Flintshire</item>
+                        <item>Forfarshire</item>
+                        <item>Galloway</item>
+                        <item>Glamorgan</item>
+                        <item>Gloucestershire</item>
+                        <item>Haddingtonshire (East Lothian)</item>
+                        <item>Hampshire</item>
+                        <item>Herefordshire</item>
+                        <item>Hertfordshire</item>
+                        <item>Huntingdonshire</item>
+                        <item>Inner Hebrides, Argyll</item>
+                        <item>Inverness-shire</item>
+                        <item>Isle of Skye</item>
+                        <item>Jersey</item>
+                        <item>Kent</item>
+                        <item>Kincardineshire</item>
+                        <item>Kinross-shire</item>
+                        <item>Kirkcudbrightshire</item>
+                        <item>Lanarkshire</item>
+                        <item>Lancashire</item>
+                        <item>Leicestershire</item>
+                        <item>Lewis, Uist &amp; Skye</item>
+                        <item>Lincolnshire</item>
+                        <item>Linlithgowshire (West Lothian)</item>
+                        <item>London</item>
+                        <item>Middlesex</item>
+                        <item>Midlothian</item>
+                        <item>Monmouthshire</item>
+                        <item>Moray</item>
+                        <item>Nairnshire</item>
+                        <item>Norfolk</item>
+                        <item>North Yorkshire</item>
+                        <item>Northamptonshire</item>
+                        <item>Northumberland</item>
+                        <item>Nottinghamshire</item>
+                        <item>Orkney</item>
+                        <item>Oxfordshire</item>
+                        <item>Peeblesshire</item>
+                        <item>Pembrokeshire</item>
+                        <item>Perthshire</item>
+                        <item>Powys</item>
+                        <item>Renfrewshire</item>
+                        <item>Ross &amp; Cromarty</item>
+                        <item>Roxburghshire</item>
+                        <item>Rutland</item>
+                        <item>Selkirkshire</item>
+                        <item>Shropshire</item>
+                        <item>Somerset</item>
+                        <item>Staffordshire</item>
+                        <item>Stirlingshire</item>
+                        <item>Suffolk</item>
+                        <item>Surrey</item>
+                        <item>Sussex</item>
+                        <item>Sutherland</item>
+                        <item>Warwickshire</item>
+                        <item>West Lothian</item>
+                        <item>West Yorkshire</item>
+                        <item>Westmorland</item>
+                        <item>Wigtownshire</item>
+                        <item>Wiltshire</item>
+                        <item>Worcestershire</item>
+                        <item>Yorkshire</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Element name="region">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>Argyll &amp; Bute</item>
+                        <item>Central England</item>
+                        <item>Central Scotland</item>
+                        <item>Channel Islands</item>
+                        <item>Devon &amp; Cornwall</item>
+                        <item>East Anglia</item>
+                        <item>East Midlands</item>
+                        <item>Highlands &amp; Islands</item>
+                        <item>London</item>
+                        <item>Mid-Wales</item>
+                        <item>North Wales</item>
+                        <item>North-east Scotland</item>
+                        <item>North-west England</item>
+                        <item>Northern England</item>
+                        <item>Scotland</item>
+                        <item>South Wales</item>
+                        <item>South-east England</item>
+                        <item>South-west England</item>
+                        <item>Southern Scotland</item>
+                        <item>Wessex</item>
+                        <item>West Midlands</item>
+                        <item>Yorkshire</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Element name="country">
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item>England</item>
+                        <item>Scotland</item>
+                        <item>Wales</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+        <Element name="latitude" ValueScheme="string"/>
+        <Element name="longitude" ValueScheme="string"/>
+    </Component>
+</ComponentSpec>
