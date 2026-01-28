@@ -1,0 +1,60 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "https://example.com/individual.schema.json",
+    "title": "Individual",
+    "description": "Individual in Tastade",
+    "type": "object",
+    "properties": {
+        "nr": {
+            "description": "nr",
+            "type": "string"
+        },
+        "id": {
+            "description": "id",
+            "type": "string"
+        },
+        "when": {
+            "description": "when",
+            "type": "string"
+        },
+        "record": {
+            "type": "array",
+            "items": {
+                "type": [
+                    "object",
+                    "array"
+                ],
+                "properties": {
+                    "name": {"type": "string"},
+                    "type": {"type": "string"},
+                    "value": {
+                        "type": [
+                            "string",
+                            "array"
+                        ]
+                    },
+                    "attributes": {
+                        "type": "object",
+                        "properties": {
+                            "epoch": {"type": "string"}
+                        },
+                        "required": [
+                            "epoch"
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "type",
+                    "value"
+                ]
+            }
+        }
+    },
+    "required": [
+        "nr",
+        "id",
+        "when",
+        "record"
+    ]
+}
