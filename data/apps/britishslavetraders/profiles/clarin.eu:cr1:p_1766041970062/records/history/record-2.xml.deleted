@@ -1,0 +1,23 @@
+<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/1"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.clarin.eu/cmd/1 https://infra.clarin.eu/CMDI/1.x/xsd/cmd-envelop.xsd http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1766041970062 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.2/profiles/clarin.eu:cr1:p_1766041970062/xsd"
+         CMDVersion="1.2">
+   <cmd:Header>
+      <cmd:MdCreator>server</cmd:MdCreator>
+      <cmd:MdCreationDate xmlns:clariah="http://www.clariah.eu/" clariah:epoch="1769441422">2026-01-26</cmd:MdCreationDate>
+      <cmd:MdSelfLink>unl://2</cmd:MdSelfLink>
+      <cmd:MdProfile>clarin.eu:cr1:p_1766041970062</cmd:MdProfile>
+      <cmd:MdCollectionDisplayName/>
+   </cmd:Header>
+   <cmd:Resources>
+      <cmd:ResourceProxyList/>
+      <cmd:JournalFileProxyList/>
+      <cmd:ResourceRelationList/>
+      <cmd:IsPartOfList/>
+   </cmd:Resources>
+   <cmd:Components>
+      <cmdp:Individual xmlns:cmdp="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1766041970062">
+         <cmdp:title>test2</cmdp:title>
+      </cmdp:Individual>
+   </cmd:Components>
+</cmd:CMD>

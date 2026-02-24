@@ -1,0 +1,2024 @@
+{
+    "nr": "1",
+    "id": "clarin.eu:cr1:p_1766041970062",
+    "when": "1769443143",
+    "content": {
+        "type": "Component",
+        "level": 1,
+        "ID": "d1e14",
+        "attributes": {
+            "name": "Individual",
+            "label": "Individual",
+            "CardinalityMin": "1",
+            "CardinalityMax": "1",
+            "initialOrder": "1"
+        },
+        "content": [
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e16",
+                "attributes": {
+                    "name": "title",
+                    "label": "Title",
+                    "ValueScheme": "string",
+                    "initialOrder": "1"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e18",
+                "attributes": {
+                    "name": "firstname",
+                    "label": "Firstname",
+                    "ValueScheme": "string",
+                    "initialOrder": "2"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e20",
+                "attributes": {
+                    "name": "middlename",
+                    "label": "Middlename",
+                    "ValueScheme": "string",
+                    "initialOrder": "3"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e22",
+                "attributes": {
+                    "name": "surname",
+                    "label": "Surname",
+                    "ValueScheme": "string",
+                    "initialOrder": "4"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e24",
+                "attributes": {
+                    "name": "maidenname",
+                    "label": "Maidenname",
+                    "ValueScheme": "string",
+                    "initialOrder": "5"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e27",
+                "attributes": {
+                    "name": "suffix",
+                    "label": "Suffix",
+                    "ValueScheme": "string",
+                    "initialOrder": "6"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e29",
+                "attributes": {
+                    "name": "alias",
+                    "label": "Alias",
+                    "ValueScheme": "string",
+                    "initialOrder": "7"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e31",
+                "attributes": {
+                    "name": "individualid",
+                    "label": "Individualid",
+                    "ValueScheme": "string",
+                    "initialOrder": "8"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e33",
+                "attributes": {
+                    "name": "cohort",
+                    "label": "Cohort",
+                    "initialOrder": "9",
+                    "ValueScheme": [
+                        [
+                            {"value": "Liverpool"},
+                            {"value": "Bristol"},
+                            {"value": "London"},
+                            {"value": "Minor Ports"},
+                            {"value": "Corporate"},
+                            {"value": "Unknown"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e70",
+                "attributes": {
+                    "name": "other_cohorts",
+                    "label": "Other_cohorts",
+                    "initialOrder": "10",
+                    "ValueScheme": [
+                        [
+                            {"value": "Liverpool"},
+                            {"value": "Bristol"},
+                            {"value": "London"},
+                            {"value": "Minor Ports"},
+                            {"value": "Corporate"},
+                            {"value": "Unknown"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e107",
+                "attributes": {
+                    "name": "sex",
+                    "label": "Sex",
+                    "initialOrder": "11",
+                    "ValueScheme": [
+                        [
+                            {"value": "male"},
+                            {"value": "female"},
+                            {"value": "maybe-male"},
+                            {"value": "maybe-female"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e136",
+                "attributes": {
+                    "name": "religion",
+                    "label": "Religion",
+                    "initialOrder": "12",
+                    "ValueScheme": [
+                        [
+                            {"value": "Church of England"},
+                            {"value": "Church of Scotland"},
+                            {"value": "Church of Ireland"},
+                            {"value": "Roman Catholic"},
+                            {"value": "Jewish"},
+                            {"value": "Anglican \u2013 Jewish convert"},
+                            {"value": "Quaker"},
+                            {"value": "Nonconformist or \u2018Dissenter\u2019"},
+                            {"value": "Nonconformist - Congregationalist"},
+                            {"value": "Nonconformist - Baptist"},
+                            {"value": "Nonconformist - Methodist"},
+                            {"value": "Nonconformist \u2013 Moravian"},
+                            {"value": "Nonconformist - Unitarian"},
+                            {"value": "Nonconformist - Presbyterian"},
+                            {"value": "Huguenot"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e210",
+                "attributes": {
+                    "name": "social_background",
+                    "label": "Social_background",
+                    "initialOrder": "13",
+                    "ValueScheme": [
+                        [
+                            {"value": "Labourer"},
+                            {"value": "Tenant farmer"},
+                            {"value": "Yeoman farmer"},
+                            {"value": "Craft"},
+                            {"value": "Trade"},
+                            {"value": "Professional"},
+                            {"value": "Gentry"},
+                            {"value": "Nobility"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e255",
+                "attributes": {
+                    "name": "social_outcome",
+                    "label": "Social_outcome",
+                    "initialOrder": "14",
+                    "ValueScheme": [
+                        [
+                            {"value": "Labourer"},
+                            {"value": "Tenant farmer"},
+                            {"value": "Yeoman farmer"},
+                            {"value": "Craft"},
+                            {"value": "Trade"},
+                            {"value": "Professional"},
+                            {"value": "Gentry"},
+                            {"value": "Nobility"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e300",
+                "attributes": {
+                    "name": "political_affiliation",
+                    "label": "Political_affiliation",
+                    "initialOrder": "15",
+                    "ValueScheme": [
+                        [
+                            {"value": "Parliamentary"},
+                            {"value": "Royalist"},
+                            {"value": "Whig"},
+                            {"value": "Tory"},
+                            {"value": "Shifting"},
+                            {"value": "Other"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e337",
+                "attributes": {
+                    "name": "occupation_of_husband",
+                    "label": "Occupation_of_husband",
+                    "ValueScheme": "string",
+                    "initialOrder": "16"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e339",
+                "attributes": {
+                    "name": "occupation_of_father",
+                    "label": "Occupation_of_father",
+                    "ValueScheme": "string",
+                    "initialOrder": "17"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e342",
+                "attributes": {
+                    "name": "internal_migrant",
+                    "label": "Internal_migrant",
+                    "ValueScheme": "string",
+                    "initialOrder": "18"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e344",
+                "attributes": {
+                    "name": "foreign_born",
+                    "label": "Foreign_born",
+                    "ValueScheme": "string",
+                    "initialOrder": "19"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e346",
+                "attributes": {
+                    "name": "supplier_to_slave_trade_voyages",
+                    "label": "Supplier_to_slave_trade_voyages",
+                    "ValueScheme": "string",
+                    "initialOrder": "20"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e348",
+                "attributes": {
+                    "name": "creditor_to_slave_trade_voyages",
+                    "label": "Creditor_to_slave_trade_voyages",
+                    "ValueScheme": "string",
+                    "initialOrder": "21"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e350",
+                "attributes": {
+                    "name": "philanthropy",
+                    "label": "Philanthropy",
+                    "ValueScheme": "string",
+                    "initialOrder": "22"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e352",
+                "attributes": {
+                    "name": "plantation_owner",
+                    "label": "Plantation_owner",
+                    "ValueScheme": "string",
+                    "initialOrder": "23"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e355",
+                "attributes": {
+                    "name": "corporate_investor",
+                    "label": "Corporate_investor",
+                    "ValueScheme": "string",
+                    "initialOrder": "24"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e357",
+                "attributes": {
+                    "name": "predominant_slave_trading",
+                    "label": "Predominant_slave_trading",
+                    "initialOrder": "25",
+                    "ValueScheme": [
+                        [
+                            {"value": "1"},
+                            {"value": "0"},
+                            {"value": "?"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e381",
+                "attributes": {
+                    "name": "slaveholder",
+                    "label": "Slaveholder",
+                    "initialOrder": "26",
+                    "ValueScheme": [
+                        [
+                            {"value": "1"},
+                            {"value": "0"},
+                            {"value": "?"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e405",
+                "attributes": {
+                    "name": "lobbyist_for_the_slave_trade",
+                    "label": "Lobbyist_for_the_slave_trade",
+                    "initialOrder": "27",
+                    "ValueScheme": [
+                        [
+                            {"value": "1"},
+                            {"value": "0"},
+                            {"value": "?"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e429",
+                "attributes": {
+                    "name": "occupation",
+                    "label": "Occupation",
+                    "ValueScheme": "string",
+                    "initialOrder": "28"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e431",
+                "attributes": {
+                    "name": "occupation_details",
+                    "label": "Occupation_details",
+                    "ValueScheme": "string",
+                    "initialOrder": "29"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e434",
+                "attributes": {
+                    "name": "name",
+                    "label": "Name",
+                    "ValueScheme": "string",
+                    "initialOrder": "30"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e436",
+                "attributes": {
+                    "name": "name",
+                    "label": "Name",
+                    "initialOrder": "31",
+                    "ValueScheme": [
+                        [
+                            {"value": "Inner Temple"},
+                            {"value": "Middle Temple"},
+                            {"value": "Lincoln\u2019s"},
+                            {"value": "Gray\u2019s"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e464",
+                "attributes": {
+                    "name": "description",
+                    "label": "Description",
+                    "ValueScheme": "string",
+                    "initialOrder": "32"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e466",
+                "attributes": {
+                    "name": "legacies",
+                    "label": "Legacies",
+                    "ValueScheme": "string",
+                    "initialOrder": "33"
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e468",
+                "attributes": {
+                    "name": "was_slave_trading_investment_profitable",
+                    "label": "Was_slave_trading_investment_profitable",
+                    "initialOrder": "34",
+                    "ValueScheme": [
+                        [
+                            {"value": "1"},
+                            {"value": "0"},
+                            {"value": "?"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e492",
+                "attributes": {
+                    "name": "completion_status",
+                    "label": "Completion_status",
+                    "initialOrder": "35",
+                    "ValueScheme": [
+                        [
+                            {"value": "In Progress"},
+                            {"value": "Complete"}
+                        ]
+                    ]
+                }
+            },
+            {
+                "type": "Element",
+                "level": 2,
+                "ID": "d1e513",
+                "attributes": {
+                    "name": "notes",
+                    "label": "Notes",
+                    "ValueScheme": "string",
+                    "initialOrder": "36"
+                }
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e515",
+                "attributes": {
+                    "name": "Identifiers",
+                    "label": "Identifiers",
+                    "initialOrder": "37"
+                },
+                "content": []
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e517",
+                "attributes": {
+                    "name": "Personal",
+                    "label": "Personal",
+                    "initialOrder": "38"
+                },
+                "content": []
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e519",
+                "attributes": {
+                    "name": "Family_Members",
+                    "label": "Family_ Members",
+                    "initialOrder": "39"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e521",
+                        "attributes": {
+                            "name": "name",
+                            "label": "Name",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e523",
+                        "attributes": {
+                            "name": "relationship",
+                            "label": "Relationship",
+                            "initialOrder": "2",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Spouse"},
+                                    {"value": "Mother"},
+                                    {"value": "Father"},
+                                    {"value": "Daughter"},
+                                    {"value": "Son"},
+                                    {"value": "Uncle"},
+                                    {"value": "Aunt"},
+                                    {"value": "Brother"},
+                                    {"value": "Sister"},
+                                    {"value": "Mother-in-law"},
+                                    {"value": "Father-in-law"},
+                                    {"value": "Brother-in-law"},
+                                    {"value": "Sister-in-law"},
+                                    {"value": "Son-in-law"},
+                                    {"value": "Daughter-in-law"},
+                                    {"value": "Niece"},
+                                    {"value": "Nephew"},
+                                    {"value": "Cousin"},
+                                    {"value": "Grandmother"},
+                                    {"value": "Grandfather"},
+                                    {"value": "Granddaughter"},
+                                    {"value": "Grandson"},
+                                    {"value": "Testator-Legatee"},
+                                    {"value": "Trustee"},
+                                    {"value": "Executor"},
+                                    {"value": "Business Partner"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e643",
+                        "attributes": {
+                            "name": "marriage_date",
+                            "label": "Marriage_date",
+                            "ValueScheme": "date",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e645",
+                        "attributes": {
+                            "name": "individual",
+                            "label": "Individual",
+                            "ValueScheme": "string",
+                            "initialOrder": "4"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e647",
+                        "attributes": {
+                            "name": "relationship_notes",
+                            "label": "Relationship_notes",
+                            "ValueScheme": "string",
+                            "initialOrder": "5"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e650",
+                "attributes": {
+                    "name": "Political_offices_held",
+                    "label": "Political_offices_held",
+                    "initialOrder": "40"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e652",
+                        "attributes": {
+                            "name": "type",
+                            "label": "Type",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Court"},
+                                    {"value": "Local"},
+                                    {"value": "National"},
+                                    {"value": "Parliament"},
+                                    {"value": "Government"},
+                                    {"value": "Other"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e689",
+                        "attributes": {
+                            "name": "notes",
+                            "label": "Notes",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e692",
+                "attributes": {
+                    "name": "Bankruptcies",
+                    "label": "Bankruptcies",
+                    "initialOrder": "41"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e694",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e696",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e700",
+                "attributes": {
+                    "name": "Geographic_Experience",
+                    "label": "Geographic_ Experience",
+                    "initialOrder": "42"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e702",
+                        "attributes": {
+                            "name": "continent",
+                            "label": "Continent",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Africa"},
+                                    {"value": "Americas"},
+                                    {"value": "Asia"},
+                                    {"value": "Europe"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e730",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e733",
+                "attributes": {
+                    "name": "Dates___Locations",
+                    "label": "Dates___ Locations",
+                    "initialOrder": "43"
+                },
+                "content": []
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e735",
+                "attributes": {
+                    "name": "Residencies",
+                    "label": "Residencies",
+                    "initialOrder": "44"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e737",
+                        "attributes": {
+                            "name": "address",
+                            "label": "Address",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e739",
+                        "attributes": {
+                            "name": "town_city_clone",
+                            "label": "Town_city_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e742",
+                "attributes": {
+                    "name": "Birth",
+                    "label": "Birth",
+                    "initialOrder": "45"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e744",
+                        "attributes": {
+                            "name": "birth",
+                            "label": "Birth",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e746",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e748",
+                        "attributes": {
+                            "name": "address",
+                            "label": "Address",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e750",
+                        "attributes": {
+                            "name": "town_city_clone",
+                            "label": "Town_city_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "4"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e753",
+                "attributes": {
+                    "name": "Death",
+                    "label": "Death",
+                    "initialOrder": "46"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e755",
+                        "attributes": {
+                            "name": "death",
+                            "label": "Death",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e757",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e759",
+                        "attributes": {
+                            "name": "address",
+                            "label": "Address",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e761",
+                        "attributes": {
+                            "name": "town_city_clone",
+                            "label": "Town_city_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "4"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e764",
+                "attributes": {
+                    "name": "Burial",
+                    "label": "Burial",
+                    "initialOrder": "47"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e766",
+                        "attributes": {
+                            "name": "burial",
+                            "label": "Burial",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e768",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e770",
+                        "attributes": {
+                            "name": "address",
+                            "label": "Address",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e772",
+                        "attributes": {
+                            "name": "town_city_clone",
+                            "label": "Town_city_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "4"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e774",
+                        "attributes": {
+                            "name": "memorial_details",
+                            "label": "Memorial_details",
+                            "ValueScheme": "string",
+                            "initialOrder": "5"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e778",
+                "attributes": {
+                    "name": "Christening",
+                    "label": "Christening",
+                    "initialOrder": "48"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e780",
+                        "attributes": {
+                            "name": "christening",
+                            "label": "Christening",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e782",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e785",
+                "attributes": {
+                    "name": "Knighthood",
+                    "label": "Knighthood",
+                    "initialOrder": "49"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e787",
+                        "attributes": {
+                            "name": "knighthood",
+                            "label": "Knighthood",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e789",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e792",
+                "attributes": {
+                    "name": "Baronetcy",
+                    "label": "Baronetcy",
+                    "initialOrder": "50"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e794",
+                        "attributes": {
+                            "name": "baronetcy",
+                            "label": "Baronetcy",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e796",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e799",
+                "attributes": {
+                    "name": "Peerage",
+                    "label": "Peerage",
+                    "initialOrder": "51"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e801",
+                        "attributes": {
+                            "name": "peerage",
+                            "label": "Peerage",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e803",
+                        "attributes": {
+                            "name": "date",
+                            "label": "Date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e806",
+                "attributes": {
+                    "name": "Education___Work",
+                    "label": "Education___ Work",
+                    "initialOrder": "52"
+                },
+                "content": []
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e808",
+                "attributes": {
+                    "name": "Merchant_details",
+                    "label": "Merchant_details",
+                    "initialOrder": "53"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e810",
+                        "attributes": {
+                            "name": "merchant",
+                            "label": "Merchant",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e812",
+                        "attributes": {
+                            "name": "region",
+                            "label": "Region",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e814",
+                        "attributes": {
+                            "name": "trade",
+                            "label": "Trade",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e818",
+                "attributes": {
+                    "name": "Universities",
+                    "label": "Universities",
+                    "initialOrder": "54"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e820",
+                        "attributes": {
+                            "name": "name",
+                            "label": "Name",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Aberdeen"},
+                                    {"value": "Cambridge"},
+                                    {"value": "Edinburgh"},
+                                    {"value": "Glasgow"},
+                                    {"value": "Oxford"},
+                                    {"value": "St Andrews"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e857",
+                        "attributes": {
+                            "name": "college",
+                            "label": "College",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e860",
+                "attributes": {
+                    "name": "Imperial_positions",
+                    "label": "Imperial_positions",
+                    "initialOrder": "55"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e862",
+                        "attributes": {
+                            "name": "role",
+                            "label": "Role",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e864",
+                        "attributes": {
+                            "name": "region_clone",
+                            "label": "Region_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e867",
+                "attributes": {
+                    "name": "Apprenticeships",
+                    "label": "Apprenticeships",
+                    "initialOrder": "56"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e869",
+                        "attributes": {
+                            "name": "master",
+                            "label": "Master",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e871",
+                        "attributes": {
+                            "name": "livery_clone",
+                            "label": "Livery_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e873",
+                        "attributes": {
+                            "name": "start_date",
+                            "label": "Start_date",
+                            "ValueScheme": "date",
+                            "initialOrder": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e876",
+                "attributes": {
+                    "name": "Livery_company_affiliations",
+                    "label": "Livery_company_affiliations",
+                    "initialOrder": "57"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e878",
+                        "attributes": {
+                            "name": "livery_clone",
+                            "label": "Livery_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e880",
+                        "attributes": {
+                            "name": "role",
+                            "label": "Role",
+                            "initialOrder": "2",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Freeman"},
+                                    {"value": "Liveryman"},
+                                    {"value": "Warden"},
+                                    {"value": "Master"},
+                                    {"value": "Treasurer"},
+                                    {"value": "Secretary"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e917",
+                        "attributes": {
+                            "name": "start_date",
+                            "label": "Start_date",
+                            "ValueScheme": "date",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e919",
+                        "attributes": {
+                            "name": "end_date",
+                            "label": "End_date",
+                            "ValueScheme": "date",
+                            "initialOrder": "4"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e922",
+                "attributes": {
+                    "name": "Other_business_activities",
+                    "label": "Other_business_activities",
+                    "initialOrder": "58"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e924",
+                        "attributes": {
+                            "name": "region_clone",
+                            "label": "Region_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e926",
+                        "attributes": {
+                            "name": "economic_sector",
+                            "label": "Economic_sector",
+                            "initialOrder": "2",
+                            "ValueScheme": [
+                                [
+                                    {"value": "banking"},
+                                    {"value": "charity"},
+                                    {"value": "commerce"},
+                                    {"value": "government"},
+                                    {"value": "infrastructure"},
+                                    {"value": "insurance"},
+                                    {"value": "land"},
+                                    {"value": "manufacturing"},
+                                    {"value": "mining"},
+                                    {"value": "privateering"},
+                                    {"value": "shipping"},
+                                    {"value": "servant"},
+                                    {"value": "tax_farmer"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e992",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e995",
+                "attributes": {
+                    "name": "Will",
+                    "label": "Will",
+                    "initialOrder": "59"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e997",
+                        "attributes": {
+                            "name": "will",
+                            "label": "Will",
+                            "ValueScheme": "string",
+                            "initialOrder": "1"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e999",
+                        "attributes": {
+                            "name": "probate_date",
+                            "label": "Probate_date",
+                            "ValueScheme": "date",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1001",
+                        "attributes": {
+                            "name": "value",
+                            "label": "Value",
+                            "ValueScheme": "int",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1003",
+                        "attributes": {
+                            "name": "value_known_legacies",
+                            "label": "Value_known_legacies",
+                            "ValueScheme": "int",
+                            "initialOrder": "4"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1005",
+                        "attributes": {
+                            "name": "occupation",
+                            "label": "Occupation",
+                            "ValueScheme": "string",
+                            "initialOrder": "5"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1008",
+                        "attributes": {
+                            "name": "town_city_clone",
+                            "label": "Town_city_clone",
+                            "ValueScheme": "string",
+                            "initialOrder": "6"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1010",
+                        "attributes": {
+                            "name": "courts",
+                            "label": "Courts",
+                            "ValueScheme": "string",
+                            "initialOrder": "7"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1012",
+                        "attributes": {
+                            "name": "notes",
+                            "label": "Notes",
+                            "ValueScheme": "string",
+                            "initialOrder": "8"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1016",
+                "attributes": {
+                    "name": "Investments",
+                    "label": "Investments",
+                    "initialOrder": "60"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1018",
+                        "attributes": {
+                            "name": "company",
+                            "label": "Company",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Company of Royal Adventurers"},
+                                    {"value": "Royal African Company"},
+                                    {"value": "South Sea Company"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1042",
+                        "attributes": {
+                            "name": "source_of_investment_funds",
+                            "label": "Source_of_investment_funds",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1044",
+                        "attributes": {
+                            "name": "size_of_investment",
+                            "label": "Size_of_investment",
+                            "ValueScheme": "int",
+                            "initialOrder": "3"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1046",
+                        "attributes": {
+                            "name": "date_of_purchase",
+                            "label": "Date_of_purchase",
+                            "ValueScheme": "date",
+                            "initialOrder": "4"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1048",
+                        "attributes": {
+                            "name": "date_of_sale",
+                            "label": "Date_of_sale",
+                            "ValueScheme": "date",
+                            "initialOrder": "5"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1051",
+                        "attributes": {
+                            "name": "profitable",
+                            "label": "Profitable",
+                            "ValueScheme": "boolean",
+                            "initialOrder": "6"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1053",
+                        "attributes": {
+                            "name": "destination_for_profits",
+                            "label": "Destination_for_profits",
+                            "ValueScheme": "string",
+                            "initialOrder": "7"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1055",
+                        "attributes": {
+                            "name": "location",
+                            "label": "Location",
+                            "ValueScheme": "string",
+                            "initialOrder": "8"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1057",
+                        "attributes": {
+                            "name": "data_source",
+                            "label": "Data_source",
+                            "ValueScheme": "string",
+                            "initialOrder": "9"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1060",
+                "attributes": {
+                    "name": "Summary",
+                    "label": "Summary",
+                    "initialOrder": "61"
+                },
+                "content": []
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1062",
+                "attributes": {
+                    "name": "Internal_Migrant",
+                    "label": "Internal_ Migrant",
+                    "initialOrder": "62"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1064",
+                        "attributes": {
+                            "name": "enabled",
+                            "label": "Enabled",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "1"},
+                                    {"value": "0"},
+                                    {"value": "?"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1088",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1091",
+                "attributes": {
+                    "name": "Foreign_born",
+                    "label": "Foreign_born",
+                    "initialOrder": "63"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1093",
+                        "attributes": {
+                            "name": "enabled",
+                            "label": "Enabled",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "1"},
+                                    {"value": "0"},
+                                    {"value": "?"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1117",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1120",
+                "attributes": {
+                    "name": "Supplier_to_Slave_Trade_Voyages",
+                    "label": "Supplier_to_ Slave_ Trade_ Voyages",
+                    "initialOrder": "64"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1122",
+                        "attributes": {
+                            "name": "enabled",
+                            "label": "Enabled",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "1"},
+                                    {"value": "0"},
+                                    {"value": "?"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1146",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1149",
+                "attributes": {
+                    "name": "Creditor_to_Slave_Trade_Voyages",
+                    "label": "Creditor_to_ Slave_ Trade_ Voyages",
+                    "initialOrder": "65"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1151",
+                        "attributes": {
+                            "name": "enabled",
+                            "label": "Enabled",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "1"},
+                                    {"value": "0"},
+                                    {"value": "?"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1175",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1179",
+                "attributes": {
+                    "name": "Philanthropy",
+                    "label": "Philanthropy",
+                    "initialOrder": "66"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1181",
+                        "attributes": {
+                            "name": "enabled",
+                            "label": "Enabled",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "1"},
+                                    {"value": "0"},
+                                    {"value": "?"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1205",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1208",
+                "attributes": {
+                    "name": "Plantation_owner",
+                    "label": "Plantation_owner",
+                    "initialOrder": "67"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1210",
+                        "attributes": {
+                            "name": "enabled",
+                            "label": "Enabled",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "1"},
+                                    {"value": "0"},
+                                    {"value": "?"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1234",
+                        "attributes": {
+                            "name": "link",
+                            "label": "Link",
+                            "ValueScheme": "string",
+                            "initialOrder": "2"
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1236",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "Component",
+                "level": 2,
+                "ID": "d1e1239",
+                "attributes": {
+                    "name": "Corporate_Investor",
+                    "label": "Corporate_ Investor",
+                    "initialOrder": "68"
+                },
+                "content": [
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1241",
+                        "attributes": {
+                            "name": "investments",
+                            "label": "Investments",
+                            "initialOrder": "1",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Neither"},
+                                    {"value": "Corporate"},
+                                    {"value": "Non-corporate"},
+                                    {"value": "Both"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1269",
+                        "attributes": {
+                            "name": "type",
+                            "label": "Type",
+                            "initialOrder": "2",
+                            "ValueScheme": [
+                                [
+                                    {"value": "Company of Royal Adventurers"},
+                                    {"value": "Royal African Company"},
+                                    {"value": "South Sea Company"}
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Element",
+                        "level": 3,
+                        "ID": "d1e1293",
+                        "attributes": {
+                            "name": "details",
+                            "label": "Details",
+                            "ValueScheme": "string",
+                            "initialOrder": "3"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "record": [
+        {
+            "name": "Header",
+            "type": "component",
+            "value": [
+                {
+                    "name": "MdCreator",
+                    "type": "element",
+                    "value": "server"
+                },
+                {
+                    "name": "MdCreationDate",
+                    "type": "element",
+                    "attributes": {"epoch": "1769443143"},
+                    "value": "2026-01-26"
+                },
+                {
+                    "name": "MdSelfLink",
+                    "type": "element",
+                    "value": "unl://1"
+                },
+                {
+                    "name": "MdProfile",
+                    "type": "element",
+                    "value": "clarin.eu:cr1:p_1766041970062"
+                },
+                {
+                    "name": "MdCollectionDisplayName",
+                    "type": "element",
+                    "value": ""
+                },
+                []
+            ]
+        },
+        {
+            "name": "Resources",
+            "type": "component",
+            "value": [
+                []
+            ]
+        },
+        {
+            "name": "Components",
+            "type": "component",
+            "value": [
+                {
+                    "name": "Individual",
+                    "type": "component",
+                    "value": [
+                        {
+                            "name": "title",
+                            "type": "element",
+                            "value": "test3"
+                        },
+                        []
+                    ]
+                },
+                []
+            ]
+        },
+        []
+    ]
+}
