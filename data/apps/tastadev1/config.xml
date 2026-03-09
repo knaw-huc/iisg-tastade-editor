@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<config>
+  <app>
+    <name>tastade</name>
+    <title>Tastade Editor</title>
+    <def_prof>clarin.eu:cr1:p_1758888743558</def_prof>
+    <cmdi_version>1.2</cmdi_version>
+    <access>
+      <read>any</read>
+      <write>any</write>
+    </access>
+    <prof>
+      <personObservation>
+        <prof>clarin.eu:cr1:p_1758888743558</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </personObservation>
+      <personReconstruction>
+        <prof>clarin.eu:cr1:p_1772521921687</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </personReconstruction>
+      <organisationObservation>
+        <prof>clarin.eu:cr1:p_1772521921687</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </organisationObservation>
+      <organisationReconstruction>
+        <prof>clarin.eu:cr1:p_1772521921680</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </organisationReconstruction>
+      <crossingObservation>
+        <prof>clarin.eu:cr1:p_1772521921681</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </crossingObservation>
+      <crossingReconstruction>
+        <prof>clarin.eu:cr1:p_1772521921684</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </crossingReconstruction>
+      <place>
+        <prof>clarin.eu:cr1:p_1761816151568</prof>
+        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+      </place>
+    </prof>
+  </app>
+</config>
