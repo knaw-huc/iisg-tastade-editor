@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <config>
   <app>
-    <name>tastade</name>
-    <title>Tastade Editor</title>
+    <name>tastadev1</name>
+    <title>Tastade Editor version 1</title>
     <def_prof>clarin.eu:cr1:p_1758888743558</def_prof>
     <cmdi_version>1.2</cmdi_version>
     <access>
