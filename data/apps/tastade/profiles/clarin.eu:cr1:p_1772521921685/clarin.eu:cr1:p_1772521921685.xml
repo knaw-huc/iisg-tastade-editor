@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<ID>clarin.eu:cr1:p_1772521921685</ID>
+		<Name>CrossingObservation</Name>
+		<Description>Test component to include elements related to crossings (observation and link to reconstruction)</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="CrossingObservation" CardinalityMin="1" CardinalityMax="1">
+		<Component name="NameObservation" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>https://personsincontext.org/model/#PersonObservation</Documentation>
+			<Element name="nameAsSeen" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+			</Element>
+			<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
+				<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item ConceptLink="" AppInfo="">Certain</item>
+								<item ConceptLink="" AppInfo="">Conjecture</item>
+								<item ConceptLink="" AppInfo="">Uncertain</item>
+								<item ConceptLink="" AppInfo="">Unknown</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+			</Component>
+		</Component>
+		<Component name="CrossingReconstruction" ComponentRef="clarin.eu:cr1:c_1772521921686" CardinalityMin="1" CardinalityMax="1">
+			<Element name="crossingName" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Component name="Identifier" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://purl.org/dc/terms/identifier" CardinalityMin="1" CardinalityMax="1">
+				<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>
+				<Element name="identifierType" CardinalityMin="1" CardinalityMax="1">
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">Local-identifier</item>
+								<item ConceptLink="" AppInfo="">URI</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="identifierLabel" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Add the preferred label for this identifier.</Documentation>
+				</Element>
+				<Element name="identifierUrl" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+				</Element>
+				<Element name="schemeAgency" ConceptLink="http://www.w3.org/ns/adms#schemeAgency" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>
+								<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>
+								<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>
+								<item ConceptLink="" AppInfo="">EMLO</item>
+								<item ConceptLink="" AppInfo="">CERL</item>
+								<item ConceptLink="" AppInfo="">NODEGOAT</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+			</Component>
+		</Component>
+		<Component name="Source" ComponentRef="clarin.eu:cr1:c_1758888743557" ConceptLink="https://schema.org/CreativeWork" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>https://personsincontext.org/model/#ArchiveComponent</Documentation>
+			<Element name="name" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>The name of the item. (Also used for titles).</Documentation>
+			</Element>
+		</Component>
+	</Component>
+</ComponentSpec>
