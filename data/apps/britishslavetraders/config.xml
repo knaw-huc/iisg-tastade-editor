@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <config>
   <app>
-    <name>tastade</name>
+    <name>britishslavetraders</name>
     <title>Tastade Editor</title>
     <def_prof>clarin.eu:cr1:p_1766041970062</def_prof>
     <cmdi_version>1.2</cmdi_version>
