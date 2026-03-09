@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<ID>clarin.eu:cr1:p_1772521921680</ID>
+		<Name>OrganisationReconstruction</Name>
+		<Description>main entity</Description>
+		<Status>development</Status>
+		<DerivedFrom>clarin.eu:cr1:p_1766041970063</DerivedFrom>
+	</Header>
+	<Component name="OrganisationReconstruction" CardinalityMin="1" CardinalityMax="1">
+		<Component name="Identifier" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://purl.org/dc/terms/identifier" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>
+			<Element name="identifierType" CardinalityMin="1" CardinalityMax="1">
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">Local-identifier</item>
+							<item ConceptLink="" AppInfo="">URI</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="identifierLabel" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Add the preferred label for this identifier.</Documentation>
+			</Element>
+			<Element name="identifierUrl" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+			<Element name="schemeAgency" ConceptLink="http://www.w3.org/ns/adms#schemeAgency" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>
+							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>
+							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>
+							<item ConceptLink="" AppInfo="">EMLO</item>
+							<item ConceptLink="" AppInfo="">CERL</item>
+							<item ConceptLink="" AppInfo="">NODEGOAT</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+		</Component>
+		<Component name="BritishDatabaseElements" CardinalityMin="1" CardinalityMax="1">
+			<Element name="economic_sector" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="">banking</item>
+							<item ConceptLink="" AppInfo="">charity</item>
+							<item ConceptLink="" AppInfo="">commerce</item>
+							<item ConceptLink="" AppInfo="">government</item>
+							<item ConceptLink="" AppInfo="">infrastructure</item>
+							<item ConceptLink="" AppInfo="">insurance</item>
+							<item ConceptLink="" AppInfo="">land</item>
+							<item ConceptLink="" AppInfo="">manufacturing</item>
+							<item ConceptLink="" AppInfo="">mining</item>
+							<item ConceptLink="" AppInfo="">shipping</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="region_clone" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="category" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="">Business</item>
+							<item ConceptLink="" AppInfo="">Charity</item>
+							<item ConceptLink="" AppInfo="">Educational</item>
+							<item ConceptLink="" AppInfo="">Hospitals</item>
+							<item ConceptLink="" AppInfo="">Imperial</item>
+							<item ConceptLink="" AppInfo="">Legal</item>
+							<item ConceptLink="" AppInfo="">Livery</item>
+							<item ConceptLink="" AppInfo="">Military</item>
+							<item ConceptLink="" AppInfo="">Parish</item>
+							<item ConceptLink="" AppInfo="">Political</item>
+							<item ConceptLink="" AppInfo="">Religious</item>
+							<item ConceptLink="" AppInfo="">Scientific</item>
+							<item ConceptLink="" AppInfo="">Social</item>
+							<item ConceptLink="" AppInfo="">State</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="description_of_activities" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		</Component>
+		<Component name="BritishDatabase_Slave_trading">
+			<Element name="slave_trading" ValueScheme="string" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="is_associated" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item>yes</item>
+							<item>no</item>
+							<item>inferred</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="year_of_first_participation" ValueScheme="int" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			<Element name="year_of_last_participation" ValueScheme="int" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		</Component>
+	</Component>
+</ComponentSpec>
