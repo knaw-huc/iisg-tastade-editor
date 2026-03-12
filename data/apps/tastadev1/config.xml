@@ -13,30 +13,86 @@
       <personObservation>
         <prof>clarin.eu:cr1:p_1758888743558</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </personObservation>
       <personReconstruction>
         <prof>clarin.eu:cr1:p_1772521921687</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </personReconstruction>
       <organisationObservation>
         <prof>clarin.eu:cr1:p_1772521921687</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </organisationObservation>
       <organisationReconstruction>
         <prof>clarin.eu:cr1:p_1772521921680</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </organisationReconstruction>
       <crossingObservation>
         <prof>clarin.eu:cr1:p_1772521921681</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </crossingObservation>
       <crossingReconstruction>
         <prof>clarin.eu:cr1:p_1772521921684</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </crossingReconstruction>
       <place>
         <prof>clarin.eu:cr1:p_1761816151568</prof>
         <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <list>
+          <label>
+            <xpath>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+        </list>
       </place>
     </prof>
   </app>
