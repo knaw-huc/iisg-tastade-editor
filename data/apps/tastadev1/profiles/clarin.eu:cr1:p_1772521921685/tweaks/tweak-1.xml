@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1772521921681</ID>
+		<Name>OrganisationObservation</Name>
+		<Description>Test for a profile to describe organisations (no standard model yet, only based on data modelling document Tastade and other basic metadata)</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="OrganisationObservation">
+		<Component name="Identifier">
+			<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>
+			<Element name="identifierType">
+				
+			</Element>
+			<Element name="identifierLabel">
+				<Documentation>Add the preferred label for this identifier.</Documentation>
+			</Element>
+			<Element name="identifierUrl">
+				<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+			<Element name="schemeAgency">
+				<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>
+				
+			</Element>
+		</Component>
+		<Component name="NameObservation">
+			<Documentation>https://personsincontext.org/model/#PersonObservation</Documentation>
+			<Element name="nameAsSeen">
+				<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+			</Element>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="EntityTypeObservation">
+			<Element name="typeAsSeen">
+				<Documentation>Write here the type as observed in the source (as written, transcribed, or extracted).</Documentation>
+			</Element>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="LinkToReconstruction">
+			<Component name="Relationship">
+				<Element name="to"><!--cues--></Element>
+				<Element name="category">
+					<Documentation>Type of relationship.</Documentation>
+				</Element>
+				<Element name="description">
+					<Documentation>Description or notes clarifying the relationship.</Documentation>
+				</Element>
+				<Element name="date">
+					<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+				</Element>
+			</Component>
+			<Component name="ReconstructionActivity">
+				<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+				<Element name="typeActivity">
+					<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+					
+				</Element>
+				<Element name="agent">
+					<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+				</Element>
+				<Element name="startedAtTime">
+					<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+				</Element>
+				<Element name="endedAtTime">
+					<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+				</Element>
+				<Element name="noteReconstruction"><!--cues--></Element>
+			</Component>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="RelationshipOrganisationToCrossing">
+			<Component name="Relationship">
+				<Element name="to"><!--cues--></Element>
+				<Element name="category">
+					<Documentation>Type of relationship.</Documentation>
+				</Element>
+				<Element name="description">
+					<Documentation>Description or notes clarifying the relationship.</Documentation>
+				</Element>
+				<Element name="date">
+					<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+				</Element>
+			</Component>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="Source">
+			<Documentation>https://personsincontext.org/model/#ArchiveComponent</Documentation>
+			<Element name="name">
+				<Documentation>The name of the item. (Also used for titles).</Documentation>
+			</Element>
+		</Component>
+	</Component>
+</ComponentSpec>

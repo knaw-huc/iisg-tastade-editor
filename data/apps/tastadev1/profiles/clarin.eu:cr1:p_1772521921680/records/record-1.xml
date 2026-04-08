@@ -1,0 +1,34 @@
+<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/1"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.clarin.eu/cmd/1 https://infra.clarin.eu/CMDI/1.x/xsd/cmd-envelop.xsd http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1772521921680 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.2/profiles/clarin.eu:cr1:p_1772521921680/xsd"
+         CMDVersion="1.2">
+   <cmd:Header>
+      <cmd:MdCreator>server</cmd:MdCreator>
+      <cmd:MdCreationDate xmlns:clariah="http://www.clariah.eu/" clariah:epoch="1775501472">2026-04-06</cmd:MdCreationDate>
+      <cmd:MdSelfLink>unl://1</cmd:MdSelfLink>
+      <cmd:MdProfile>clarin.eu:cr1:p_1772521921680</cmd:MdProfile>
+      <cmd:MdCollectionDisplayName/>
+   </cmd:Header>
+   <cmd:Resources>
+      <cmd:ResourceProxyList/>
+      <cmd:JournalFileProxyList/>
+      <cmd:ResourceRelationList/>
+      <cmd:IsPartOfList/>
+   </cmd:Resources>
+   <cmd:Components>
+      <cmdp:OrganisationReconstruction xmlns:cmdp="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1772521921680">
+         <cmdp:Identifier>
+            <cmdp:identifierType>URI</cmdp:identifierType>
+            <cmdp:identifierLabel>Q1270312</cmdp:identifierLabel>
+            <cmdp:identifierUrl>https://www.wikidata.org/wiki/Q1270312</cmdp:identifierUrl>
+            <cmdp:schemeAgency>Wikidata</cmdp:schemeAgency>
+         </cmdp:Identifier>
+         <cmdp:OrganisationNames>
+            <cmdp:preferredName>Danish West India Company</cmdp:preferredName>
+         </cmdp:OrganisationNames>
+         <cmdp:OrganisationType>
+            <cmdp:hasType>chartered company</cmdp:hasType>
+         </cmdp:OrganisationType>
+      </cmdp:OrganisationReconstruction>
+   </cmd:Components>
+</cmd:CMD>

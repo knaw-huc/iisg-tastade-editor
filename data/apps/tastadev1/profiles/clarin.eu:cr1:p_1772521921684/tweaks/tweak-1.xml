@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1772521921684</ID>
+		<Name>CrossingReconstruction</Name>
+		<Description>Test profile for "authorized" (i.e., known to exist) crossings in the Tastade project. Note: the project has decided not to create their own metadata for crossings/voyages, but only to link to other databases, mostly to https://www.slavevoyages.org/. Thus, there is a basic component for observations, and here only the "reconstructions" are imported.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="CrossingReconstruction">
+		<Element name="crossingName"><!--cues--></Element>
+		<Component name="Identifier">
+			<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>
+			<Element name="identifierType">
+				
+			</Element>
+			<Element name="identifierLabel">
+				<Documentation>Add the preferred label for this identifier.</Documentation>
+			</Element>
+			<Element name="identifierUrl">
+				<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+			<Element name="schemeAgency">
+				<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>
+				
+			</Element>
+		</Component>
+	</Component>
+</ComponentSpec>

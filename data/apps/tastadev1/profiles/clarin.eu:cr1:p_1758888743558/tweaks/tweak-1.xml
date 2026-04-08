@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1758888743558</ID>
+		<Name>PersonObservation</Name>
+		<Description>This is a test profile for Person-related data according to the PiCo model. </Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="PersonObservation">
+		<Documentation>A Person is a human being whose individual existence can somehow be documented. Container class for Person observation and Person reconstruction.</Documentation>
+		<Component name="Identifier">
+			<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>
+			<Element name="identifierType">
+
+			</Element>
+			<Element name="identifierLabel">
+				<Documentation>Add the preferred label for this identifier.</Documentation>
+			</Element>
+<!--			<Element name="identifierUrl">-->
+<!--				<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>-->
+<!--			</Element>-->
+<!--			<Element name="schemeAgency">-->
+<!--				<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>-->
+<!--				-->
+<!--			</Element>-->
+		</Component>
+		<Component name="Source">
+			<Documentation>https://personsincontext.org/model/#ArchiveComponent</Documentation>
+			<Element name="name">
+				<Documentation>The name of the item. (Also used for titles).</Documentation>
+			</Element>
+		</Component>
+		<Component name="RoleInSource">
+			<Element name="hasRole">
+				<Documentation>The role of a Person observation on the Source. Use a term from the PiCo Roles thesaurus: https://terms.personsincontext.org/roles </Documentation>
+			</Element>
+		</Component>
+		<Component name="PersonNameObservation">
+			<Component name="NameAsObserved">
+				<Element name="name">
+					<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). For persons: "This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed"."</Documentation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="PersonName">
+				<Element name="fullName">
+					<Documentation>Literal name designates a full personal name. This property may only be left blank if a person's name was unknown or if a person was unnamed (e.g. a child that died shortly after being born), in which cases the property pnv:nameSpecification should state "unknown" or "unnamed". (Note -not in PiCo-: if you are entering the name of a person observation, use this element to enter the name as it appears in the source.</Documentation>
+				</Element>
+				<Element name="prefix">
+					<Documentation>A Prefix is a noble or honorific title prefixing a name, e.g. 'Prof. dr.' or 'Jhr.'</Documentation>
+				</Element>
+				<Element name="initials">
+					<Documentation>An initial is the first letter of a person's given name (or sometimes a combination of letters). The Initials property can be used to separately record the initial(s) of a person's given name(s). Each initial should be followed by a dot. It is recommended to always use the Initials property to record initials, but if only the initials of a given name are known, they may also be recorded using pnv:givenName (or pnv:firstName).</Documentation>
+				</Element>
+				<Element name="givenName">
+					<Documentation>A Given name designates the name(s) given to someone at birth or any other name-giving event. In the U.S., the first name of a Person.</Documentation>
+				</Element>
+				<Element name="patronym">
+					<Documentation>A Patronym is a name element based on the given name of one's father or grandfather. This is also the preferred property for a matronym (i.e. a name element based on the given name of one's mother or grandmother).</Documentation>
+				</Element>
+				<Element name="givenNameSufix">
+					<Documentation>A Given name suffix is a name part that is appended to a given name. In the name of the fifteenth-century Duke of Burgundy Philip the Good, for example, 'the Good' is the Given name suffix.</Documentation>
+				</Element>
+				<Element name="infixTitle">
+					<Documentation>An Infix title designates a title in the middle of a name.</Documentation>
+				</Element>
+				<Element name="surname">
+					<Documentation>A surname is the name of the family a person is born into, including one or more prefixes. In some cases the honorific prefix can be incorporated into the surname (e.g. Van Welderen baron Rengers).</Documentation>
+				</Element>
+				<Element name="surnamePrefix">
+					<Documentation>A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').</Documentation>
+				</Element>
+				<Element name="baseSurname">
+					<Documentation>A Base surname is a family name without any prefixes, if those prefixes need to be ignored in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V', the Base surname is 'Vries'.</Documentation>
+				</Element>
+				<Element name="trailingPatronym">
+					<Documentation>A Trailing patronym refers to the parent's given name, suffixing the person's family name, mostly used for disambiguation.</Documentation>
+				</Element>
+				<Element name="honorificSuffix">
+					<Documentation>An honorific suffix following a Person's name such as M.D./PhD/MSCSW.</Documentation>
+				</Element>
+				<Element name="disambiguatingDescription">
+					<Documentation>A Disambiguating description is a name part that is appended to make sure that the right person is designated. Name parts like 'Sr.' and 'Jr.', used to distinguish a child from his parent, are disambiguating descriptions.</Documentation>
+				</Element>
+			</Component>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="PersonDataObservations">
+			<Documentation>https://www.personsincontext.org/model/#Persons-in-Context---Datatype-Properties</Documentation>
+			<Component name="BirthDate">
+				<Component name="DateNormalized">
+					<Documentation>Standard: https://knaw.sharepoint.com/:b:/r/sites/PRJ-DRE-Joegoslavie/Gedeelde%20documenten/General/DRE%20Database%20-%20shared%20with%20HuC/NEN-ISO%208601-2_2019%20en%20(1).pdf?csf=1&amp;web=1&amp;e=ZENSyh</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), or the beginning of a date range . Select from the calendar. Adapt if necessary following this pattern: YYYY-MM-DD. If there are uncertainties, use these two uncertainty patterns (here with an example): PATTERN1: 2025-??-17 (use "?" to replace uncertain values, here the day is known to be the 17th, the year is 2025 but the month is unknown). PATTERN2: ~2025-~07 (use "~" to indicate approximate values, here it means that both the year and the month are approximate values). COMBINED example: ~2025-??-17.</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the same instructions as for dateStart.</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>:Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="DeathDate">
+				<Component name="DateNormalized">
+					<Documentation>Standard: https://knaw.sharepoint.com/:b:/r/sites/PRJ-DRE-Joegoslavie/Gedeelde%20documenten/General/DRE%20Database%20-%20shared%20with%20HuC/NEN-ISO%208601-2_2019%20en%20(1).pdf?csf=1&amp;web=1&amp;e=ZENSyh</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), or the beginning of a date range . Select from the calendar. Adapt if necessary following this pattern: YYYY-MM-DD. If there are uncertainties, use these two uncertainty patterns (here with an example): PATTERN1: 2025-??-17 (use "?" to replace uncertain values, here the day is known to be the 17th, the year is 2025 but the month is unknown). PATTERN2: ~2025-~07 (use "~" to indicate approximate values, here it means that both the year and the month are approximate values). COMBINED example: ~2025-??-17.</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the same instructions as for dateStart.</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>:Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="BirthPlace">
+				<Component name="PlaceObservation">
+					<Element name="placeAsText">
+						<Documentation>The name of the place as it is written in the source.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Relationship">
+					<Element name="to"><!--cues--></Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+				</Component>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="DeathPlace">
+				<Component name="PlaceObservation">
+					<Element name="placeAsText">
+						<Documentation>The name of the place as it is written in the source.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Relationship">
+					<Element name="to"><!--cues--></Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+				</Component>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="Address">
+				<Component name="PlaceObservation">
+					<Element name="placeAsText">
+						<Documentation>The name of the place as it is written in the source.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Relationship">
+					<Element name="to"><!--cues--></Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+				</Component>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="Gender">
+				<Element name="genderType">
+					
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="Occupation">
+				<Element name="hasOccupation"><!--cues--></Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="Religion">
+				<Element name="hasReligion"><!--cues--></Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="Age">
+				<Element name="hasAge">
+					<Documentation>The age of a person. Only used for Person observations, in case the birth date is not known, but the age is. In combination with de date of the Source, a birth date range can be derived, which can be used in the process of creating a Person reconstruction. The age is considered to be in years, unless otherwise mentioned. So an age of "4" is considered to be 4 years, where "4 months" is interpreted as 4 months. Numerical ages ("4") are preferred above ages in text ("four"). </Documentation>
+				</Element>
+			</Component>
+		</Component>
+		<Component name="RelationshipsToObservations">
+			<Component name="ToPerson">
+				<Component name="Relationship">
+					<Element name="to" cue:class="skosType">
+						<clariah:autoCompleteURI>/app/tastadev1/profile/clarin.eu:cr1:p_1758888743558/entity/personObservation</clariah:autoCompleteURI>
+					</Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item AppInfo="hasAncestor" conceptLink="https://personsincontext.org/model#hasAncestor">hasAncestor</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+				</Component>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="ToOrganisation">
+				<Component name="RelationshipInvestment">
+					<Element name="to" cue:class="skosType">
+						<clariah:autoCompleteURI>/app/tastadev1/profile/clarin.eu:cr1:p_1772521921680/entity/organisationReconstruction</clariah:autoCompleteURI>
+					</Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item AppInfo="investsIn" conceptLink="">investsIn</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+					<Element name="totalNumberOfStocks"><!--cues--></Element>
+					<Element name="gain"><!--cues--></Element>
+					<Element name="stockNumber"><!--cues--></Element>
+				</Component>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="ToCrossing">
+				<Component name="Relationship">
+					<Element name="to"><!--cues--></Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+				</Component>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="LinkToReconstruction">
+			<Component name="Relationship">
+				<Element name="to"><!--cues--></Element>
+				<Element name="category">
+					<Documentation>Type of relationship.</Documentation>
+				</Element>
+				<Element name="description">
+					<Documentation>Description or notes clarifying the relationship.</Documentation>
+				</Element>
+				<Element name="date">
+					<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+				</Element>
+			</Component>
+			<Component name="ReconstructionActivity">
+				<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+				<Element name="typeActivity">
+					<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+					
+				</Element>
+				<Element name="agent">
+					<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+				</Element>
+				<Element name="startedAtTime">
+					<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+				</Element>
+				<Element name="endedAtTime">
+					<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+				</Element>
+				<Element name="noteReconstruction"><!--cues--></Element>
+			</Component>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>
