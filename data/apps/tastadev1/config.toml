@@ -81,7 +81,7 @@ filter="true"
 ################## ORGANISATION RECONSTRUCTIONS  ########################################
 [app.prof.organisationReconstruction]
 prof="clarin.eu:cr1:p_1772521921680"
-title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+title="string(((//cmdp:OrganisationReconstruction/cmdp:OrganisationNames/cmdp:preferredName)[.!=''])[1])"
 
 [app.prof.organisationReconstruction.list]
 
