@@ -8,51 +8,60 @@
 	</Header>
 	<Component name="PersonObservation" ConceptLink="https://personsincontext.org/model#Person" CardinalityMin="1" CardinalityMax="1">
 		<Documentation>A Person is a human being whose individual existence can somehow be documented. Container class for Person observation and Person reconstruction.</Documentation>
-		<Component name="Identifier" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://purl.org/dc/terms/identifier" CardinalityMin="1" CardinalityMax="unbounded">
-			<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>
-			<Element name="identifierType" CardinalityMin="1" CardinalityMax="1">
-				<ValueScheme>
-					<Vocabulary>
-						<enumeration>
-							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">Local-identifier</item>
-							<item ConceptLink="" AppInfo="">URI</item>
-						</enumeration>
-					</Vocabulary>
-				</ValueScheme>
-			</Element>
-			<Element name="identifierLabel" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>Add the preferred label for this identifier.</Documentation>
-			</Element>
-			<Element name="identifierUrl" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
-			</Element>
-			<Element name="schemeAgency" ConceptLink="http://www.w3.org/ns/adms#schemeAgency" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>
-				<ValueScheme>
-					<Vocabulary>
-						<enumeration>
-							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>
-							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>
-							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>
-							<item ConceptLink="" AppInfo="">EMLO</item>
-							<item ConceptLink="" AppInfo="">CERL</item>
-							<item ConceptLink="" AppInfo="">NODEGOAT</item>
-						</enumeration>
-					</Vocabulary>
-				</ValueScheme>
-			</Element>
-		</Component>
+<!--		<Component name="Identifier" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://purl.org/dc/terms/identifier" CardinalityMin="1" CardinalityMax="unbounded">-->
+<!--			<Documentation>A unique identifier of the resource being described or cataloged. Usage note: The identifier is a text string which is assigned to the resource to provide an unambiguous reference within a particular context. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. </Documentation>-->
+<!--			<Element name="identifierType" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<ValueScheme>-->
+<!--					<Vocabulary>-->
+<!--						<enumeration>-->
+<!--							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">Local-identifier</item>-->
+<!--							<item ConceptLink="" AppInfo="">URI</item>-->
+<!--						</enumeration>-->
+<!--					</Vocabulary>-->
+<!--				</ValueScheme>-->
+<!--			</Element>-->
+<!--			<Element name="identifierLabel" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>Add the preferred label for this identifier.</Documentation>-->
+<!--			</Element>-->
+<!--			<Element name="identifierUrl" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>The complete URL if the identifier has a web locator. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>-->
+<!--			</Element>-->
+<!--			<Element name="schemeAgency" ConceptLink="http://www.w3.org/ns/adms#schemeAgency" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>The name of the external source/knowledge base used to get the identifier. </Documentation>-->
+<!--				<ValueScheme>-->
+<!--					<Vocabulary>-->
+<!--						<enumeration>-->
+<!--							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
+<!--							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>-->
+<!--							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
+<!--							<item ConceptLink="" AppInfo="">EMLO</item>-->
+<!--							<item ConceptLink="" AppInfo="">CERL</item>-->
+<!--							<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
+<!--						</enumeration>-->
+<!--					</Vocabulary>-->
+<!--				</ValueScheme>-->
+<!--			</Element>-->
+<!--		</Component>-->
 		<Component name="Source" ComponentRef="clarin.eu:cr1:c_1758888743557" ConceptLink="https://schema.org/CreativeWork" CardinalityMin="1" CardinalityMax="1">
 			<Documentation>https://personsincontext.org/model/#ArchiveComponent</Documentation>
 			<Element name="name" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 				<Documentation>The name of the item. (Also used for titles).</Documentation>
 			</Element>
-		</Component>
-		<Component name="RoleInSource" CardinalityMin="0" CardinalityMax="1">
-			<Element name="hasRole" ConceptLink=" https://personsincontext.org/model#hasRole" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>The role of a Person observation on the Source. Use a term from the PiCo Roles thesaurus: https://terms.personsincontext.org/roles </Documentation>
+			<Element name="urlZoteroItem" ConceptLink="https://schema.org/URL" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Enter the Zotero group link to the record (e.g., https://www.zotero.org/groups/5045066/tastade/items/3FMQTK9V)</Documentation>
+			</Element>
+			<Element name="urlPageScan" ConceptLink="https://schema.org/URL" ValueScheme="anyURI" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A link to the location of the scan at the Tastade archive. A link to scan as it can be displayed online and a link to a thumbnail (for search results) should be provided. Preferably a link to a IIIF manifest.</Documentation>
+			</Element>
+			<Element name="position" ConceptLink="https://schema.org/position" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>(to be defined: use for page number?), PiCo says: "The position defines the order in which scans are presented on the web. This feature is required when a Source has multiple scans."</Documentation>
 			</Element>
 		</Component>
+<!--		<Component name="RoleInSource" CardinalityMin="0" CardinalityMax="1">-->
+<!--			<Element name="hasRole" ConceptLink=" https://personsincontext.org/model#hasRole" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>The role of a Person observation on the Source. Use a term from the PiCo Roles thesaurus: https://terms.personsincontext.org/roles </Documentation>-->
+<!--			</Element>-->
+<!--		</Component>-->
 		<Component name="PersonNameObservation" CardinalityMin="1" CardinalityMax="1">
 			<Component name="NameAsObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
 				<Element name="name" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -445,7 +454,7 @@
 			</Component>
 		</Component>
 		<Component name="RelationshipsToObservations" CardinalityMin="1" CardinalityMax="1">
-			<Component name="ToPerson" CardinalityMin="1" CardinalityMax="1">
+			<Component name="ToPersonGeneric" CardinalityMin="1" CardinalityMax="1">
 				<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
 					<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 					<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
@@ -475,6 +484,62 @@
 					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
 				</Component>
 			</Component>
+			<Component name="ToPersonBuyingSelling" CardinalityMin="0" CardinalityMax="1">
+				<Component name="RelationshipTransactional" ComponentRef="clarin.eu:cr1:c_1772521921735" CardinalityMin="1" CardinalityMax="1">
+					<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date" ValueScheme="date" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="amount" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="currency" CardinalityMin="1" CardinalityMax="1">
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item ConceptLink="http://www.wikidata.org/entity/Q202018" AppInfo="">ducat</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q745316" AppInfo="">escudo</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q918094" AppInfo="">guinea</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q1430760" AppInfo="">louis d'or</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q1678551" AppInfo="">portuguese real (réis)</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q584496" AppInfo="">sovereign</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q162528" AppInfo="">thaler</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
+				</Component>
+			</Component>
+			<Component name="ToPersonLendingBorrowing" CardinalityMin="0" CardinalityMax="1">
+				<Component name="RelationshipTransactional" ComponentRef="clarin.eu:cr1:c_1772521921735" CardinalityMin="1" CardinalityMax="1">
+					<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date" ValueScheme="date" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="amount" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="currency" CardinalityMin="1" CardinalityMax="1">
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item ConceptLink="http://www.wikidata.org/entity/Q202018" AppInfo="">ducat</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q745316" AppInfo="">escudo</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q918094" AppInfo="">guinea</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q1430760" AppInfo="">louis d'or</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q1678551" AppInfo="">portuguese real (réis)</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q584496" AppInfo="">sovereign</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q162528" AppInfo="">thaler</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
+				</Component>
+			</Component>
 			<Component name="ToOrganisation" CardinalityMin="1" CardinalityMax="1">
 				<Component name="RelationshipInvestment" ComponentRef="clarin.eu:cr1:c_1772521921732" CardinalityMin="1" CardinalityMax="1">
 					<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
@@ -484,11 +549,26 @@
 					<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 						<Documentation>Description or notes clarifying the relationship.</Documentation>
 					</Element>
-					<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Element name="date" ValueScheme="date" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
 					</Element>
-					<Element name="totalNumberOfStocks" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
-					<Element name="gain" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="totalNumberOfStocks" ValueScheme="int" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="gain" ValueScheme="decimal" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+					<Element name="currency" ConceptLink="http://www.wikidata.org/entity/P38" CardinalityMin="1" CardinalityMax="1">
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item ConceptLink="http://www.wikidata.org/entity/Q202018" AppInfo="">ducat</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q745316" AppInfo="">escudo</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q918094" AppInfo="">guinea</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q1430760" AppInfo="">louis d'or</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q1678551" AppInfo="">portuguese real (réis)</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q584496" AppInfo="">sovereign</item>
+									<item ConceptLink="http://www.wikidata.org/entity/Q162528" AppInfo="">thaler</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
 					<Element name="stockNumber" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="7" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
 				</Component>
 				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
