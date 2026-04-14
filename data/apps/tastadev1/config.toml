@@ -13,7 +13,7 @@ write="any" # or "users" or "owner"
 ######################################## PERSON OBSERVATIONS  ########################################
 [app.prof.personObservation]
 prof="clarin.eu:cr1:p_1758888743558"
-title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
+title="string(/cmd:CMD/cmd:Components/cmdp:PersonObservation/cmdp:PersonNameObservation/cmdp:NameAsObserved/(cmdp:name[@xml:lang='en'],cmdp:name)[1])"
 
 [app.prof.personObservation.list]
         

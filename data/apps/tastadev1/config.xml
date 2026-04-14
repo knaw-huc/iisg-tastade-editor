@@ -12,7 +12,7 @@
     <prof>
       <personObservation>
         <prof>clarin.eu:cr1:p_1758888743558</prof>
-        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:PersonObservation/cmdp:PersonNameObservation/cmdp:NameAsObserved/(cmdp:name[@xml:lang='en'],cmdp:name)[1])</title>
         <list>
           <nr>
             <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
@@ -24,7 +24,7 @@
       </personObservation>
       <organisationReconstruction>
         <prof>clarin.eu:cr1:p_1772521921680</prof>
-        <title>string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])</title>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:OrganisationReconstruction/cmdp:OrganisationNames/(cmdp:preferredName[@xml:lang='en'],cmdp:preferredName)[1])</title>
         <list>
           <nr>
             <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
