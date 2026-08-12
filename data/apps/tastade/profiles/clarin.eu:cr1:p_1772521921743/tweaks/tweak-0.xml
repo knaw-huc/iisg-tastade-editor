@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1772521921743</ID>
+		<Name>Actor</Name>
+		<Description>This is a test profile for Person-related data according to the CIDOC (and PiCo) models.</Description>
+		<Status>development</Status>
+		<DerivedFrom>clarin.eu:cr1:p_1758888743558</DerivedFrom>
+	</Header>
+	<Component name="Actor">
+		<Documentation>This class comprises people, either individually or in groups, who have the potential to perform intentional actions of kinds for which they can be held responsible.</Documentation>
+		<Component name="ObservationLinkToSource">
+			<Documentation>This component is to establish a link between an instance of Source and an instance of an Observation. If the Source uses the main component for SourceBasicMetadata, the urlZoteroItem element here can be left out, since it will be added to the Source. This linking component requires only the specific location of the observation in the source (e.g., a locator in the form of a string and a Url -&gt; when there is a digital scan of a page inside a folder that contains all the source).</Documentation>
+			<Element name="name">
+				<Documentation>The name of the item. (Also used for titles). In Tastade: use the short name of the source entered in the "Extra" field in Zotero.</Documentation>
+			</Element>
+			<Component name="Relationship">
+				<Element name="to">
+					<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+				</Element>
+				<Element name="category">
+					<Documentation>Type of relationship.</Documentation>
+				</Element>
+				<Element name="description">
+					<Documentation>Description or notes clarifying the relationship.</Documentation>
+				</Element>
+				<Element name="date">
+					<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="ObservationLocator">
+				<Documentation>Component for the data property assertions that specify where exactly an Observation is located or appears in the Source where it was extracted from.</Documentation>
+				<Element name="pageScanUrl">
+					<Documentation>This is the link to the specific page (image/scan inside a source's folder) where an observation occurs.</Documentation>
+				</Element>
+				<Element name="locator">
+					<Documentation>An indication of a page, folio, line, or any other pointer to the specific part in a source where the observation occurs. If you entered the page Url above, here you could enter the page number as a label/string. PiCo says: "The position defines the order in which scans are presented on the web. This feature is required when a Source has multiple scans."</Documentation>
+				</Element>
+			</Component>
+		</Component>
+		<Component name="ActorType">
+			<Documentation>This is a selector for the type of actor according to CIDOC</Documentation>
+			<Element name="actorType">
+				<Documentation>This is an element that links the CIDOC class Actor to the two subclasses.</Documentation>
+				
+			</Element>
+		</Component>
+		<Component name="LabelObserved">
+			<Element name="labelAsWritten">
+				<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+			</Element>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="RoleInSource">
+			<Element name="hasRole">
+				<Documentation>The role of a Person observation on the Source. Use a term from the PiCo Roles thesaurus: https://terms.personsincontext.org/roles </Documentation>
+			</Element>
+		</Component>
+		<Component name="Identifiers">
+			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+			<Element name="identifierType">
+				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+				
+			</Element>
+			<Element name="identifierValue">
+				<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+			</Element>
+			<Element name="identifierUri">
+				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+		</Component>
+		<Component name="PersonNameParts">
+			<Component name="PersonNamePart">
+				<Documentation>person_7_name_part / Name Part / This field is used to indicate a type of a specific part of the name attributed to the documented person.  / -&gt;P1-&gt;E33_E41[5_1]-&gt;P106-&gt;E33_E41[7_1]-&gt;rdfs:label-&gt;rdf:Literal</Documentation>
+				<Element name="prefix">
+					<Documentation>A Prefix is a noble or honorific title prefixing a name, e.g. 'Prof. dr.' or 'Jhr.'</Documentation>
+				</Element>
+				<Element name="initials">
+					<Documentation>An initial is the first letter of a person's given name (or sometimes a combination of letters). The Initials property can be used to separately record the initial(s) of a person's given name(s). Each initial should be followed by a dot. It is recommended to always use the Initials property to record initials, but if only the initials of a given name are known, they may also be recorded using pnv:givenName (or pnv:firstName).</Documentation>
+				</Element>
+				<Element name="givenName">
+					<Documentation>A Given name designates the name(s) given to someone at birth or any other name-giving event. In the U.S., the first name of a Person.</Documentation>
+				</Element>
+				<Element name="patronym">
+					<Documentation>A Patronym is a name element based on the given name of one's father or grandfather. This is also the preferred property for a matronym (i.e. a name element based on the given name of one's mother or grandmother).</Documentation>
+				</Element>
+				<Element name="givenNameSufix">
+					<Documentation>A Given name suffix is a name part that is appended to a given name. In the name of the fifteenth-century Duke of Burgundy Philip the Good, for example, 'the Good' is the Given name suffix.</Documentation>
+				</Element>
+				<Element name="infixTitle">
+					<Documentation>An Infix title designates a title in the middle of a name.</Documentation>
+				</Element>
+				<Element name="surname">
+					<Documentation>A surname is the name of the family a person is born into, including one or more prefixes. In some cases the honorific prefix can be incorporated into the surname (e.g. Van Welderen baron Rengers).</Documentation>
+				</Element>
+				<Element name="surnamePrefix">
+					<Documentation>A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').</Documentation>
+				</Element>
+				<Element name="baseSurname">
+					<Documentation>A Base surname is a family name without any prefixes, if those prefixes need to be ignored in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V', the Base surname is 'Vries'.</Documentation>
+				</Element>
+				<Element name="trailingPatronym">
+					<Documentation>A Trailing patronym refers to the parent's given name, suffixing the person's family name, mostly used for disambiguation.</Documentation>
+				</Element>
+				<Element name="honorificSuffix">
+					<Documentation>An honorific suffix following a Person's name such as M.D./PhD/MSCSW.</Documentation>
+				</Element>
+				<Element name="disambiguatingDescription">
+					<Documentation>A Disambiguating description is a name part that is appended to make sure that the right person is designated. Name parts like 'Sr.' and 'Jr.', used to distinguish a child from his parent, are disambiguating descriptions.</Documentation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="PersonData">
+			<Documentation>https://www.personsincontext.org/model/#Persons-in-Context---Datatype-Properties</Documentation>
+			<Component name="BirthDate">
+				<Documentation>This is a minted property to handle dates not as direct properties but as uncertain time spans. The domain is Person and the range is CIDOC TimeSpan. For direct property use PiCo's recommended https://schema.org/birthDate</Documentation>
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="DeathDate">
+				<Documentation>This is a minted property to handle dates not as direct properties but as uncertain time spans. The domain is Person and the range is CIDOC TimeSpan. For direct property use PiCo's recommended For PiCo: https://schema.org/deathDate</Documentation>
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="FloruitPeriods">
+				<Documentation>This component is used to record the dates of the documented period of activity/flourishing of the documented person. It's also used for life "hints" (years when a person was known to be active). See also: https://docs.swissartresearch.net/et/persons/</Documentation>
+				<Component name="DateObservation">
+					<Element name="dateAsWritten">
+						<Documentation>Enter the date exactly as it is written in the source (trascription or extraction), but not yet normalized.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="BirthPlace">
+				<Documentation>This is a minted property for representing places, domain Person, Raange reuses CIDOC Place entity. For direct properties use: https://schema.org/birthPlace</Documentation>
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Relationship">
+					<Element name="to">
+						<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+					</Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="DeathPlace">
+				<Documentation>This is a minted property for representing places, domain Person, Raange reuses CIDOC Place entity. For direct properties use: https://schema.org/deathPlace</Documentation>
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Relationship">
+					<Element name="to">
+						<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+					</Element>
+					<Element name="category">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="LifeEventOther">
+				<Documentation>Except Birth and Death, which are modelled separatedly.</Documentation>
+				<Element name="eventType"><!--cues--></Element>
+				<Component name="EventName">
+					<Component name="LabelObserved">
+						<Element name="labelAsWritten">
+							<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+						</Element>
+						<Component name="Confidence">
+							<Element name="confidenceValue">
+								<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+								
+							</Element>
+							<Element name="confidenceScore"><!--cues--></Element>
+						</Component>
+					</Component>
+					<Component name="EventNormalized">
+						<Element name="eventNameNormalizedString"><!--cues--></Element>
+						<Component name="EventIdentifiers">
+							<Component name="Identifiers">
+								<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+								<Element name="identifierType">
+									<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+									
+								</Element>
+								<Element name="identifierValue">
+									<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+								</Element>
+								<Element name="identifierUri">
+									<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+								</Element>
+							</Component>
+							<Component name="Confidence">
+								<Element name="confidenceValue">
+									<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+									
+								</Element>
+								<Element name="confidenceScore"><!--cues--></Element>
+							</Component>
+						</Component>
+					</Component>
+				</Component>
+				<Component name="EventDate">
+					<Component name="LabelObserved">
+						<Element name="labelAsWritten">
+							<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+						</Element>
+						<Component name="Confidence">
+							<Element name="confidenceValue">
+								<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+								
+							</Element>
+							<Element name="confidenceScore"><!--cues--></Element>
+						</Component>
+					</Component>
+					<Component name="DateNormalized">
+						<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Element name="dateStart">
+							<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						</Element>
+						<Element name="dateEnd">
+							<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						</Element>
+						<Element name="calendar">
+							
+						</Element>
+						<Element name="noteDate">
+							<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+						</Element>
+						<Component name="Confidence">
+							<Element name="confidenceValue">
+								<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+								
+							</Element>
+							<Element name="confidenceScore"><!--cues--></Element>
+						</Component>
+					</Component>
+				</Component>
+				<Component name="EventPlace">
+					<Component name="LabelObserved">
+						<Element name="labelAsWritten">
+							<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+						</Element>
+						<Component name="Confidence">
+							<Element name="confidenceValue">
+								<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+								
+							</Element>
+							<Element name="confidenceScore"><!--cues--></Element>
+						</Component>
+					</Component>
+					<Component name="Relationship">
+						<Element name="to">
+							<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+						</Element>
+						<Element name="category">
+							<Documentation>Type of relationship.</Documentation>
+						</Element>
+						<Element name="description">
+							<Documentation>Description or notes clarifying the relationship.</Documentation>
+						</Element>
+						<Element name="date">
+							<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+						</Element>
+						<Component name="Confidence">
+							<Element name="confidenceValue">
+								<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+								
+							</Element>
+							<Element name="confidenceScore"><!--cues--></Element>
+						</Component>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="Gender">
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="GenderTypeIdentifier">
+					<Component name="Identifiers">
+						<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+						<Element name="identifierType">
+							<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+							
+						</Element>
+						<Element name="identifierValue">
+							<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+						</Element>
+						<Element name="identifierUri">
+							<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+						</Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="Occupation">
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="OccupationIdentifier">
+					<Component name="Identifiers">
+						<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+						<Element name="identifierType">
+							<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+							
+						</Element>
+						<Element name="identifierValue">
+							<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+						</Element>
+						<Element name="identifierUri">
+							<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+						</Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="Religion">
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="ReligionIdentifier">
+					<Component name="Identifiers">
+						<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+						<Element name="identifierType">
+							<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+							
+						</Element>
+						<Element name="identifierValue">
+							<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+						</Element>
+						<Element name="identifierUri">
+							<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+						</Element>
+					</Component>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="Age">
+				<Component name="LabelObserved">
+					<Element name="labelAsWritten">
+						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="AgeNormalized">
+					<Element name="hasAgeNormalized">
+						<Documentation>The age of a person. Only used for Person observations, in case the birth date is not known, but the age is. In combination with de date of the Source, a birth date range can be derived, which can be used in the process of creating a Person reconstruction. The age is considered to be in years, unless otherwise mentioned. So an age of "4" is considered to be 4 years, where "4 months" is interpreted as 4 months. Numerical ages ("4") are preferred above ages in text ("four"). </Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="GroupData">
+			<Component name="Formation">
+				<Documentation>Internal note: in RDF export use "P95 has formed" to link this formation event to the Actor (Group) described here. "This class comprises events that result in the formation of a formal or informal E74 Group of people, such as a club, society, association, corporation, or nation."</Documentation>
+				<Component name="DateObservation">
+					<Element name="dateAsWritten">
+						<Documentation>Enter the date exactly as it is written in the source (trascription or extraction), but not yet normalized.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="PlaceObservation">
+					<Element name="placeAsText">
+						<Documentation>The name of the place as it is written in the source.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Founders">
+					<Documentation>"P14 carried out by" links the formation event to its agents.</Documentation>
+					<Element name="founderUrl">
+						<Documentation>URL or identifier of the actor (person or organisation) who carried out the formation event.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+			</Component>
+			<Component name="Dissolution">
+				<Documentation>Internal note: in RDF export use "P99 dissolved" to link this dissolution event to the Actor (Group) described here. "This class comprises the events that result in the formal or informal termination of an instance of E74 Group.  If the dissolution was deliberate, the Dissolution event should also be instantiated as an instance of E7 Activity."</Documentation>
+				<Component name="DateObservation">
+					<Element name="dateAsWritten">
+						<Documentation>Enter the date exactly as it is written in the source (trascription or extraction), but not yet normalized.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="DateNormalized">
+					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="dateStart">
+						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="dateEnd">
+						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					</Element>
+					<Element name="calendar">
+						
+					</Element>
+					<Element name="noteDate">
+						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="PlaceObservation">
+					<Element name="placeAsText">
+						<Documentation>The name of the place as it is written in the source.</Documentation>
+					</Element>
+					<Component name="Confidence">
+						<Element name="confidenceValue">
+							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+							
+						</Element>
+						<Element name="confidenceScore"><!--cues--></Element>
+					</Component>
+				</Component>
+				<Component name="Dissoluters">
+					<Element name="dissolutorUrl"><!--cues--></Element>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="LinkToReconstruction">
+			<Component name="Relationship">
+				<Element name="to">
+					<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+				</Element>
+				<Element name="category">
+					<Documentation>Type of relationship.</Documentation>
+				</Element>
+				<Element name="description">
+					<Documentation>Description or notes clarifying the relationship.</Documentation>
+				</Element>
+				<Element name="date">
+					<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="ReconstructionActivity">
+				<Documentation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </Documentation>
+				<Element name="typeActivity">
+					<Documentation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</Documentation>
+					
+				</Element>
+				<Element name="agent">
+					<Documentation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</Documentation>
+				</Element>
+				<Element name="startedAtTime">
+					<Documentation>The start time of the activity that generated a Person Reconstruction.</Documentation>
+				</Element>
+				<Element name="endedAtTime">
+					<Documentation>The end time of the activity that generated a Person Reconstruction.</Documentation>
+				</Element>
+				<Element name="noteReconstruction"><!--cues--></Element>
+			</Component>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="RecordWorkflowStatus">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+				
+			</Element>
+			<Component name="Note">
+				<Documentation>Any</Documentation>
+				<Element name="noteType">
+					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+					
+				</Element>
+				<Element name="noteContent"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="RecordType">
+			<Element name="recordType">
+				
+			</Element>
+		</Component>
+		<Component name="Note">
+			<Documentation>Any</Documentation>
+			<Element name="noteType">
+				<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+				
+			</Element>
+			<Element name="noteContent"><!--cues--></Element>
+		</Component>
+	</Component>
+</ComponentSpec>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962450</ID>
+		<Name>Source</Name>
+		<Description>Minimum and mandatory metadata elements common to all resources.</Description>
+		<Status>development</Status>
+		<DerivedFrom>clarin.eu:cr1:c_1761816151555</DerivedFrom>
+	</Header>
+	<Component name="Source">
+		<Component name="SourceBasicMetadata">
+			<Element name="nameOrTitle">
+				<clariah:label xml:lang="en">Source's key title</clariah:label>
+				<clariah:explanation>Enter the source's key title, also used as folder title, the same entered in the Zotero "Extra" field. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+			<Element name="mainType">
+				<clariah:label xml:lang="en">Source's main type</clariah:label>
+				<clariah:explanation>Select the source's main type. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+			<Element name="additionalSourceType">
+				<clariah:label xml:lang="en">Source's additional type</clariah:label>
+				<clariah:explanation>Select the source's additional type. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+			<Element name="internalType">
+				<clariah:label xml:lang="en">Source's reliability type</clariah:label>
+				<clariah:explanation>Select the source's internal type. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+			<Element name="accessURL">
+				<clariah:label xml:lang="en">Source's cloud link</clariah:label>
+				<clariah:explanation>Find the link to the folder in Research Drive and paste it here. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+<!--			<Element name="landingPage">-->
+<!--				<Documentation>Optional: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, [a source], its distributions and/or additional information (e.g., HTML page with description, metadata, links, DOI landing page, catalog page, Zotero item page)</Documentation>-->
+<!--			</Element>-->
+<!--			<Element name="abstract">-->
+<!--				<Documentation>An abstract is a short description that summarizes a CreativeWork.</Documentation>-->
+<!--			</Element>-->
+			<Element name="zoteroGroupItemLink">
+				<clariah:label xml:lang="en">Zotero group item link</clariah:label>
+				<clariah:explanation>Find the link to the source's reference in Zotero and paste it here. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+<!--			<Element name="pageRange">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+<!--			<Element name="notesSource">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+		</Component>
+		<Component name="RecordWorkflowStatus">
+			<clariah:label xml:lang="en">Source work status</clariah:label>
+			<clariah:explanation>Select the current work status for this source. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			<Element name="recordStatus">
+				<clariah:label xml:lang="en">Source status</clariah:label>
+				<clariah:explanation>Select the most specific type. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+		</Component>
+		<Component name="Note">
+			<clariah:explanation>Use notes for any additional information or action points related to the source. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			<Element name="noteType">
+				<clariah:label xml:lang="en">Note type</clariah:label>
+				<clariah:explanation>Select the most specific type. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			</Element>
+			<Element name="noteContent" cue:inputWidth="60" cue:inputHeight="8"/>
+		</Component>
+	</Component>
+</ComponentSpec>

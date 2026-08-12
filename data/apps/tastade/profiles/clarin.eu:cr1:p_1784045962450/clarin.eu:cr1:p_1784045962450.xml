@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962450</ID>
+		<Name>Source</Name>
+		<Description>Minimum and mandatory metadata elements common to all resources.</Description>
+		<Status>development</Status>
+		<DerivedFrom>clarin.eu:cr1:c_1761816151555</DerivedFrom>
+	</Header>
+	<Component name="Source" CardinalityMin="1" CardinalityMax="1">
+		<Component name="SourceBasicMetadata" ComponentRef="clarin.eu:cr1:c_1761816151555" CardinalityMin="1" CardinalityMax="1">
+			<Element name="nameOrTitle" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="false" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>The name of a Source. For Sources: Use a user-friendly name to identify the source. Depending on the Source type, this may contain a combination of it's name, year of creation, creator, et cetera. </Documentation>
+			</Element>
+			<Element name="mainType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Recommendation for vocabularies to use: https://www.w3.org/TR/vocab-dcat-3/#Property:resource_type. You can use a term from the PiCo thesaurus for Source types: https://terms.personsincontext.org/sourcetypes . (Internal note: this property is related but is not the same as this one in PiCo: https://schema.org/additionalType).</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+<!--							<item ConceptLink="http://id.loc.gov/vocabulary/marcgt/let">letter</item>-->
+							<item ConceptLink="https://www.wikidata.org/wiki/Q36279">Biography</item>
+							<item ConceptLink="https://www.wikidata.org/wiki/Q155656">Will</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="additionalSourceType" ConceptLink="https://schema.org/additionalType" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>"An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org style guide." See PiCo's vocabulary:  https://personsincontext.org/model/#https://schema.org/additionalType</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="https://www.wikidata.org/wiki/Q112754">Primary source</item>
+							<item ConceptLink="https://www.wikidata.org/wiki/Q905511">Secondary source</item>
+							<item ConceptLink="https://www.wikidata.org/wiki/Q1063801">Tertiary source</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="internalType" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>To use for internal classification of sources (e.g., primary, secondary; or any other useful classifications which vary per project).</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="">High</item>
+							<item ConceptLink="">Medium</item>
+							<item ConceptLink="">Low</item>
+							<item ConceptLink="">Disputed</item>
+							<item ConceptLink="">Uncertain</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="accessURL" ConceptLink="https://www.w3.org/ns/dcat#accessURL" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A URL of the resource that gives access to it. In PiCo: A media object, usually a scan, that encodes the Source of a Person observation (https://schema.org/associatedMedia).</Documentation>
+			</Element>
+<!--			<Element name="landingPage" ConceptLink="https://www.w3.org/ns/dcat#landingPage" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>Optional: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, [a source], its distributions and/or additional information (e.g., HTML page with description, metadata, links, DOI landing page, catalog page, Zotero item page)</Documentation>-->
+<!--			</Element>-->
+<!--			<Element name="abstract" ConceptLink="https://schema.org/abstract" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="7" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>An abstract is a short description that summarizes a CreativeWork.</Documentation>-->
+<!--			</Element>-->
+			<Element name="zoteroGroupItemLink" ConceptLink="https://schema.org/url" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="8" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Add here the link to the item in the Zotero group: 1) go to https://www.zotero.org/groups/6097405/ecodicesnl. 2) Right-click on the item and select the option "copy link". 3) Paste the link here. Here's an example item URL: https://www.zotero.org/groups/4804340/hereyourgroupname/items/EQ2D34GW</Documentation>
+			</Element>
+<!--			<Element name="pageRange" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="9" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>-->
+<!--			<Element name="notesSource" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="10" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>-->
+<!--			<Component name="Keywords" ComponentRef="clarin.eu:cr1:c_1761816151570" ConceptLink="http://www.w3.org/ns/dcat#resource_keyword" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<Documentation>Add as many keywords as wanted, making sure they have URIs.</Documentation>-->
+<!--				<Component name="Identifiers" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="unbounded">-->
+<!--					<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>-->
+<!--					<Element name="identifierType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>-->
+<!--						<ValueScheme>-->
+<!--							<Vocabulary>-->
+<!--								<enumeration>-->
+<!--									<item ConceptLink="" AppInfo="">CERL</item>-->
+<!--									<item ConceptLink="" AppInfo="">EMLO</item>-->
+<!--									<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>-->
+<!--									<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
+<!--									<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
+<!--									<item ConceptLink="" AppInfo="">Shelfmark</item>-->
+<!--									<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
+<!--									<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>-->
+<!--									<item>Other</item>-->
+<!--								</enumeration>-->
+<!--							</Vocabulary>-->
+<!--						</ValueScheme>-->
+<!--					</Element>-->
+<!--					<Element name="identifierValue" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>-->
+<!--					</Element>-->
+<!--					<Element name="identifierUri" ConceptLink="https://schema.org/sameAs" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>-->
+<!--					</Element>-->
+<!--				</Component>-->
+<!--			</Component>-->
+		</Component>
+		<Component name="RecordWorkflowStatus" ComponentRef="clarin.eu:cr1:c_1784045962448" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="Use for sources which are not yet analized, no data is extracted">toDo</item>
+<!--							<item ConceptLink="" AppInfo="Use for Entities (e.g., Actor) which are created quickly but no data is yet extracted">draft</item>-->
+							<item ConceptLink="" AppInfo="Use for Sources or Entities for which some data has been extracted, but there are still other pieces of data to be extracted">inProgress</item>
+							<item ConceptLink="" AppInfo="all relevant data from this Source has been extracted">done</item>
+							<item ConceptLink="" AppInfo="The work with this source is fully completed and reviewed.">checked</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+<!--			<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="0" CardinalityMax="0">-->
+<!--				<Documentation>Any</Documentation>-->
+<!--				<Element name="noteType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>-->
+<!--					<ValueScheme>-->
+<!--						<Vocabulary>-->
+<!--							<enumeration>-->
+<!--								<item>action point</item>-->
+<!--								<item>general remarks</item>-->
+<!--							</enumeration>-->
+<!--						</Vocabulary>-->
+<!--					</ValueScheme>-->
+<!--				</Element>-->
+<!--				<Element name="noteContent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>-->
+<!--			</Component>-->
+		</Component>
+		<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="0" CardinalityMax="0">
+			<Documentation>Any</Documentation>
+			<Element name="noteType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item>actionPoint</item>
+							<item>workStatusNote</item>
+							<item>otherNote</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="noteContent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		</Component>
+	</Component>
+</ComponentSpec>

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<config>
+  <app>
+    <name>tastadev1</name>
+    <title>Tastade Editor version 2</title>
+    <def_prof>clarin.eu:cr1:p_1784045962450</def_prof>
+    <cmdi_version>1.2</cmdi_version>
+    <access>
+      <read>any</read>
+      <write>users</write>
+    </access>
+    <prof>
+      <source>
+        <prof>clarin.eu:cr1:p_1784045962450</prof>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <keytitle>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</xpath>
+            <label>Key title</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </keytitle>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Creator</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </creator>
+        </list>
+      </source>
+      <actorObservation>
+        <prof>clarin.eu:cr1:p_1772521921743</prof>
+        <title>string((/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </actorObservation>
+    </prof>
+  </app>
+</config>
