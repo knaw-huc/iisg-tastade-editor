@@ -41,7 +41,7 @@
 <!--							</Vocabulary>-->
 <!--						</ValueScheme>-->
 <!--					</Element>-->
-<!--					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--&lt;!&ndash;					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>&ndash;&gt;-->
 <!--				</Component>-->
 			</Component>
 			<Component name="ObservationLocator" CardinalityMin="0" CardinalityMax="1">
@@ -87,7 +87,7 @@
 						</Vocabulary>
 					</ValueScheme>
 				</Element>
-				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--&lt;!&ndash;				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>&ndash;&gt;-->
 			</Component>
 		</Component>
 		<Component name="RoleInSource" CardinalityMin="0" CardinalityMax="1">
@@ -102,14 +102,14 @@
 				<ValueScheme>
 					<Vocabulary>
 						<enumeration>
-							<item ConceptLink="" AppInfo="">CERL</item>
-							<item ConceptLink="" AppInfo="">EMLO</item>
+<!--							<item ConceptLink="" AppInfo="">CERL</item>-->
+<!--							<item ConceptLink="" AppInfo="">EMLO</item>-->
 							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>
-							<item ConceptLink="" AppInfo="">NODEGOAT</item>
-							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>
-							<item ConceptLink="" AppInfo="">Shelfmark</item>
-							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>
-							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>
+<!--							<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
+<!--							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
+<!--							<item ConceptLink="" AppInfo="">Shelfmark</item>-->
+<!--							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
+<!--							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>-->
 							<item>Other</item>
 						</enumeration>
 					</Vocabulary>
@@ -118,66 +118,48 @@
 			<Element name="identifierValue" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 				<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
 			</Element>
-			<Element name="identifierUri" ConceptLink="https://schema.org/sameAs" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
-			</Element>
+<!--			<Element name="identifierUri" ConceptLink="https://schema.org/sameAs" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>-->
+<!--			</Element>-->
 		</Component>
-		<Component name="PersonNameParts" CardinalityMin="1" CardinalityMax="1">
-			<Component name="PersonNamePart" ComponentRef="clarin.eu:cr1:c_1761816151561" ConceptLink="https://w3id.org/pnv#PersonName" CardinalityMin="1" CardinalityMax="1">
-				<Documentation>person_7_name_part / Name Part / This field is used to indicate a type of a specific part of the name attributed to the documented person.  / -&gt;P1-&gt;E33_E41[5_1]-&gt;P106-&gt;E33_E41[7_1]-&gt;rdfs:label-&gt;rdf:Literal</Documentation>
-				<Element name="prefix" ConceptLink="https://w3id.org/pnv#prefix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Prefix is a noble or honorific title prefixing a name, e.g. 'Prof. dr.' or 'Jhr.'</Documentation>
-				</Element>
-				<Element name="initials" ConceptLink="https://w3id.org/pnv#initials" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>An initial is the first letter of a person's given name (or sometimes a combination of letters). The Initials property can be used to separately record the initial(s) of a person's given name(s). Each initial should be followed by a dot. It is recommended to always use the Initials property to record initials, but if only the initials of a given name are known, they may also be recorded using pnv:givenName (or pnv:firstName).</Documentation>
-				</Element>
-				<Element name="givenName" ConceptLink="https://w3id.org/pnv#givenName" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Given name designates the name(s) given to someone at birth or any other name-giving event. In the U.S., the first name of a Person.</Documentation>
-				</Element>
-				<Element name="patronym" ConceptLink="https://w3id.org/pnv#patronym" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Patronym is a name element based on the given name of one's father or grandfather. This is also the preferred property for a matronym (i.e. a name element based on the given name of one's mother or grandmother).</Documentation>
-				</Element>
-				<Element name="givenNameSufix" ConceptLink="https://w3id.org/pnv#givenNameSuffix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Given name suffix is a name part that is appended to a given name. In the name of the fifteenth-century Duke of Burgundy Philip the Good, for example, 'the Good' is the Given name suffix.</Documentation>
-				</Element>
-				<Element name="infixTitle" ConceptLink="https://w3id.org/pnv#infixTitle" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="7" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>An Infix title designates a title in the middle of a name.</Documentation>
-				</Element>
-				<Element name="surname" ConceptLink="https://w3id.org/pnv#surname" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="8" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A surname is the name of the family a person is born into, including one or more prefixes. In some cases the honorific prefix can be incorporated into the surname (e.g. Van Welderen baron Rengers).</Documentation>
-				</Element>
-				<Element name="surnamePrefix" ConceptLink="https://w3id.org/pnv#surnamePrefix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="9" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').</Documentation>
-				</Element>
-				<Element name="baseSurname" ConceptLink="https://w3id.org/pnv#baseSurname" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="10" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Base surname is a family name without any prefixes, if those prefixes need to be ignored in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V', the Base surname is 'Vries'.</Documentation>
-				</Element>
-				<Element name="trailingPatronym" ConceptLink="https://w3id.org/pnv#trailingPatronym" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="11" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Trailing patronym refers to the parent's given name, suffixing the person's family name, mostly used for disambiguation.</Documentation>
-				</Element>
-				<Element name="honorificSuffix" ConceptLink="https://schema.org/honorificSuffix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="12" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>An honorific suffix following a Person's name such as M.D./PhD/MSCSW.</Documentation>
-				</Element>
-				<Element name="disambiguatingDescription" ConceptLink="https://w3id.org/pnv#disambiguatingDescription" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="13" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-					<Documentation>A Disambiguating description is a name part that is appended to make sure that the right person is designated. Name parts like 'Sr.' and 'Jr.', used to distinguish a child from his parent, are disambiguating descriptions.</Documentation>
-				</Element>
-				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
-					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
-						<ValueScheme>
-							<Vocabulary>
-								<enumeration>
-									<item ConceptLink="" AppInfo="">Certain</item>
-									<item ConceptLink="" AppInfo="">Conjecture</item>
-									<item ConceptLink="" AppInfo="">Uncertain</item>
-									<item ConceptLink="" AppInfo="">Unknown</item>
-								</enumeration>
-							</Vocabulary>
-						</ValueScheme>
-					</Element>
-					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-				</Component>
-			</Component>
+		<Component name="PersonNamePart" ComponentRef="clarin.eu:cr1:c_1761816151561" ConceptLink="https://w3id.org/pnv#PersonName" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>person_7_name_part / Name Part / This field is used to indicate a type of a specific part of the name attributed to the documented person.  / -&gt;P1-&gt;E33_E41[5_1]-&gt;P106-&gt;E33_E41[7_1]-&gt;rdfs:label-&gt;rdf:Literal</Documentation>
+			<Element name="prefix" ConceptLink="https://w3id.org/pnv#prefix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Prefix is a noble or honorific title prefixing a name, e.g. 'Prof. dr.' or 'Jhr.'</Documentation>
+			</Element>
+			<Element name="initials" ConceptLink="https://w3id.org/pnv#initials" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>An initial is the first letter of a person's given name (or sometimes a combination of letters). The Initials property can be used to separately record the initial(s) of a person's given name(s). Each initial should be followed by a dot. It is recommended to always use the Initials property to record initials, but if only the initials of a given name are known, they may also be recorded using pnv:givenName (or pnv:firstName).</Documentation>
+			</Element>
+			<Element name="givenName" ConceptLink="https://w3id.org/pnv#givenName" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Given name designates the name(s) given to someone at birth or any other name-giving event. In the U.S., the first name of a Person.</Documentation>
+			</Element>
+			<Element name="patronym" ConceptLink="https://w3id.org/pnv#patronym" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="5" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Patronym is a name element based on the given name of one's father or grandfather. This is also the preferred property for a matronym (i.e. a name element based on the given name of one's mother or grandmother).</Documentation>
+			</Element>
+			<Element name="givenNameSufix" ConceptLink="https://w3id.org/pnv#givenNameSuffix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="6" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Given name suffix is a name part that is appended to a given name. In the name of the fifteenth-century Duke of Burgundy Philip the Good, for example, 'the Good' is the Given name suffix.</Documentation>
+			</Element>
+			<Element name="infixTitle" ConceptLink="https://w3id.org/pnv#infixTitle" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="7" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>An Infix title designates a title in the middle of a name.</Documentation>
+			</Element>
+			<Element name="surname" ConceptLink="https://w3id.org/pnv#surname" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="8" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A surname is the name of the family a person is born into, including one or more prefixes. In some cases the honorific prefix can be incorporated into the surname (e.g. Van Welderen baron Rengers).</Documentation>
+			</Element>
+			<Element name="surnamePrefix" ConceptLink="https://w3id.org/pnv#surnamePrefix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="9" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').</Documentation>
+			</Element>
+			<Element name="baseSurname" ConceptLink="https://w3id.org/pnv#baseSurname" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="10" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Base surname is a family name without any prefixes, if those prefixes need to be ignored in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V', the Base surname is 'Vries'.</Documentation>
+			</Element>
+			<Element name="trailingPatronym" ConceptLink="https://w3id.org/pnv#trailingPatronym" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="11" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Trailing patronym refers to the parent's given name, suffixing the person's family name, mostly used for disambiguation.</Documentation>
+			</Element>
+			<Element name="honorificSuffix" ConceptLink="https://schema.org/honorificSuffix" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="12" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>An honorific suffix following a Person's name such as M.D./PhD/MSCSW.</Documentation>
+			</Element>
+			<Element name="disambiguatingDescription" ConceptLink="https://w3id.org/pnv#disambiguatingDescription" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="13" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>A Disambiguating description is a name part that is appended to make sure that the right person is designated. Name parts like 'Sr.' and 'Jr.', used to distinguish a child from his parent, are disambiguating descriptions.</Documentation>
+			</Element>
 			<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
 				<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
@@ -192,7 +174,7 @@
 						</Vocabulary>
 					</ValueScheme>
 				</Element>
-				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--&lt;!&ndash;					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>&ndash;&gt;-->
 			</Component>
 		</Component>
 		<Component name="PersonData" ComponentRef="clarin.eu:cr1:c_1761816151573" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
@@ -217,49 +199,64 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
-				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
-					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
-					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
-					</Element>
-					<Element name="dateEnd" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
-					</Element>
-					<Element name="calendar" CardinalityMin="1" CardinalityMax="1">
-						<ValueScheme>
-							<Vocabulary>
-								<enumeration>
-									<item>Gregorian</item>
-									<item> Julian (1 January year start)</item>
-									<item>Julian (25 March year start)</item>
-									<item>Unknown</item>
-								</enumeration>
-							</Vocabulary>
-						</ValueScheme>
-					</Element>
-					<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
-					</Element>
-					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
-						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
-							<ValueScheme>
-								<Vocabulary>
-									<enumeration>
-										<item ConceptLink="" AppInfo="">Certain</item>
-										<item ConceptLink="" AppInfo="">Conjecture</item>
-										<item ConceptLink="" AppInfo="">Uncertain</item>
-										<item ConceptLink="" AppInfo="">Unknown</item>
-									</enumeration>
-								</Vocabulary>
-							</ValueScheme>
-						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-					</Component>
-				</Component>
+			    <Component name="DateNormalized" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
+			        <Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+			        <Element name="datePrecision" CardinalityMin="1" CardinalityMax="1">
+			            <Documentation>This helps validate that dateStart/dateEnd are filled correctly.</Documentation>
+			            <ValueScheme>
+			                <Vocabulary>
+			                    <enumeration>
+			                        <item ConceptLink="" AppInfo="">exactDate</item>
+			                        <item ConceptLink="" AppInfo="">yearOnly</item>
+			                        <item ConceptLink="" AppInfo="">dateRange</item>
+			                        <item ConceptLink="" AppInfo="">dateRangeYearOnly</item>
+			                        <item ConceptLink="" AppInfo="">beforeDate</item>
+			                        <item ConceptLink="" AppInfo="">afterDate</item>
+			                    </enumeration>
+			                </Vocabulary>
+			            </ValueScheme>
+			        </Element>
+			        <Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+			            <Documentation>Enter earliest possible date in EDTF format. Rules: 1) For an EXACT date: enter the date in dateStart, leave dateEnd empty. 2) For a RANGE: enter earliest in dateStart, latest in dateEnd. 3) For "BEFORE X": leave dateStart empty, enter X in dateEnd. 4) For "AFTER Y": enter Y in dateStart, leave dateEnd empty. 5) EDTF uncertainty markers (?, ~, %) can be used in either field, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+			        </Element>
+			        <Element name="dateEnd" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+			            <Documentation>Enter latest possible date in EDTF format. See rules in documentation of field "dateStart". For EDTF conventions, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+			        </Element>
+			        <Element name="calendar" CardinalityMin="1" CardinalityMax="1">
+			            <ValueScheme>
+			                <Vocabulary>
+			                    <enumeration>
+			                        <item>Gregorian</item>
+			                        <item>Julian (1 January year start)</item>
+			                        <item>Julian (25 March year start)</item>
+			                        <item>Unknown</item>
+			                    </enumeration>
+			                </Vocabulary>
+			            </ValueScheme>
+			        </Element>
+			        <Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+			            <Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+			        </Element>
+			        <Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
+			            <Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+			                <Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+			                <ValueScheme>
+			                    <Vocabulary>
+			                        <enumeration>
+			                            <item ConceptLink="" AppInfo="">Certain</item>
+			                            <item ConceptLink="" AppInfo="">Conjecture</item>
+			                            <item ConceptLink="" AppInfo="">Uncertain</item>
+			                            <item ConceptLink="" AppInfo="">Unknown</item>
+			                        </enumeration>
+			                    </Vocabulary>
+			                </ValueScheme>
+			            </Element>
+<!--			            <Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+			        </Component>
+			    </Component>
 			</Component>
 			<Component name="DeathDate" ConceptLink="http://data.huc.org/ontology/deathDate" CardinalityMin="1" CardinalityMax="1">
 				<Documentation>This is a minted property to handle dates not as direct properties but as uncertain time spans. The domain is Person and the range is CIDOC TimeSpan. For direct property use PiCo's recommended For PiCo: https://schema.org/deathDate</Documentation>
@@ -281,23 +278,38 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
-				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
+				<Component name="DateNormalized" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
 					<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+					<Element name="datePrecision" CardinalityMin="1" CardinalityMax="1">
+						<Documentation>This helps validate that dateStart/dateEnd are filled correctly.</Documentation>
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item ConceptLink="" AppInfo="">exactDate</item>
+									<item ConceptLink="" AppInfo="">yearOnly</item>
+									<item ConceptLink="" AppInfo="">dateRange</item>
+									<item ConceptLink="" AppInfo="">dateRangeYearOnly</item>
+									<item ConceptLink="" AppInfo="">beforeDate</item>
+									<item ConceptLink="" AppInfo="">afterDate</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
 					<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter a specific date (if there is no date range), follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Documentation>Enter earliest possible date in EDTF format. Rules: 1) For an EXACT date: enter the date in dateStart, leave dateEnd empty. 2) For a RANGE: enter earliest in dateStart, latest in dateEnd. 3) For "BEFORE X": leave dateStart empty, enter X in dateEnd. 4) For "AFTER Y": enter Y in dateStart, leave dateEnd empty. 5) EDTF uncertainty markers (?, ~, %) can be used in either field, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					</Element>
 					<Element name="dateEnd" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Use this field to enter the end date if there was a range. Follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+						<Documentation>Enter latest possible date in EDTF format. See rules in documentation of field "dateStart". For EDTF conventions, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
 					</Element>
 					<Element name="calendar" CardinalityMin="1" CardinalityMax="1">
 						<ValueScheme>
 							<Vocabulary>
 								<enumeration>
 									<item>Gregorian</item>
-									<item> Julian (1 January year start)</item>
+									<item>Julian (1 January year start)</item>
 									<item>Julian (25 March year start)</item>
 									<item>Unknown</item>
 								</enumeration>
@@ -321,7 +333,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+						<!--			            <Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -345,7 +357,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
@@ -385,7 +397,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -409,7 +421,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
@@ -439,7 +451,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -463,7 +475,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
@@ -493,7 +505,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -519,7 +531,7 @@
 									</Vocabulary>
 								</ValueScheme>
 							</Element>
-							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 						</Component>
 					</Component>
 					<Component name="EventNormalized" CardinalityMin="1" CardinalityMax="1">
@@ -566,7 +578,7 @@
 										</Vocabulary>
 									</ValueScheme>
 								</Element>
-								<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--								<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 							</Component>
 						</Component>
 					</Component>
@@ -590,7 +602,7 @@
 									</Vocabulary>
 								</ValueScheme>
 							</Element>
-							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 						</Component>
 					</Component>
 					<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
@@ -630,7 +642,7 @@
 									</Vocabulary>
 								</ValueScheme>
 							</Element>
-							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 						</Component>
 					</Component>
 				</Component>
@@ -653,7 +665,7 @@
 									</Vocabulary>
 								</ValueScheme>
 							</Element>
-							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 						</Component>
 					</Component>
 					<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
@@ -683,61 +695,46 @@
 									</Vocabulary>
 								</ValueScheme>
 							</Element>
-							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--							<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 						</Component>
 					</Component>
 				</Component>
 			</Component>
-			<Component name="Gender" ConceptLink="https://schema.org/gender" CardinalityMin="0" CardinalityMax="1">
-				<Component name="LabelObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
-					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+			<Component name="Gender" ConceptLink="https://schema.org/gender" CardinalityMin="1" CardinalityMax="1">
+<!--				<Component name="LabelObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">-->
+<!--					<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>-->
+<!--					</Element>-->
+<!--					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+<!--						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+<!--							<ValueScheme>-->
+<!--								<Vocabulary>-->
+<!--									<enumeration>-->
+<!--										<item ConceptLink="" AppInfo="">Certain</item>-->
+<!--										<item ConceptLink="" AppInfo="">Conjecture</item>-->
+<!--										<item ConceptLink="" AppInfo="">Uncertain</item>-->
+<!--										<item ConceptLink="" AppInfo="">Unknown</item>-->
+<!--									</enumeration>-->
+<!--								</Vocabulary>-->
+<!--							</ValueScheme>-->
+<!--						</Element>-->
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--					</Component>-->
+<!--				</Component>-->
+				<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
+					<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Link to the entity in the other CMDI profile.</Documentation>
 					</Element>
-					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
-						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
-							<ValueScheme>
-								<Vocabulary>
-									<enumeration>
-										<item ConceptLink="" AppInfo="">Certain</item>
-										<item ConceptLink="" AppInfo="">Conjecture</item>
-										<item ConceptLink="" AppInfo="">Uncertain</item>
-										<item ConceptLink="" AppInfo="">Unknown</item>
-									</enumeration>
-								</Vocabulary>
-							</ValueScheme>
-						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
-					</Component>
-				</Component>
-				<Component name="GenderTypeIdentifier" CardinalityMin="1" CardinalityMax="unbounded">
-					<Component name="Identifiers" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="1">
-						<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
-						<Element name="identifierType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-							<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
-							<ValueScheme>
-								<Vocabulary>
-									<enumeration>
-										<item ConceptLink="" AppInfo="">CERL</item>
-										<item ConceptLink="" AppInfo="">EMLO</item>
-										<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>
-										<item ConceptLink="" AppInfo="">NODEGOAT</item>
-										<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>
-										<item ConceptLink="" AppInfo="">Shelfmark</item>
-										<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>
-										<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>
-										<item>Other</item>
-									</enumeration>
-								</Vocabulary>
-							</ValueScheme>
-						</Element>
-						<Element name="identifierValue" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-							<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
-						</Element>
-						<Element name="identifierUri" ConceptLink="https://schema.org/sameAs" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
-							<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
-						</Element>
-					</Component>
+					<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Type of relationship.</Documentation>
+					</Element>
+					<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Description or notes clarifying the relationship.</Documentation>
+					</Element>
+					<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+					</Element>
 					<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
 						<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
 							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
@@ -775,7 +772,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="OccupationIdentifier" CardinalityMin="1" CardinalityMax="unbounded">
@@ -820,7 +817,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -843,7 +840,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="ReligionIdentifier" CardinalityMin="1" CardinalityMax="unbounded">
@@ -888,7 +885,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -911,7 +908,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="AgeNormalized" CardinalityMin="1" CardinalityMax="1">
@@ -932,7 +929,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -958,7 +955,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
@@ -998,7 +995,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="PlaceObservation" ComponentRef="clarin.eu:cr1:c_1761816151567" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E53_Place" CardinalityMin="1" CardinalityMax="1">
@@ -1019,7 +1016,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="Founders" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by" CardinalityMin="0" CardinalityMax="1">
@@ -1041,7 +1038,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 			</Component>
@@ -1065,7 +1062,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
@@ -1105,7 +1102,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="PlaceObservation" ComponentRef="clarin.eu:cr1:c_1761816151567" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E53_Place" CardinalityMin="1" CardinalityMax="1">
@@ -1126,7 +1123,7 @@
 								</Vocabulary>
 							</ValueScheme>
 						</Element>
-						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--						<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 					</Component>
 				</Component>
 				<Component name="Dissoluters" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by" CardinalityMin="0" CardinalityMax="1">
@@ -1162,7 +1159,7 @@
 							</Vocabulary>
 						</ValueScheme>
 					</Element>
-					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 				</Component>
 			</Component>
 			<Component name="ReconstructionActivity" CardinalityMin="1" CardinalityMax="1">
@@ -1203,7 +1200,7 @@
 						</Vocabulary>
 					</ValueScheme>
 				</Element>
-				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+<!--				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
 			</Component>
 		</Component>
 		<Component name="RecordWorkflowStatus" ComponentRef="clarin.eu:cr1:c_1784045962448" CardinalityMin="1" CardinalityMax="1">
