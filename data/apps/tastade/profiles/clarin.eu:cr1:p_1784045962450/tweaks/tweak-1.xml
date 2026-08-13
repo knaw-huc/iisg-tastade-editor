@@ -40,6 +40,30 @@
 			</Element>
 <!--			<Element name="pageRange">&lt;!&ndash;cues&ndash;&gt;</Element>-->
 <!--			<Element name="notesSource">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+			<Component name="DateNormalized">
+				<clariah:label xml:lang="en">Primary source's date(s)</clariah:label>
+				<clariah:explanation>Enter the date in which a primary source was written. Do not enter for secondary or tertiary sources. This component allows you to enter the dates if they are certain or uncertain. In case they are uncertain, enter your interpretation about how this date should be normalized. These dates will be added as "floruit" periods to the persons or groups that appear in the source. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				<Element name="datePrecision">
+					<clariah:explanation>Select the type of precision that applies to your normalized date. This helps validate that dateStart/dateEnd are filled correctly. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				</Element>
+				<Element name="dateStart">
+					<clariah:explanation>Enter earliest possible date in EDTF format. Rules: 1) For an EXACT date: enter the date in dateStart, leave dateEnd empty. 2) For a RANGE: enter earliest in dateStart, latest in dateEnd. 3) For "BEFORE X": leave dateStart empty, enter X in dateEnd. 4) For "AFTER Y": enter Y in dateStart, leave dateEnd empty. 5) EDTF uncertainty markers (?, ~, %) can be used in either field, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</clariah:explanation>
+				</Element>
+				<Element name="dateEnd">
+					<clariah:explanation>Enter latest possible date in EDTF format. See rules in documentation of field "dateStart". For EDTF conventions, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</clariah:explanation>
+				</Element>
+				<Element name="calendar">
+				</Element>
+				<Element name="noteDate">
+					<clariah:explanation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</clariah:explanation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<clariah:explanation>How confident you (or an algorithm) that this date is normalised correctly.</clariah:explanation>
+					</Element>
+					<!--						<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+				</Component>
+			</Component>
 		</Component>
 		<Component name="RecordWorkflowStatus">
 			<clariah:label xml:lang="en">Source work status</clariah:label>

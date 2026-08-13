@@ -94,6 +94,61 @@
 <!--					</Element>-->
 <!--				</Component>-->
 <!--			</Component>-->
+			<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="0" CardinalityMax="1">
+				<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+				<Element name="datePrecision" CardinalityMin="1" CardinalityMax="1">
+					<Documentation>This helps validate that dateStart/dateEnd are filled correctly.</Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item ConceptLink="" AppInfo="">exactDate</item>
+								<item ConceptLink="" AppInfo="">yearOnly</item>
+								<item ConceptLink="" AppInfo="">dateRange</item>
+								<item ConceptLink="" AppInfo="">dateRangeYearOnly</item>
+								<item ConceptLink="" AppInfo="">beforeDate</item>
+								<item ConceptLink="" AppInfo="">afterDate</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="dateStart" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Enter earliest possible date in EDTF format. Rules: 1) For an EXACT date: enter the date in dateStart, leave dateEnd empty. 2) For a RANGE: enter earliest in dateStart, latest in dateEnd. 3) For "BEFORE X": leave dateStart empty, enter X in dateEnd. 4) For "AFTER Y": enter Y in dateStart, leave dateEnd empty. 5) EDTF uncertainty markers (?, ~, %) can be used in either field, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+				</Element>
+				<Element name="dateEnd" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Enter latest possible date in EDTF format. See rules in documentation of field "dateStart", . For EDTF conventions, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+				</Element>
+				<Element name="calendar" CardinalityMin="1" CardinalityMax="1">
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item ConceptLink="" AppInfo="">Gregorian</item>
+								<item ConceptLink="" AppInfo="">Julian (1 January year start)</item>
+								<item ConceptLink="" AppInfo="">Julian (25 March year start)</item>
+								<item ConceptLink="" AppInfo="">Unknown</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+				</Element>
+				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
+					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item ConceptLink="" AppInfo="">Certain</item>
+									<item ConceptLink="" AppInfo="">Conjecture</item>
+									<item ConceptLink="" AppInfo="">Uncertain</item>
+									<item ConceptLink="" AppInfo="">Unknown</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
+					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+				</Component>
+			</Component>
 		</Component>
 		<Component name="RecordWorkflowStatus" ComponentRef="clarin.eu:cr1:c_1784045962448" CardinalityMin="1" CardinalityMax="1">
 			<Documentation>Explained in the project documentation (add link:...)</Documentation>
