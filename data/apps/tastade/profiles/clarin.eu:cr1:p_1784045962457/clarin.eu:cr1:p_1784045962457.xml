@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962457</ID>
+		<Name>FinancialInstrument</Name>
+		<Description>A legal object representing a financial claim, obligation, or ownership stake. Financial instruments can be owned, transferred, and typically have a monetary value expressed in a specific currency.
+			Currently (August 24, 2026) it includes Loans (debt instruments) and Shares (equity instruments). May be extended to include other instruments like Bills of Exchange, Bonds, or Insurance Policies as research demands.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="FinancialInstrument" ConceptLink="http://data.tastade.org/ontology/FinancialInstrument" CardinalityMin="1" CardinalityMax="1">
+		<Element name="name" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+		<Element name="hasType" ConceptLink="https://www.w3.org/1999/02/22-rdf-syntax-ns#type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+			<Documentation>For the subclases. Each value is an instance of the class.</Documentation>
+			<ValueScheme>
+				<Vocabulary>
+					<enumeration>
+						<item ConceptLink="http://data.tastade.org/ontology/Share">Share</item>
+						<item ConceptLink="http://data.tastade.org/ontology/Loan">Loan</item>
+						<item ConceptLink="http://data.tastade.org/ontology/BottomryLoan">(Loan) Bottomry Loan</item>
+					</enumeration>
+				</Vocabulary>
+			</ValueScheme>
+		</Element>
+		<Component name="ObservationLinkToSource" ComponentRef="clarin.eu:cr1:c_1758888743557" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>This component is to establish a link between an instance of Source and an instance of an Observation. If the Source uses the main component for SourceBasicMetadata, the urlZoteroItem element here can be left out, since it will be added to the Source. This linking component requires only the specific location of the observation in the source (e.g., a locator in the form of a string and a Url -&gt; when there is a digital scan of a page inside a folder that contains all the source).</Documentation>
+			<!--			<Element name="name" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+			<!--				<Documentation>The name of the item. (Also used for titles). In Tastade: use the short name of the source entered in the "Extra" field in Zotero.</Documentation>-->
+			<!--			</Element>-->
+			<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
+				<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+				</Element>
+				<!--				<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--					<Documentation>Type of relationship.</Documentation>-->
+				<!--				</Element>-->
+				<!--				<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--					<Documentation>Description or notes clarifying the relationship.</Documentation>-->
+				<!--				</Element>-->
+				<!--				<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--					<Documentation>Date in which this relationship took place (if applicable).</Documentation>-->
+				<!--				</Element>-->
+				<!--				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+				<!--					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+				<!--						<ValueScheme>-->
+				<!--							<Vocabulary>-->
+				<!--								<enumeration>-->
+				<!--									<item ConceptLink="" AppInfo="">Certain</item>-->
+				<!--									<item ConceptLink="" AppInfo="">Conjecture</item>-->
+				<!--									<item ConceptLink="" AppInfo="">Uncertain</item>-->
+				<!--									<item ConceptLink="" AppInfo="">Unknown</item>-->
+				<!--								</enumeration>-->
+				<!--							</Vocabulary>-->
+				<!--						</ValueScheme>-->
+				<!--					</Element>-->
+				<!--&lt;!&ndash;					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>&ndash;&gt;-->
+				<!--				</Component>-->
+			</Component>
+			<Component name="ObservationLocator" CardinalityMin="0" CardinalityMax="1">
+				<Documentation>Component for the data property assertions that specify where exactly an Observation is located or appears in the Source where it was extracted from.</Documentation>
+				<Element name="pageScanUrl" ConceptLink="http://data.tastade.org/ontology/pageScanUrl" ValueScheme="string" CardinalityMin="1" CardinalityMax="0" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>This is the link to the specific page (image/scan inside a source's folder) where an observation occurs.</Documentation>
+				</Element>
+				<Element name="locator" ConceptLink="http://purl.org/ontology/bibo/locator" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>An indication of a page, folio, line, or any other pointer to the specific part in a source where the observation occurs. If you entered the page Url above, here you could enter the page number as a label/string. PiCo says: "The position defines the order in which scans are presented on the web. This feature is required when a Source has multiple scans."</Documentation>
+				</Element>
+			</Component>
+		</Component>
+		<Component name="FinancialTermsAndVariables" CardinalityMin="1" CardinalityMax="1">
+			<Component name="LabelObserved" ComponentRef="clarin.eu:cr1:c_1758888743556" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
+				<Element name="labelAsWritten" ConceptLink="https://www.w3.org/TR/rdf-schema/#ch_label" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
+				</Element>
+				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
+					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						<ValueScheme>
+							<Vocabulary>
+								<enumeration>
+									<item ConceptLink="" AppInfo="">Certain</item>
+									<item ConceptLink="" AppInfo="">Conjecture</item>
+									<item ConceptLink="" AppInfo="">Uncertain</item>
+									<item ConceptLink="" AppInfo="">Unknown</item>
+								</enumeration>
+							</Vocabulary>
+						</ValueScheme>
+					</Element>
+					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>
+				</Component>
+			</Component>
+			<Component name="MonetaryValue" ConceptLink="http://data.tastade.org/ontology/hasMonetaryValue" CardinalityMin="0" CardinalityMax="1">
+				<Documentation>To enter the monetary value of this financial instrument both as observed and as normalized value.</Documentation>
+				<Element name="hasValue" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P90_has_value" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>As written in the source.</Documentation>
+				</Element>
+				<Element name="sterlingEquivalentValue" ConceptLink="http://data.tastade.org/ontology/sterlingEquivalentvalue" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+				<Component name="Currency" ComponentRef="clarin.eu:cr1:c_1784045962458" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E98_Currency" CardinalityMin="1" CardinalityMax="1">
+					<Documentation>"This class comprises the units in which a monetary system, supported by an administrative authority or other community, quantifies and arithmetically compares all monetary amounts declared in the unit. The unit of a monetary system must describe a nominal value which is kept constant by its administrative authority and an associated banking system if it exists, and not by market value. For instance, one may pay with grams of gold, but the respective monetary amount would have been agreed as the gold price in US dollars on the day of the payment. Under this definition, British Pounds, U.S. Dollars, and European Euros are examples of currency, but “grams of gold” is not. One monetary system has one and only one currency. Instances of this class must not be confused with coin denominations, such as “Dime” or “Sestertius”. Non-monetary exchange of value in terms of quantities of a particular type of goods, such as cows, do not constitute a currency."</Documentation>
+					<Element name="test" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="RecordWorkflowStatus" ComponentRef="clarin.eu:cr1:c_1784045962448" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="Use for sources which are not yet analized, no data is extracted">toDo</item>
+							<item ConceptLink="" AppInfo="Use for Entities (e.g., Actor) which are created quickly but no data is yet extracted">draft</item>
+							<item ConceptLink="" AppInfo="Use for Sources or Entities for which some data has been extracted, but there are still other pieces of data to be extracted">inProgress</item>
+							<item ConceptLink="" AppInfo="all relevant data from this Source or Entity has been extracted">done</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
+				<Documentation>Any</Documentation>
+				<Element name="noteType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item>generalNote</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="noteContent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>

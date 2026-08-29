@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1784045962460</ID>
+        <Name>BinaryRelationship</Name>
+        <Description>Profile for representing the relationship between two entities. It is an extension to CIDOC-CRM (it adds this BinaryRelationship as a subclass under Temporal Entity).</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="BinaryRelationship" ConceptLink="http://data.tastade.org/ontology/BinaryRelationship" CardinalityMin="1" CardinalityMax="1">
+		<Element name="relationName" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        <Element name="hasSubClass" ConceptLink="https://www.w3.org/1999/02/22-rdf-syntax-ns#type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+            <Documentation>For the subclasses. Each value is an instance of a class.</Documentation>
+            <ValueScheme>
+                <Vocabulary>
+                    <enumeration>
+                        <item ConceptLink="" AppInfo="">Family relationship</item>
+                        <item ConceptLink="" AppInfo="">Social relationship</item>
+                        <item ConceptLink="" AppInfo="">Group membership</item>
+                        <item ConceptLink="" AppInfo="">Employment relationship</item>
+                        <item ConceptLink="" AppInfo="">Loan ownership</item>
+                        <item ConceptLink="" AppInfo="">Share ownership</item>
+                        <item ConceptLink="" AppInfo="">Ruling relationship</item>
+                    </enumeration>
+                </Vocabulary>
+            </ValueScheme>
+        </Element>
+		<Component name="ObservationLinkToSource" ComponentRef="clarin.eu:cr1:c_1758888743557" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>This component is to establish a link between an instance of Source and an instance of an Observation. If the Source uses the main component for SourceBasicMetadata, the urlZoteroItem element here can be left out, since it will be added to the Source. This linking component requires only the specific location of the observation in the source (e.g., a locator in the form of a string and a Url -&gt; when there is a digital scan of a page inside a folder that contains all the source).</Documentation>
+			<!--			<Element name="name" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+			<!--				<Documentation>The name of the item. (Also used for titles). In Tastade: use the short name of the source entered in the "Extra" field in Zotero.</Documentation>-->
+			<!--			</Element>-->
+			<Component name="Relationship" ComponentRef="clarin.eu:cr1:c_1761816151563" CardinalityMin="1" CardinalityMax="1">
+				<Element name="to" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+				</Element>
+				<!--				<Element name="category" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--					<Documentation>Type of relationship.</Documentation>-->
+				<!--				</Element>-->
+				<!--				<Element name="description" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--					<Documentation>Description or notes clarifying the relationship.</Documentation>-->
+				<!--				</Element>-->
+				<!--				<Element name="date" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="4" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--					<Documentation>Date in which this relationship took place (if applicable).</Documentation>-->
+				<!--				</Element>-->
+				<!--				<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+				<!--					<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+				<!--						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+				<!--						<ValueScheme>-->
+				<!--							<Vocabulary>-->
+				<!--								<enumeration>-->
+				<!--									<item ConceptLink="" AppInfo="">Certain</item>-->
+				<!--									<item ConceptLink="" AppInfo="">Conjecture</item>-->
+				<!--									<item ConceptLink="" AppInfo="">Uncertain</item>-->
+				<!--									<item ConceptLink="" AppInfo="">Unknown</item>-->
+				<!--								</enumeration>-->
+				<!--							</Vocabulary>-->
+				<!--						</ValueScheme>-->
+				<!--					</Element>-->
+				<!--&lt;!&ndash;					<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>&ndash;&gt;-->
+				<!--				</Component>-->
+			</Component>
+			<Component name="ObservationLocator" CardinalityMin="0" CardinalityMax="1">
+				<Documentation>Component for the data property assertions that specify where exactly an Observation is located or appears in the Source where it was extracted from.</Documentation>
+				<Element name="pageScanUrl" ConceptLink="http://data.tastade.org/ontology/pageScanUrl" ValueScheme="string" CardinalityMin="1" CardinalityMax="0" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>This is the link to the specific page (image/scan inside a source's folder) where an observation occurs.</Documentation>
+				</Element>
+				<Element name="locator" ConceptLink="http://purl.org/ontology/bibo/locator" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>An indication of a page, folio, line, or any other pointer to the specific part in a source where the observation occurs. If you entered the page Url above, here you could enter the page number as a label/string. PiCo says: "The position defines the order in which scans are presented on the web. This feature is required when a Source has multiple scans."</Documentation>
+				</Element>
+			</Component>
+		</Component>
+        <Component name="RelationshipFamily" ComponentRef="clarin.eu:cr1:c_1784045962464" ConceptLink="http://data.tastade.org/ontology/FamilyRelationship" CardinalityMin="0" CardinalityMax="1">
+            <Documentation>Custom subclass in CIDOC.</Documentation>
+            <Element name="relationFrom" ConceptLink="http://data.tastade.org/ontology/relationFrom" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="hasRelationType" ConceptLink="http://data.tastade.org/ontology/has_relation_type" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="relatedFamilyMember" ConceptLink="http://data.tastade.org/ontology/relatedFamilyMember" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="RelationshipSocial" ComponentRef="clarin.eu:cr1:c_1784045962469" ConceptLink="http://data.tastade.org/ontology/SocialRelationship" CardinalityMin="0" CardinalityMax="1">
+            <Element name="relationFrom" ConceptLink="http://data.tastade.org/ontology/relationFrom" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+            <Element name="hasRelationType" ConceptLink="http://data.tastade.org/ontology/has_relation_type" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="relatedPerson" ConceptLink="http://data.tastade.org/ontology/relatedPerson" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="RelationshipGroupMembership" ComponentRef="clarin.eu:cr1:c_1784045962466" ConceptLink="http://data.tastade.org/ontology/MembershipRelationship" CardinalityMin="0" CardinalityMax="1">
+            <Element name="hasMember" ConceptLink="http://data.tastade.org/ontology/hasMember" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="belongsToGroup" ConceptLink="http://data.tastade.org/ontology/belongsToGroup" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="RelationshipGroupEmployment" ComponentRef="clarin.eu:cr1:c_1784045962468" ConceptLink="http://data.tastade.org/ontology/EmploymentRelationship" CardinalityMin="0" CardinalityMax="1">
+            <Element name="hasEmployee" ConceptLink="http://data.tastade.org/ontology/hasEmployee" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="employedBy" ConceptLink="http://data.tastade.org/ontology/employedBy" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        </Component>
+        <Component name="RelationshipOwnershipLoan" ComponentRef="clarin.eu:cr1:c_1784045962463" ConceptLink="http://data.tastade.org/ontology/Loan_Ownership" CardinalityMin="0" CardinalityMax="1">
+            <Element name="hasOwner" ConceptLink="http://data.tastade.org/ontology/hasOwner" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="ownsLoan" ConceptLink="http://data.tastade.org/ontology/ownsLoan" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+        <Component name="RelationshipOwnershipShare" ComponentRef="clarin.eu:cr1:c_1784045962470" ConceptLink="http://data.tastade.org/ontology/Share_Ownership" CardinalityMin="0" CardinalityMax="1">
+            <Element name="hasOwner" ConceptLink="http://data.tastade.org/ontology/hasOwner" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="ownsShare" ConceptLink="http://data.tastade.org/ontology/ownsShare" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        </Component>
+		<Component name="RecordWorkflowStatus" ComponentRef="clarin.eu:cr1:c_1784045962448" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="Use for sources which are not yet analized, no data is extracted">toDo</item>
+							<item ConceptLink="" AppInfo="Use for Entities (e.g., Actor) which are created quickly but no data is yet extracted">draft</item>
+							<item ConceptLink="" AppInfo="Use for Sources or Entities for which some data has been extracted, but there are still other pieces of data to be extracted">inProgress</item>
+							<item ConceptLink="" AppInfo="all relevant data from this Source or Entity has been extracted">done</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
+				<Documentation>Any</Documentation>
+				<Element name="noteType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item>generalNote</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="noteContent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>

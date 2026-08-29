@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1761816151568</ID>
+		<Name>Place</Name>
+		<Description>For "authorized" place names.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="Place">
+		<Component name="Identifiers">
+			<clariah:explanation src="documentation"/>
+			<Element name="identifierType">
+				<clariah:explanation src="documentation"/>
+			</Element>
+			<Element name="identifierValue">
+				<clariah:explanation src="documentation"/>
+			</Element>
+			<Element name="identifierUri">
+				<clariah:explanation src="documentation"/>
+			</Element>
+		</Component>
+		<Component name="LabelNormalised">
+			<Element name="fullName">
+				<clariah:explanation src="documentation"/>
+			</Element>
+			<Element name="nameLabelPreference">
+				
+			</Element>
+			<Element name="nameType">
+				<clariah:explanation src="documentation"/>
+				
+			</Element>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<clariah:explanation src="documentation"/>
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="PlaceType">
+			<clariah:explanation src="documentation"/>
+			<Element name="label"><!--cues--></Element>
+			<Element name="uri"><!--cues--></Element>
+		</Component>
+		<Component name="BelongsToPlace">
+			<Element name="fallsWithin" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
+			</Element>
+		</Component>
+		<Component name="RuledByPolity">
+			<clariah:explanation src="documentation"/>
+			<Element name="hasRulingPolity" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962474/entity/polity</clariah:autoCompleteURI>
+			</Element>
+			<Component name="DateNormalized">
+				<clariah:explanation src="documentation"/>
+				<Element name="datePrecision">
+					<clariah:explanation src="documentation"/>
+				</Element>
+				<Element name="dateStart">
+					<clariah:explanation src="documentation"/>
+				</Element>
+				<Element name="dateEnd">
+					<clariah:explanation src="documentation"/>
+				</Element>
+				<Element name="calendar">
+				</Element>
+				<Element name="noteDate">
+					<clariah:explanation src="documentation"/>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<clariah:explanation src="documentation"/>
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="RecordWorkflowStatus">
+			<clariah:explanation src="documentation"/>
+			<Element name="recordStatus">
+				<clariah:explanation src="documentation"/>
+			</Element>
+			<Component name="Note">
+				<clariah:explanation src="documentation"/>
+				<Element name="noteType">
+					<clariah:explanation src="documentation"/>
+				</Element>
+				<Element name="noteContent"><!--cues--></Element>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>

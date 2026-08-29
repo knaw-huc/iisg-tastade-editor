@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1761816151568</ID>
+		<Name>Place</Name>
+		<Description>For "authorized" place names.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="Place">
+		<Component name="Identifiers">
+			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+			<Element name="identifierType">
+				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+				
+			</Element>
+			<Element name="identifierValue">
+				<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+			</Element>
+			<Element name="identifierUri">
+				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+		</Component>
+		<Component name="LabelNormalised">
+			<Element name="fullName">
+				<Documentation>For persons, it maps to: https://w3id.org/pnv#literalName</Documentation>
+			</Element>
+			<Element name="nameLabelPreference">
+				
+			</Element>
+			<Element name="nameType">
+				<Documentation>The type of name. Use a value from the name type vocabulary per entity type (e.g., for persons: current name, former name, alias, etc.)</Documentation>
+				
+			</Element>
+			<Component name="Confidence">
+				<Element name="confidenceValue">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					
+				</Element>
+				<Element name="confidenceScore"><!--cues--></Element>
+			</Component>
+		</Component>
+		<Component name="PlaceType">
+			<Documentation>For the type of place. Preferably using GeoNames feature classes (e.g., P.PPL for populated place: https://www.geonames.org/ontology#P.PPL) </Documentation>
+			<Element name="label"><!--cues--></Element>
+			<Element name="uri"><!--cues--></Element>
+		</Component>
+		<Component name="BelongsToPlace">
+			<Element name="fallsWithin"><!--cues--></Element>
+		</Component>
+		<Component name="RuledByPolity">
+			<Documentation>A time-bounded relationship expressing that this place was ruled by a polity during a specific period.</Documentation>
+			<Element name="hasRulingPolity"><!--cues--></Element>
+			<Component name="DateNormalized">
+				<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+				<Element name="datePrecision">
+					<Documentation>This helps validate that dateStart/dateEnd are filled correctly.</Documentation>
+					
+				</Element>
+				<Element name="dateStart">
+					<Documentation>Enter earliest possible date in EDTF format. Rules: 1) For an EXACT date: enter the date in dateStart, leave dateEnd empty. 2) For a RANGE: enter earliest in dateStart, latest in dateEnd. 3) For "BEFORE X": leave dateStart empty, enter X in dateEnd. 4) For "AFTER Y": enter Y in dateStart, leave dateEnd empty. 5) EDTF uncertainty markers (?, ~, %) can be used in either field, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+				</Element>
+				<Element name="dateEnd">
+					<Documentation>Enter latest possible date in EDTF format. See rules in documentation of field "dateStart", . For EDTF conventions, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+				</Element>
+				<Element name="calendar">
+					
+				</Element>
+				<Element name="noteDate">
+					<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+		</Component>
+		<Component name="RecordWorkflowStatus">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+
+			</Element>
+			<Component name="Note">
+				<Documentation>Any</Documentation>
+				<Element name="noteType">
+					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+
+				</Element>
+				<Element name="noteContent"><!--cues--></Element>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>

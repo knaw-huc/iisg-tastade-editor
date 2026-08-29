@@ -119,6 +119,12 @@
 		<Component name="PersonData">
 			<clariah:label xml:lang="en">Person data observed</clariah:label>
 			<clariah:explanation>This group of fields is for entering person-related data as observed in the source. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+<!--			<Component name="Gender">-->
+			<Element name="gender">
+				<clariah:label xml:lang="en">Gender</clariah:label>
+				<clariah:explanation>Use "Male" or "Female" when the source explicitly states gender. Use "Inferred" when the source strongly suggest gender (name, role, pronouns absent but contextually clear). Use "Undetermined" only for truly ambiguous cases.</clariah:explanation>
+			</Element>
+<!--			</Component>-->
 			<Component name="BirthDate">
 				<clariah:label xml:lang="en">Date of birth</clariah:label>
 				<clariah:explanation>Enter birth date information as seen in the source, and add your interpretation on how it should be normalized. See documentation at: https://edu.nl/avfnw</clariah:explanation>
@@ -254,8 +260,9 @@
 					</Component>
 				</Component>
 				<Component name="Relationship">
-					<Element name="to">
+					<Element name="to" cue:class="skosType">
 						<clariah:explanation>Link to the entity in the other CMDI profile.</clariah:explanation>
+						<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1761816151568/entity/place</clariah:autoCompleteURI>
 					</Element>
 					<Element name="category">
 						<clariah:explanation>Type of relationship.</clariah:explanation>
@@ -422,41 +429,6 @@
 							</Element>
 <!--							<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
 						</Component>
-					</Component>
-				</Component>
-			</Component>
-			<Component name="Gender">
-				<Component name="LabelObserved">
-					<Element name="labelAsWritten">
-						<Documentation>Write here the name as observed in the source (as written, transcribed, or extracted). If you are entering data about an entity, but there is no written name for it,  state "unknown" or "unnamed" following project internal conventions.</Documentation>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
-
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
-					</Component>
-				</Component>
-				<Component name="Relationship">
-					<Element name="to">
-						<Documentation>Link to the entity in the other CMDI profile.</Documentation>
-					</Element>
-					<Element name="category">
-						<Documentation>Type of relationship.</Documentation>
-					</Element>
-					<Element name="description">
-						<Documentation>Description or notes clarifying the relationship.</Documentation>
-					</Element>
-					<Element name="date">
-						<Documentation>Date in which this relationship took place (if applicable).</Documentation>
-					</Element>
-					<Component name="Confidence">
-						<Element name="confidenceValue">
-							<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
-
-						</Element>
-						<Element name="confidenceScore"><!--cues--></Element>
 					</Component>
 				</Component>
 			</Component>
@@ -675,53 +647,53 @@
 				</Component>
 			</Component>
 		</Component>
-		<Component name="LinkToReconstruction">
-			<Component name="Relationship">
-				<Element name="to">
-					<clariah:explanation>Link to the entity in the other CMDI profile.</clariah:explanation>
-				</Element>
-				<Element name="category">
-					<clariah:explanation>Type of relationship.</clariah:explanation>
-				</Element>
-				<Element name="description">
-					<clariah:explanation>Description or notes clarifying the relationship.</clariah:explanation>
-				</Element>
-				<Element name="date">
-					<clariah:explanation>Date in which this relationship took place (if applicable).</clariah:explanation>
-				</Element>
-				<Component name="Confidence">
-					<Element name="confidenceValue">
-						<clariah:explanation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</clariah:explanation>
-						
-					</Element>
-<!--					<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
-				</Component>
-			</Component>
-			<Component name="ReconstructionActivity">
-				<clariah:explanation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </clariah:explanation>
-				<Element name="typeActivity">
-					<clariah:explanation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</clariah:explanation>
-					
-				</Element>
-				<Element name="agent">
-					<clariah:explanation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</clariah:explanation>
-				</Element>
-				<Element name="startedAtTime">
-					<clariah:explanation>The start time of the activity that generated a Person Reconstruction.</clariah:explanation>
-				</Element>
-				<Element name="endedAtTime">
-					<clariah:explanation>The end time of the activity that generated a Person Reconstruction.</clariah:explanation>
-				</Element>
-				<Element name="noteReconstruction"><!--cues--></Element>
-			</Component>
-			<Component name="Confidence">
-				<Element name="confidenceValue">
-					<clariah:explanation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</clariah:explanation>
-					
-				</Element>
-<!--				<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>-->
-			</Component>
-		</Component>
+<!--		<Component name="LinkToReconstruction">-->
+<!--			<Component name="Relationship">-->
+<!--				<Element name="to">-->
+<!--					<clariah:explanation>Link to the entity in the other CMDI profile.</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Element name="category">-->
+<!--					<clariah:explanation>Type of relationship.</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Element name="description">-->
+<!--					<clariah:explanation>Description or notes clarifying the relationship.</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Element name="date">-->
+<!--					<clariah:explanation>Date in which this relationship took place (if applicable).</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Component name="Confidence">-->
+<!--					<Element name="confidenceValue">-->
+<!--						<clariah:explanation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</clariah:explanation>-->
+<!--						-->
+<!--					</Element>-->
+<!--&lt;!&ndash;					<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>&ndash;&gt;-->
+<!--				</Component>-->
+<!--			</Component>-->
+<!--			<Component name="ReconstructionActivity">-->
+<!--				<clariah:explanation>The Activity that generated a PersonReconstruction. A Person Reconstruction can either be created by a human researcher or by a software algorithm. In case of a human-made reconstruction, provide information about the time, place and knowledge- input. In case of a software algorithm, provide information about the name, version and configuration settings of the program. </clariah:explanation>-->
+<!--				<Element name="typeActivity">-->
+<!--					<clariah:explanation>Register which type of activity was used to make the reconstruction (not from PiCo, t.b.d.)</clariah:explanation>-->
+<!--					-->
+<!--				</Element>-->
+<!--				<Element name="agent">-->
+<!--					<clariah:explanation>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Element name="startedAtTime">-->
+<!--					<clariah:explanation>The start time of the activity that generated a Person Reconstruction.</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Element name="endedAtTime">-->
+<!--					<clariah:explanation>The end time of the activity that generated a Person Reconstruction.</clariah:explanation>-->
+<!--				</Element>-->
+<!--				<Element name="noteReconstruction">&lt;!&ndash;cues&ndash;&gt;</Element>-->
+<!--			</Component>-->
+<!--			<Component name="Confidence">-->
+<!--				<Element name="confidenceValue">-->
+<!--					<clariah:explanation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</clariah:explanation>-->
+<!--					-->
+<!--				</Element>-->
+<!--&lt;!&ndash;				<Element name="confidenceScore">&lt;!&ndash;cues&ndash;&gt;</Element>&ndash;&gt;-->
+<!--			</Component>-->
+<!--		</Component>-->
 		<Component name="RecordWorkflowStatus">
 			<clariah:explanation>Explained in the project documentation (add link:...)</clariah:explanation>
 			<Element name="recordStatus">
@@ -739,7 +711,6 @@
 		</Component>
 		<Component name="RecordType">
 			<Element name="recordType">
-				
 			</Element>
 		</Component>
 		<Component name="Note">

@@ -19,6 +19,7 @@
 						<enumeration>
 <!--							<item ConceptLink="http://id.loc.gov/vocabulary/marcgt/let">letter</item>-->
 							<item ConceptLink="https://www.wikidata.org/wiki/Q36279">Biography</item>
+							<item ConceptLink="https://www.wikidata.org/wiki/Q1385610">Excerpt</item>
 							<item ConceptLink="https://www.wikidata.org/wiki/Q155656">Will</item>
 						</enumeration>
 					</Vocabulary>

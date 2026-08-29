@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+    <Header>
+        <ID>clarin.eu:cr1:p_1784045962460</ID>
+        <Name>BinaryRelationship</Name>
+        <Description>Profile for representing the relationship between two entities. It is an extension to CIDOC-CRM (it adds this BinaryRelationship as a subclass under Temporal Entity).</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="BinaryRelationship">
+		<Element name="relationName"><!--cues--></Element>
+        <Element name="hasSubClass">
+            <Documentation>For the subclasses. Each value is an instance of a class.</Documentation>
+            
+        </Element>
+		<Component name="ObservationLinkToSource">
+			<Documentation>This component is to establish a link between an instance of Source and an instance of an Observation. If the Source uses the main component for SourceBasicMetadata, the urlZoteroItem element here can be left out, since it will be added to the Source. This linking component requires only the specific location of the observation in the source (e.g., a locator in the form of a string and a Url -&gt; when there is a digital scan of a page inside a folder that contains all the source).</Documentation>
+			<Element name="name">
+				<Documentation>The name of the item. (Also used for titles). In Tastade: use the short name of the source entered in the "Extra" field in Zotero.</Documentation>
+			</Element>
+			<Component name="Relationship">
+				<Element name="to">
+					<Documentation>Link to the entity in the other CMDI profile.</Documentation>
+				</Element>
+				<Element name="category">
+					<Documentation>Type of relationship.</Documentation>
+				</Element>
+				<Element name="description">
+					<Documentation>Description or notes clarifying the relationship.</Documentation>
+				</Element>
+				<Element name="date">
+					<Documentation>Date in which this relationship took place (if applicable).</Documentation>
+				</Element>
+				<Component name="Confidence">
+					<Element name="confidenceValue">
+						<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+						
+					</Element>
+					<Element name="confidenceScore"><!--cues--></Element>
+				</Component>
+			</Component>
+			<Component name="ObservationLocator">
+				<Documentation>Component for the data property assertions that specify where exactly an Observation is located or appears in the Source where it was extracted from.</Documentation>
+				<Element name="pageScanUrl">
+					<Documentation>This is the link to the specific page (image/scan inside a source's folder) where an observation occurs.</Documentation>
+				</Element>
+				<Element name="locator">
+					<Documentation>An indication of a page, folio, line, or any other pointer to the specific part in a source where the observation occurs. If you entered the page Url above, here you could enter the page number as a label/string. PiCo says: "The position defines the order in which scans are presented on the web. This feature is required when a Source has multiple scans."</Documentation>
+				</Element>
+			</Component>
+		</Component>
+        <Component name="RelationshipFamily">
+            <Documentation>Custom subclass in CIDOC.</Documentation>
+            <Element name="relationFrom"><!--cues--></Element>
+            <Element name="hasRelationType"><!--cues--></Element>
+            <Element name="relatedFamilyMember"><!--cues--></Element>
+        </Component>
+        <Component name="RelationshipSocial">
+            <Element name="relationFrom"><!--cues--></Element>
+            <Element name="hasRelationType"><!--cues--></Element>
+            <Element name="relatedPerson"><!--cues--></Element>
+        </Component>
+        <Component name="RelationshipGroupMembership">
+            <Element name="hasMember"><!--cues--></Element>
+            <Element name="belongsToGroup"><!--cues--></Element>
+        </Component>
+        <Component name="RelationshipGroupEmployment">
+            <Element name="hasEmployee"><!--cues--></Element>
+            <Element name="employedBy"><!--cues--></Element>
+        </Component>
+        <Component name="RelationshipOwnershipLoan">
+            <Element name="hasOwner"><!--cues--></Element>
+            <Element name="ownsLoan"><!--cues--></Element>
+        </Component>
+        <Component name="RelationshipOwnershipShare">
+            <Element name="hasOwner"><!--cues--></Element>
+            <Element name="ownsShare"><!--cues--></Element>
+        </Component>
+    </Component>
+</ComponentSpec>

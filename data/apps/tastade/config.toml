@@ -29,105 +29,250 @@ label="Key title"
 sort="true"# or "false"
 filter="'select'"# or "true"
 
+[app.prof.source.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
 [app.prof.source.list.status]
 xpath="string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
 label="Work status"
 sort="true"# or "false"
 filter="'select'"# or "true"
 
-[app.prof.source.list.creator]
-xpath="string(//*:MdCreator)"
-label="Creator"
-sort="true"
-filter="true"
-
 ########################################## ACTOR OBSERVATIONS  ########################################
 
-[app.prof.actorObservation]
+[app.prof.actor]
 prof="clarin.eu:cr1:p_1772521921743"
-title="string((/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)"
+title="string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)"
 
-[app.prof.actorObservation.list]
+[app.prof.actor.list]
 
-[app.prof.actorObservation.list.nr]
+[app.prof.actor.list.nr]
 xpath="replace(//*:MdSelfLink,'unl://','')"
 label="record-nr"
 sort="true"
 filter="true"
-#
-[app.prof.actorObservation.list.status]
+
+[app.prof.actor.list.label]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)"
+label="Label"
+sort="true"# or "false"
+filter="true"# or "'select'"
+
+[app.prof.actor.list.type]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:ActorType/cmdp:actorType)"
+label="Type"
+sort="true"# or "false"
+filter="'select'"
+
+[app.prof.actor.list.source]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:ObservationLinkToSource/cmdp:Relationship/cmdp:to)"
+label="Source"
+sort="true"# or "false"
+filter="'select'"
+
+[app.prof.actor.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.actor.list.status]
 xpath="string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
 label="Work status"
 sort="true"# or "false"
 filter="'select'"# or "true"
 
-##[app.prof.organisationObservation.list.label]
-##xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-##label="Label"
-##sort="true"# or "false"
-##filter="true"# or "'select'"
-#
-########################################## CROSSING OBSERVATIONS  ########################################
-##[app.prof.crossingObservation]
-##prof="clarin.eu:cr1:p_1772521921681"
-##title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-##
-##[app.prof.crossingObservation.list]
-##
-###[app.prof.crossingObservation.list.label]
-###xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-###label="Label"
-###sort="true"# or "false"
-###filter="true"# or "'select'"
-##
-##[app.prof.crossingObservation.list.nr]
-##xpath="replace(//*:MdSelfLink,'unl://','')"
-##label="record-nr"
-##sort="true"
-##filter="true"
-##
-#
-#
-################################### RECONSTRUCTIONS ###################
-#######################  PERSON RECONSTRUCTIONS ###################
-##[app.prof.personReconstruction]
-##prof="clarin.eu:cr1:p_1772521921687"
-##title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-##
-##[app.prof.personReconstruction.list]
-##
-##[app.prof.personReconstruction.list.label]
-##xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-##label="Label"
-##sort="true"# or "false"
-##filter="true"# or "'select'"
-##
-################### ORGANISATION RECONSTRUCTIONS  ########################################
-#[app.prof.organisationReconstruction]
-#prof="clarin.eu:cr1:p_1772521921680"
-#title="string(/cmd:CMD/cmd:Components/cmdp:OrganisationReconstruction/cmdp:OrganisationNames/(cmdp:preferredName[@xml:lang='en'],cmdp:preferredName)[1])"
-#
-#[app.prof.organisationReconstruction.list]
-#
-##[app.prof.organisationReconstruction.list.label]
-##xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-##label="Label"
-##sort="true"# or "false"
-##filter="true"# or "'select'"
-#
-#[app.prof.organisationReconstruction.list.nr]
-#xpath="replace(//*:MdSelfLink,'unl://','')"
-#label="record-nr"
-#sort="true"
-#filter="true"
-#
-#[app.prof.organisationReconstruction.list.nameOrganisation]
-#xpath="string(/cmd:CMD/cmd:Components/cmdp:OrganisationReconstruction/cmdp:OrganisationNames/(cmdp:preferredName[@xml:lang='en'],cmdp:preferredName)[1])"
-#label="Organisation name (eng)"
-#sort="true"
-#filter="true"
-#
-################# CROSSING RECONSTRUCTIONS  ########################################
+######################################### FINANCIAL INSTRUMENT OBSERVATIONS #####################
+[app.prof.financialInstrumentObs]
+prof="clarin.eu:cr1:p_1784045962457"
+title="string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)"
+
+[app.prof.financialInstrumentObs.list]
+
+[app.prof.financialInstrumentObs.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="record-nr"
+sort="true"
+filter="true"
+
+[app.prof.financialInstrumentObs.list.keytitle]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:FinancialInstrument/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)"
+label="Name"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+[app.prof.financialInstrumentObs.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.financialInstrumentObs.list.status]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:FinancialInstrument/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
+label="Work status"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+######################################### FINANCIAL EVENT OBSERVATIONS #####################
+[app.prof.financialEventObs]
+prof="clarin.eu:cr1:p_1784045962471"
+title="string(/cmd:CMD/cmd:Components/cmdp:FinancialEvent/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)"
+
+[app.prof.financialEventObs.list]
+
+[app.prof.financialEventObs.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="record-nr"
+sort="true"
+filter="true"
+
+[app.prof.financialEventObs.list.keytitle]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:FinancialEvent/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)"
+label="Name"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+[app.prof.financialEventObs.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.financialEventObs.list.status]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:FinancialEvent/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
+label="Work status"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+######################################### RELATIONSHIPS  ########################################
+[app.prof.relationshipObservation]
+prof="clarin.eu:cr1:p_1784045962460"
+title="string((/cmd:CMD/cmd:Components/cmdp:BinaryRelationship/cmdp:relationName)"
+
+
+[app.prof.relationshipObservation.list]
+
+[app.prof.relationshipObservation.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="record-nr"
+sort="true"
+filter="true"
+
+[app.prof.relationshipObservation.list.label]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:BinaryRelationship/cmdp:relationName)"
+label="Name"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+[app.prof.relationshipObservation.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.relationshipObservation.list.status]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:BinaryRelationship/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
+label="Work status"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+######################################### PLACES AUTHORIZED  ########################################
+[app.prof.place]
+prof="clarin.eu:cr1:p_1761816151568"
+title="string(/cmd:CMD/cmd:Components/cmdp:Place/cmdp:LabelNormalised/cmdp:fullName)"
+
+[app.prof.place.list]
+
+[app.prof.place.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="record-nr"
+sort="true"
+filter="true"
+
+[app.prof.place.list.label]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Place/cmdp:LabelNormalised/cmdp:fullName)"
+label="Name"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+[app.prof.place.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.place.list.status]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Place/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
+label="Work status"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+######################################### POLITY AUTHORIZED  ########################################
+[app.prof.polity]
+prof="clarin.eu:cr1:p_1784045962474"
+title="string(/cmd:CMD/cmd:Components/cmdp:Polity/cmdp:LabelNormalised/cmdp:fullName)"
+
+[app.prof.polity.list]
+
+[app.prof.polity.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="record-nr"
+sort="true"
+filter="true"
+
+[app.prof.polity.list.label]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Polity/cmdp:LabelNormalised/cmdp:fullName)"
+label="Name"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+[app.prof.polity.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.polity.list.status]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Polity/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
+label="Work status"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+######################################### CURRENCY AUTHORIZED #####################
+[app.prof.currency]
+prof="clarin.eu:cr1:p_1784045962476"
+title="string(/cmd:CMD/cmd:Components/cmdp:Currency/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)"
+
+[app.prof.currency.list]
+
+[app.prof.currency.list.nr]
+xpath="replace(//*:MdSelfLink,'unl://','')"
+label="record-nr"
+sort="true"
+filter="true"
+
+[app.prof.currency.list.keytitle]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Currency/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)"
+label="Name"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+[app.prof.currency.list.creator]
+xpath="string(//*:MdCreator)"
+label="Record creator"
+sort="true"
+filter="'select'"
+
+[app.prof.currency.list.status]
+xpath="string(/cmd:CMD/cmd:Components/cmdp:Currency/cmdp:RecordWorkflowStatus/cmdp:recordStatus)"
+label="Work status"
+sort="true"# or "false"
+filter="'select'"# or "true"
+
+################# CROSSING AUTHORIZED  ########################################
 #[app.prof.crossingReconstruction]
 #prof="clarin.eu:cr1:p_1772521921684"
 #title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
@@ -145,69 +290,4 @@ filter="'select'"# or "true"
 #label="record-nr"
 #sort="true"
 #filter="true"
-#
-######################################### PLACES RECONSTRUCTIONS  ########################################
-#[app.prof.placeReconstruction]
-#prof="clarin.eu:cr1:p_1761816151568"
-#title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-#
-#[app.prof.placeReconstruction.list]
-#
-##[app.prof.placeReconstruction.list.label]
-##xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-##label="Label"
-##sort="true"# or "false"
-##filter="true"# or "'select'"
-#
-#
-#[app.prof.placeReconstruction.list.nr]
-#xpath="replace(//*:MdSelfLink,'unl://','')"
-#label="record-nr"
-#sort="true"
-#filter="true"
-
-
-######################################## ########################################
-######BRITISHSLAVE
-#
-#[app]
-#name="britishslavetraders"
-#title="British Slavetraders based Editor"
-#def_prof="clarin.eu:cr1:p_1766041970062"
-#cmdi_version="1.2"
-#
-#[app.access]
-##users="./htp.test" # location of the htpassword file, i.e. the "users" and "owner"
-#read="any" # or "users" or "owner"
-#write="any" # or "users" or "owner"
-#
-#[app.prof.individual]
-#prof="clarin.eu:cr1:p_1766041970062"
-#title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-#
-#[app.prof.individual.list]
-#
-#[app.prof.individual.list.first]
-#xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-#label="First"
-#sort="true"# or "false"
-#filter="true"# or "'select'"
-#
-#[app.prof.organisation]
-#prof="clarin.eu:cr1:p_1766041970063"
-#title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-#
-#[app.prof.organisation.list]
-#
-#[app.prof.organisation.list.first]
-#xpath="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-#label="First"
-#sort="true"# or "false"
-#filter="true"# or "'select'"
-#
-#[app.prof.place]
-#prof="clarin.eu:cr1:p_1766041970064"
-#title="string((/cmd:CMD/cmd:Components//cmdp:*[empty(cmdp:*)][normalize-space(text())!=''])[1])"
-#
-#[app.prof.place.list]
 #

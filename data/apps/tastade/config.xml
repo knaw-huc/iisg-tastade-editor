@@ -26,23 +26,23 @@
             <sort>true</sort>
             <filter>'select'</filter>
           </keytitle>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
           <status>
             <xpath>string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
             <label>Work status</label>
             <sort>true</sort>
             <filter>'select'</filter>
           </status>
-          <creator>
-            <xpath>string(//*:MdCreator)</xpath>
-            <label>Creator</label>
-            <sort>true</sort>
-            <filter>true</filter>
-          </creator>
         </list>
       </source>
-      <actorObservation>
+      <actor>
         <prof>clarin.eu:cr1:p_1772521921743</prof>
-        <title>string((/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)</title>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)</title>
         <list>
           <nr>
             <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
@@ -50,6 +50,30 @@
             <sort>true</sort>
             <filter>true</filter>
           </nr>
+          <label>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:LabelObserved/cmdp:labelAsWritten)</xpath>
+            <label>Label</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </label>
+          <type>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:ActorType/cmdp:actorType)</xpath>
+            <label>Type</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </type>
+          <source>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:ObservationLinkToSource/cmdp:Relationship/cmdp:to)</xpath>
+            <label>Source</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </source>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
           <status>
             <xpath>string(/cmd:CMD/cmd:Components/cmdp:Actor/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
             <label>Work status</label>
@@ -57,7 +81,187 @@
             <filter>'select'</filter>
           </status>
         </list>
-      </actorObservation>
+      </actor>
+      <financialInstrumentObs>
+        <prof>clarin.eu:cr1:p_1784045962457</prof>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:Source/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <keytitle>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:FinancialInstrument/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</xpath>
+            <label>Name</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </keytitle>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:FinancialInstrument/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </financialInstrumentObs>
+      <financialEventObs>
+        <prof>clarin.eu:cr1:p_1784045962471</prof>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:FinancialEvent/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <keytitle>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:FinancialEvent/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</xpath>
+            <label>Name</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </keytitle>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:FinancialEvent/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </financialEventObs>
+      <relationshipObservation>
+        <prof>clarin.eu:cr1:p_1784045962460</prof>
+        <title>string((/cmd:CMD/cmd:Components/cmdp:BinaryRelationship/cmdp:relationName)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <label>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:BinaryRelationship/cmdp:relationName)</xpath>
+            <label>Name</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </label>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:BinaryRelationship/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </relationshipObservation>
+      <place>
+        <prof>clarin.eu:cr1:p_1761816151568</prof>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:Place/cmdp:LabelNormalised/cmdp:fullName)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <label>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Place/cmdp:LabelNormalised/cmdp:fullName)</xpath>
+            <label>Name</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </label>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Place/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </place>
+      <polity>
+        <prof>clarin.eu:cr1:p_1784045962474</prof>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:Polity/cmdp:LabelNormalised/cmdp:fullName)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <label>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Polity/cmdp:LabelNormalised/cmdp:fullName)</xpath>
+            <label>Name</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </label>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Polity/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </polity>
+      <currency>
+        <prof>clarin.eu:cr1:p_1784045962476</prof>
+        <title>string(/cmd:CMD/cmd:Components/cmdp:Currency/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</title>
+        <list>
+          <nr>
+            <xpath>replace(//*:MdSelfLink,'unl://','')</xpath>
+            <label>record-nr</label>
+            <sort>true</sort>
+            <filter>true</filter>
+          </nr>
+          <keytitle>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Currency/cmdp:SourceBasicMetadata/cmdp:nameOrTitle)</xpath>
+            <label>Name</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </keytitle>
+          <creator>
+            <xpath>string(//*:MdCreator)</xpath>
+            <label>Record creator</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </creator>
+          <status>
+            <xpath>string(/cmd:CMD/cmd:Components/cmdp:Currency/cmdp:RecordWorkflowStatus/cmdp:recordStatus)</xpath>
+            <label>Work status</label>
+            <sort>true</sort>
+            <filter>'select'</filter>
+          </status>
+        </list>
+      </currency>
     </prof>
   </app>
 </config>

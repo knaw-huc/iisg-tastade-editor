@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962474</ID>
+		<Name>Polity</Name>
+		<Description>To enter the Polities and time durations.</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="Polity" ConceptLink="http://data.tastade.org/ontology/Polity" CardinalityMin="1" CardinalityMax="1">
+		<Documentation>A sovereign polity with governance authority. Historical entities modeled as they existed at their time. For 16th-19th century context, includes composite monarchies, republics, empires, and chartered companies with sovereign powers.  Modeled as a subclass of E74 Group because polities are collective entities whose members are subjects/citizens. This enables uniform treatment of political membership via hasNationality (subPropertyOf P107i_is_current_or_former_member_of).</Documentation>
+		<Element name="hasType" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P2_has_type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+			<ValueScheme>
+				<Vocabulary>
+					<enumeration>
+						<item ConceptLink="http://www.wikidata.org/entity/Q154547">Duchy</item>
+						<item ConceptLink="http://www.wikidata.org/entity/Q133156">Colony</item>
+						<item ConceptLink="http://www.wikidata.org/entity/Q48349">Empire</item>
+						<item ConceptLink="http://www.wikidata.org/entity/Q417175">Kingdom</item>
+						<item ConceptLink="http://www.wikidata.org/entity/Q7270">Republic</item>
+						<item ConceptLink="https://www.wikidata.org/wiki/Q5156764">Composite monarchy</item>
+					</enumeration>
+				</Vocabulary>
+			</ValueScheme>
+		</Element>
+		<Component name="LabelNormalised" ComponentRef="clarin.eu:cr1:c_1778593302220" CardinalityMin="1" CardinalityMax="1">
+			<Element name="fullName" ConceptLink="https://schema.org/name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>For persons, it maps to: https://w3id.org/pnv#literalName</Documentation>
+			</Element>
+<!--			<Element name="nameLabelPreference" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<ValueScheme>-->
+<!--					<Vocabulary>-->
+<!--						<enumeration>-->
+<!--							<item ConceptLink="" AppInfo="">preferred</item>-->
+<!--							<item ConceptLink="" AppInfo="">alternative</item>-->
+<!--						</enumeration>-->
+<!--					</Vocabulary>-->
+<!--				</ValueScheme>-->
+<!--			</Element>-->
+<!--			<Element name="nameType" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--				<Documentation>The type of name. Use a value from the name type vocabulary per entity type (e.g., for persons: current name, former name, alias, etc.)</Documentation>-->
+<!--				<ValueScheme>-->
+<!--					<Vocabulary>-->
+<!--						<enumeration>-->
+<!--							<item ConceptLink="" AppInfo="">current-name</item>-->
+<!--							<item ConceptLink="" AppInfo="">former-name</item>-->
+<!--							<item ConceptLink="" AppInfo="">alias</item>-->
+<!--							<item ConceptLink="" AppInfo="">birth-name</item>-->
+<!--							<item ConceptLink="" AppInfo="">married-name</item>-->
+<!--							<item ConceptLink="" AppInfo="">religious-name</item>-->
+<!--							<item ConceptLink="" AppInfo="">nickname</item>-->
+<!--							<item ConceptLink="" AppInfo="">spelling-variant</item>-->
+<!--						</enumeration>-->
+<!--					</Vocabulary>-->
+<!--				</ValueScheme>-->
+<!--			</Element>-->
+<!--			<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">-->
+<!--				<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">-->
+<!--					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>-->
+<!--					<ValueScheme>-->
+<!--						<Vocabulary>-->
+<!--							<enumeration>-->
+<!--								<item ConceptLink="" AppInfo="">Certain</item>-->
+<!--								<item ConceptLink="" AppInfo="">Conjecture</item>-->
+<!--								<item ConceptLink="" AppInfo="">Uncertain</item>-->
+<!--								<item ConceptLink="" AppInfo="">Unknown</item>-->
+<!--							</enumeration>-->
+<!--						</Vocabulary>-->
+<!--					</ValueScheme>-->
+<!--				</Element>-->
+<!--				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+<!--			</Component>-->
+		</Component>
+		<Component name="Identifiers" ComponentRef="clarin.eu:cr1:c_1761816151559" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>Internal note: for Letters (profile v2), the URI should be mapped to: https://lod.academy/cer/vocab/ontology#21_Identifier. CIDOC path: -&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal. </Documentation>
+			<Element name="identifierType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>The type/scheme of identifier (e.g., "Wikidata QID", "VIAF", "project local"</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+<!--							<item ConceptLink="" AppInfo="">CERL</item>-->
+<!--							<item ConceptLink="" AppInfo="">EMLO</item>-->
+<!--							<item ConceptLink="http://id.loc.gov/ontologies/bibframe/Local" AppInfo="">LocalIdentifier</item>-->
+<!--							<item ConceptLink="" AppInfo="">NODEGOAT</item>-->
+<!--							<item ConceptLink="https://www.openstreetmap.org/relation" AppInfo="">OpenStreetMaps</item>-->
+<!--							<item ConceptLink="" AppInfo="">Shelfmark</item>-->
+<!--							<item ConceptLink="https://viaf.org" AppInfo="Virtual International Authority File">VIAF</item>-->
+							<item ConceptLink="https://www.wikidata.org" AppInfo="">Wikidata</item>
+<!--							<item>Other</item>-->
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="identifierValue" ConceptLink="http://purl.org/dc/terms/identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Add the identifier's label (e.g., the shelfmark, or the identifier number in another scheme). If you chose "Other" in the Identifier type, enter here in parenthesis where the identifier comes from, for example: N011111 (Nodegoat).</Documentation>
+			</Element>
+			<Element name="identifierUri" ConceptLink="https://schema.org/sameAs" ValueScheme="anyURI" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Persistent identifier (optional): If the object has a permanent identifier (e.g., a URN, DOI, or handle), enter the full IRI here (e.g., https://resolver.staatsbibliothek-berlin.de/SBB00019E8400000003). It does not need to be resolvable. If it is OpenStreetMaps: Enter the URI from OpenStreetMap API. You can search directly in OpenStreetMaps and paste the URI here. The URI has to have this format, for example: https://www.openstreetmap.org/relation/214885 (note the type in the middle: relation, node, way)</Documentation>
+			</Element>
+		</Component>
+		<Component name="DateNormalized" ComponentRef="clarin.eu:cr1:c_1761816151565" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+			<Element name="datePrecision" CardinalityMin="1" CardinalityMax="1">
+				<Documentation>This helps validate that dateStart/dateEnd are filled correctly.</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="">exactDate</item>
+							<item ConceptLink="" AppInfo="">yearOnly</item>
+							<item ConceptLink="" AppInfo="">dateRange</item>
+							<item ConceptLink="" AppInfo="">dateRangeYearOnly</item>
+							<item ConceptLink="" AppInfo="">beforeDate</item>
+							<item ConceptLink="" AppInfo="">afterDate</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="dateStart" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Enter earliest possible date in EDTF format. Rules: 1) For an EXACT date: enter the date in dateStart, leave dateEnd empty. 2) For a RANGE: enter earliest in dateStart, latest in dateEnd. 3) For "BEFORE X": leave dateStart empty, enter X in dateEnd. 4) For "AFTER Y": enter Y in dateStart, leave dateEnd empty. 5) EDTF uncertainty markers (?, ~, %) can be used in either field, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+			</Element>
+			<Element name="dateEnd" ConceptLink="http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end" ValueScheme="string" CardinalityMin="0" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Enter latest possible date in EDTF format. See rules in documentation of field "dateStart", . For EDTF conventions, follow the instructions here: https://knaw.sharepoint.com/:w:/s/PRJ-Brievenportaal/IQB7jUVOq98BR4Oy786Ch8n1AcilMidno3GLLVdmgUaYF-8?e=FBjVTA</Documentation>
+			</Element>
+			<Element name="calendar" CardinalityMin="1" CardinalityMax="1">
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="">Gregorian</item>
+							<item ConceptLink="" AppInfo="">Julian (1 January year start)</item>
+							<item ConceptLink="" AppInfo="">Julian (25 March year start)</item>
+							<item ConceptLink="" AppInfo="">Unknown</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Element name="noteDate" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded" cue:DisplayPriority="3" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>Add any clarifying notes related to the dates. These notes may be for internal or external use (t.b.d.)</Documentation>
+			</Element>
+			<Component name="Confidence" ComponentRef="clarin.eu:cr1:c_1761816151574" CardinalityMin="1" CardinalityMax="1">
+				<Element name="confidenceValue" ConceptLink="https://lod.academy/cer/vocab/ontology#25_Confidence_Value" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>How confident you (or an algorithm) are of an observation (what you observed (read) in the source), or of a reconstruction. Reflect the uncertainties and ambiguities of the inferred observation (or reconstruction) by choosing one of the values.</Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item ConceptLink="" AppInfo="">Certain</item>
+								<item ConceptLink="" AppInfo="">Conjecture</item>
+								<item ConceptLink="" AppInfo="">Uncertain</item>
+								<item ConceptLink="" AppInfo="">Unknown</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+<!--				<Element name="confidenceScore" ValueScheme="string" CardinalityMin="0" CardinalityMax="1"/>-->
+			</Component>
+		</Component>
+		<Component name="RecordWorkflowStatus" ComponentRef="clarin.eu:cr1:c_1784045962448" CardinalityMin="1" CardinalityMax="1">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+				<ValueScheme>
+					<Vocabulary>
+						<enumeration>
+							<item ConceptLink="" AppInfo="Use for sources which are not yet analized, no data is extracted">toDo</item>
+							<item ConceptLink="" AppInfo="Use for Entities (e.g., Actor) which are created quickly but no data is yet extracted">draft</item>
+							<item ConceptLink="" AppInfo="Use for Sources or Entities for which some data has been extracted, but there are still other pieces of data to be extracted">inProgress</item>
+							<item ConceptLink="" AppInfo="all relevant data from this Source or Entity has been extracted">done</item>
+						</enumeration>
+					</Vocabulary>
+				</ValueScheme>
+			</Element>
+			<Component name="Note" ComponentRef="clarin.eu:cr1:c_1778593302212" ConceptLink="" CardinalityMin="1" CardinalityMax="1">
+				<Documentation>Any</Documentation>
+				<Element name="noteType" ConceptLink="http://purl.org/dc/terms/type" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1">
+					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+					<ValueScheme>
+						<Vocabulary>
+							<enumeration>
+								<item>generalNote</item>
+							</enumeration>
+						</Vocabulary>
+					</ValueScheme>
+				</Element>
+				<Element name="noteContent" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="2" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>

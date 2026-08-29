@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+	<Header>
+		<ID>clarin.eu:cr1:p_1784045962471</ID>
+		<Name>FinancialEvent</Name>
+		<Description>recurring financial events that can happen multiple times over a financial instrument's lifetime</Description>
+		<Status>development</Status>
+	</Header>
+	<Component name="FinancialEvent">
+		<Element name="name"><!--cues--></Element>
+		<Element name="hasSubclass">
+			
+		</Element>
+		<Component name="ObservationLinkToSource">
+			<clariah:label xml:lang="en">Source of the observation</clariah:label>
+			<clariah:explanation>Every observation in Tastade must be linked to a source. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			<Component name="Relationship">
+				<clariah:label xml:lang="en">Link to source</clariah:label>
+				<Element name="to" cue:class="skosType">
+					<clariah:label xml:lang="en">Link</clariah:label>
+					<clariah:explanation>Start typing any word from the key title of the source (for example, a country code such as NL) and select it once it appears. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+					<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+				</Element>
+			</Component>
+			<Component name="ObservationLocator">
+				<clariah:label xml:lang="en">Observation locator</clariah:label>
+				<clariah:explanation>If applicable, add information about the specific location, within a source, of the observation data that you are registering in this record. Do not add if the link is the same as the source's folder. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				<Element name="pageScanUrl">
+					<clariah:label xml:lang="en">Observation locator link</clariah:label>
+					<clariah:explanation>If applicable, add the link(s) to the specific scan(s) where the observation data that you are registering in this record occurs. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				</Element>
+				<Element name="locator">
+					<clariah:label xml:lang="en">Observation locator text</clariah:label>
+					<clariah:explanation>If applicable, add the page, folio, line number, or any other pointer to the specific part in a source where the observation occurs. If you entered the page Url above, here you could enter the page number as a label/string. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				</Element>
+			</Component>
+		</Component>
+		<Component name="FinancialEvent_ShareTransfer">
+			<Documentation>Sale/purchase/gift of partnership shares</Documentation>
+			<Element name="hasTransferrer">
+				<Documentation>The actor selling/transferring the share.</Documentation>
+			</Element>
+			<Element name="hasTransferredShare"><!--cues--></Element>
+			<Element name="hasTransferee">
+				<Documentation>The actor buying/receiving the share.</Documentation>
+			</Element>
+		</Component>
+		<Component name="RecordWorkflowStatus">
+			<Documentation>Explained in the project documentation (add link:...)</Documentation>
+			<Element name="recordStatus">
+				<Documentation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</Documentation>
+				
+			</Element>
+			<Component name="Note">
+				<Documentation>Any</Documentation>
+				<Element name="noteType">
+					<Documentation>Add any specific types of notes to the controlled vocabulary.</Documentation>
+					
+				</Element>
+				<Element name="noteContent"><!--cues--></Element>
+			</Component>
+		</Component>
+	</Component>
+</ComponentSpec>

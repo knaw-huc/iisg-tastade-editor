@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentSpec xmlns:clariah="http://www.clariah.eu/" xmlns:cue="http://www.clarin.eu/cmd/cues/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd">
+    <Header>
+        <ID>clarin.eu:cr1:p_1784045962460</ID>
+        <Name>BinaryRelationship</Name>
+        <Description>Profile for representing the relationship between two entities. It is an extension to CIDOC-CRM (it adds this BinaryRelationship as a subclass under Temporal Entity).</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="BinaryRelationship">
+		<Element name="relationName"><!--cues--></Element>
+        <Element name="hasSubClass">
+            <clariah:explanation src="documentation"/>
+        </Element>
+		<Component name="ObservationLinkToSource">
+			<clariah:label xml:lang="en">Source of the observation</clariah:label>
+			<clariah:explanation>Every observation in Tastade must be linked to a source. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+			<Component name="Relationship">
+				<clariah:label xml:lang="en">Link to source</clariah:label>
+				<Element name="to" cue:class="skosType">
+					<clariah:label xml:lang="en">Link</clariah:label>
+					<clariah:explanation>Start typing any word from the key title of the source (for example, a country code such as NL) and select it once it appears. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+					<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+				</Element>
+			</Component>
+			<Component name="ObservationLocator">
+				<clariah:label xml:lang="en">Observation locator</clariah:label>
+				<clariah:explanation>If applicable, add information about the specific location, within a source, of the observation data that you are registering in this record. Do not add if the link is the same as the source's folder. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				<Element name="pageScanUrl">
+					<clariah:label xml:lang="en">Observation locator link</clariah:label>
+					<clariah:explanation>If applicable, add the link(s) to the specific scan(s) where the observation data that you are registering in this record occurs. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				</Element>
+				<Element name="locator">
+					<clariah:label xml:lang="en">Observation locator text</clariah:label>
+					<clariah:explanation>If applicable, add the page, folio, line number, or any other pointer to the specific part in a source where the observation occurs. If you entered the page Url above, here you could enter the page number as a label/string. See documentation at: https://edu.nl/avfnw</clariah:explanation>
+				</Element>
+			</Component>
+		</Component>
+        <Component name="RelationshipFamily">
+            <clariah:explanation src="documentation"/>
+            <Element name="relationFrom" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1772521921743/entity/actor</clariah:autoCompleteURI>
+			</Element>
+            <Element name="hasRelationType"><!--cues--></Element>
+            <Element name="relatedFamilyMember" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1772521921743/entity/actor</clariah:autoCompleteURI>
+			</Element>
+        </Component>
+        <Component name="RelationshipSocial">
+            <Element name="relationFrom" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+            <Element name="hasRelationType"><!--cues--></Element>
+            <Element name="relatedPerson" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+        </Component>
+        <Component name="RelationshipGroupMembership">
+            <Element name="hasMember" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+            <Element name="belongsToGroup" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+        </Component>
+        <Component name="RelationshipGroupEmployment">
+            <Element name="hasEmployee" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+            <Element name="employedBy" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+        </Component>
+        <Component name="RelationshipOwnershipLoan">
+            <Element name="hasOwner" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+            <Element name="ownsLoan" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+        </Component>
+        <Component name="RelationshipOwnershipShare">
+            <Element name="hasOwner" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+            <Element name="ownsShare" cue:class="skosType">
+				<clariah:autoCompleteURI>/app/tastade/profile/clarin.eu:cr1:p_1784045962450/entity/source</clariah:autoCompleteURI>
+			</Element>
+        </Component>
+		<Component name="RecordWorkflowStatus">
+			<clariah:explanation>Explained in the project documentation (add link:...)</clariah:explanation>
+			<Element name="recordStatus">
+				<clariah:explanation>To indicate the stage the record is at in terms of completeness. For example, for a Source: all relevant data has been extracted from the source, or if there is still data that could be extracted at a later stage. For an Entity observation: if it is an initial draft, or if all the observation-related data is entered.</clariah:explanation>
+			</Element>
+			<Component name="Note">
+				<clariah:explanation>Any</clariah:explanation>
+				<Element name="noteType">
+					<clariah:explanation>Add any specific types of notes to the controlled vocabulary.</clariah:explanation>
+
+				</Element>
+				<Element name="noteContent"><!--cues--></Element>
+			</Component>
+		</Component>
+    </Component>
+</ComponentSpec>
